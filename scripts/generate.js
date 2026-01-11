@@ -767,12 +767,12 @@ async function build() {
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>${baseUrl}/leaderboard.html</loc>
+    <loc>${baseUrl}/leaderboard</loc>
     <lastmod>${today}</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>${baseUrl}/about.html</loc>
+    <loc>${baseUrl}/about</loc>
     <lastmod>${today}</lastmod>
     <priority>0.8</priority>
   </url>`;
@@ -784,7 +784,7 @@ async function build() {
     // Let's keep .html for leaf pages to be safe, but root/index should be clean.
     sitemap += `
   <url>
-    <loc>${baseUrl}/${p.full_path}</loc>
+    <loc>${baseUrl}/${p.full_path.replace('.html', '')}</loc>
     <lastmod>${today}</lastmod>
     <priority>0.7</priority>
   </url>`;
