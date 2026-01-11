@@ -797,6 +797,27 @@ async function build() {
   // Also copy robots.txt to output
   try { fs.copyFileSync(path.join(REPO_ROOT, 'robots.txt'), path.join(OUT_DIR, 'robots.txt')); } catch (e) { console.warn("robots.txt not found"); }
 
+  // 8. Generate llms.txt (Answer Engine Optimization)
+  console.log("Generating llms.txt...");
+  let llmsContent = `# All We Need
+> The best free developer tools, curated. No ads. Open source.
+
+## Projects
+`;
+
+  projects.forEach(p => {
+    // Clean URL
+    const cleanLink = `${baseUrl}/${p.full_path.replace('.html', '')}`;
+    const tags = p.tags ? p.tags.map(t => `#${t}`).join(' ') : '';
+    llmsContent += `- [${p.title}](${cleanLink}): ${p.description} ${tags}\n`;
+  });
+
+  // Footer / Contact
+  llmsContent += `\n\n## Contribute
+Submit PRs at https://github.com/ghostshanky/allweneed.github.io`;
+
+  fs.writeFileSync(path.join(OUT_DIR, 'llms.txt'), llmsContent);
+
   console.log("Build Complete!");
 }
 
