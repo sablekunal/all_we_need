@@ -272,7 +272,7 @@ async function build() {
     pHtml = pHtml.replace('{{repo_button}}', repoBtn);
 
     // SEO Injection
-    const canonicalUrl = `https://allweneed.pages.dev/projects/${slug}.html`;
+    const canonicalUrl = `https://allweneed.pages.dev/projects/${slug}`;
     pHtml = pHtml.replace('{{canonical_url}}', canonicalUrl);
 
     // Inject Screenshot
@@ -381,7 +381,7 @@ async function build() {
     const titleColor = isOxaam ? 'text-amber-400' : 'text-white';
 
     return `
-                  <a href="${p.full_path}" class="block p-1 rounded-2xl relative group hover:scale-[1.02] transition-transform duration-500 w-[280px] shrink-0 snap-start">
+                  <a href="${p.full_path.replace('.html', '')}" class="block p-1 rounded-2xl relative group hover:scale-[1.02] transition-transform duration-500 w-[280px] shrink-0 snap-start">
                       <!-- Gradient Border Effect -->
                       <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
                       
@@ -443,7 +443,7 @@ async function build() {
 
     group.forEach(p => {
       projectsHtml += `
-             <a href="${p.full_path}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+             <a href="${p.full_path.replace('.html', '')}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
                 <div class="flex justify-between items-start mb-6">
                      <!-- Randomly beautiful favicon logic: Just ensure it pops -->
                      <img src="${p.logo}" alt="${escapeHtml(p.title)} Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
@@ -487,7 +487,7 @@ async function build() {
 
           <div id="more-tags" class="flex overflow-x-auto gap-6 pb-8 transition-all duration-500 scrollbar-hide" data-auto-scroll="true">
               ${[...remainingTags, ...remainingTags, ...remainingTags, ...remainingTags].map(([tag, group]) => `
-                  <a href="projects/index.html" class="glass-card block p-6 rounded-3xl relative overflow-hidden group hover:scale-[1.05] transition-transform duration-500 w-[240px] shrink-0 flex flex-col gap-4 border border-white/5 bg-neutral-950/20">
+                  <a href="projects/" class="glass-card block p-6 rounded-3xl relative overflow-hidden group hover:scale-[1.05] transition-transform duration-500 w-[240px] shrink-0 flex flex-col gap-4 border border-white/5 bg-neutral-950/20">
                       <div class="flex justify-between items-center">
                           <span class="font-mono text-base text-white font-bold uppercase tracking-wider truncate">#${escapeHtml(tag)}</span>
                           <span class="text-xs text-neutral-500 font-mono bg-neutral-900 px-2 py-1 rounded">${group.length}</span>
