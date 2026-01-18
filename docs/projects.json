@@ -52,6 +52,25 @@
     "filename": "design-arena.md"
   },
   {
+    "title": "DEV Community",
+    "slug": "dev-community",
+    "link": "https://dev.to/",
+    "description": "A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers.",
+    "tags": [
+      "community",
+      "blog",
+      "developer",
+      "learning",
+      "open-source"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>DEV (dev.to) is one of the most inclusive and active communities for developers. Unlike Medium or other general blogging platforms, it is built <em>by</em> developers <em>for</em> developers, with a strong focus on code sharing, mentorship, and open exchange of ideas.</p>\n<h1 id=\"key-features\">Key Features</h1>\n<h2 id=\"🤝-community--connection\">🤝 Community &amp; Connection</h2>\n<ul>\n<li><strong>Connect</strong>: finding high-quality, community-driven content is easier than ever.</li>\n<li><strong>Discuss</strong>: Engage in discussions on strict technical topics or soft skills.</li>\n<li><strong>Network</strong>: Build your personal brand and connect with industry peers.</li>\n</ul>\n<h2 id=\"📚-knowledge-sharing\">📚 Knowledge Sharing</h2>\n<ul>\n<li><strong>Articles</strong>: Write and read technical articles with code snippets and markdown support.</li>\n<li><strong>Tags</strong>: Follow specific topics like #javascript, #python, #beginners, or #career.</li>\n<li><strong>Open Source</strong>: The platform itself is open source (Forem), reflecting its ethos.</li>\n</ul>\n<h2 id=\"🚀-career-growth\">🚀 Career Growth</h2>\n<ul>\n<li><strong>Jobs</strong>: Access a curated job board for developers.</li>\n<li><strong>Listings</strong>: Find mentorship opportunities, events, and products.</li>\n</ul>\n<h1 id=\"additional-info\">Additional Info</h1>\n<p>DEV is known for its friendly &quot;inclusive&quot; vibe, making it a safe place for beginners to ask questions and experts to share deep dives.</p>\n",
+    "full_path": "projects/dev-community.html",
+    "date": "2026-01-18",
+    "filename": "dev-to.md"
+  },
+  {
     "title": "Emailnator",
     "slug": "emailnator",
     "link": "https://emailnator.com",
