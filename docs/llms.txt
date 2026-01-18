@@ -19,6 +19,7 @@
 - [SaveWeb2Zip](https://allweneed.pages.dev/projects/saveweb2zip): Download entire websites or landing pages as a ZIP archive with all assets (HTML, CSS, JS, Images, Fonts). #utilities #scraper #web-dev #cloner #free
 - [SSYouTube](https://allweneed.pages.dev/projects/ssyoutube): Download YouTube videos in max quality. Free & no ads. #youtube #downloader #video #productivity
 - [Temp Mail](https://allweneed.pages.dev/projects/temp-mail): A disposable email service for quick sign-ups and privacy protection. #privacy #email #utilities
+- [ToolFK](https://allweneed.pages.dev/projects/toolfk): A massive all-in-one developer toolbox featuring compilers, converters, network utilities, and encryption tools. #utilities #developer-tools #compiler #converters
 - [Unmute.sh](https://allweneed.pages.dev/projects/unmutesh): Speak to an AI using Kyutai's new low-latency open-source speech-to-text and text-to-speech models. #ai #speech-to-text #text-to-speech #open-source #audio
 - [Unsplash API](https://allweneed.pages.dev/projects/unsplash-api): The most powerful free image API associated with the world's largest free image library. #api #images #media
 - [Vercel](https://allweneed.pages.dev/projects/vercel): A frontend cloud platform for building, deploying, and scaling modern web applications. #hosting #frontend #deployment

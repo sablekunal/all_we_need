@@ -297,6 +297,24 @@
     "filename": "temp-mail.md"
   },
   {
+    "title": "ToolFK",
+    "slug": "toolfk",
+    "link": "https://www.toolfk.com/",
+    "description": "A massive all-in-one developer toolbox featuring compilers, converters, network utilities, and encryption tools.",
+    "tags": [
+      "utilities",
+      "developer-tools",
+      "compiler",
+      "converters"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.toolfk.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>ToolFK is a comprehensive Swiss Army knife for developers. It offers a vast array of free online tools ranging from code compilation to complex file conversions, all in one place.</p>\n<h1 id=\"key-features\">Key Features</h1>\n<h2 id=\"💻-online-compilers\">💻 Online Compilers</h2>\n<p>Run code instantly in your browser without any setup.</p>\n<ul>\n<li><strong>Languages</strong>: C, C++, Java, Python, PHP, Go, Rust, Swift, Ruby, Lua, and more.</li>\n<li><strong>Execution</strong>: Fast compilation and execution with standard input/output support.</li>\n</ul>\n<h2 id=\"🛠️-developer-utilities\">🛠️ Developer Utilities</h2>\n<ul>\n<li><strong>JSON Editor</strong>: Validate, format, and convert JSON (to CSV, XML, Java, C#).</li>\n<li><strong>SQL Tools</strong>: SQL Formatter and Online SQL Schema Designer.</li>\n<li><strong>Regex Tester</strong>: Test and generate regular expressions for multiple languages.</li>\n<li><strong>Cron Evaluator</strong>: Generate and test Linux crontab expressions.</li>\n<li><strong>Diff Tool</strong>: Compare text or code snippets for differences.</li>\n</ul>\n<h2 id=\"🔐-security--encryption\">🔐 Security &amp; Encryption</h2>\n<ul>\n<li><strong>Obfuscators</strong>: Protect JS, Python, PHP, and Java code.</li>\n<li><strong>Encryption</strong>: MD5, SHA, AES, DES text encryption.</li>\n<li><strong>Base64</strong>: Advanced encoding/decoding for text, files, images, and audio/video.</li>\n</ul>\n<h2 id=\"🌐-network--web\">🌐 Network &amp; Web</h2>\n<ul>\n<li><strong>DNS &amp; Port Checker</strong>: Verify DNS records and check open ports.</li>\n<li><strong>IP Lookup</strong>: Detailed IP address information.</li>\n<li><strong>HTTP Simulator</strong>: Test API requests (GET/POST) seamlessly.</li>\n<li><strong>cURL Converter</strong>: Convert cURL commands to Python, Node.js, Ansible, etc.</li>\n</ul>\n<h2 id=\"📂-file-converters\">📂 File Converters</h2>\n<ul>\n<li><strong>PDF Tools</strong>: Convert PDF to Word, Excel, PPT, Image, and vice versa.</li>\n<li><strong>Image Tools</strong>: Compress, resize, and convert images (PNG/JPG/WEBP/SVG).</li>\n</ul>\n<h1 id=\"pricing\">Pricing</h1>\n<ul>\n<li><strong>100% Free</strong>: All tools are available for free online use.</li>\n</ul>\n",
+    "full_path": "projects/toolfk.html",
+    "date": "2026-01-18",
+    "filename": "toolfk.md"
+  },
+  {
     "title": "Unmute.sh",
     "slug": "unmutesh",
     "link": "https://unmute.sh/",
