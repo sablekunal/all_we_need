@@ -17,6 +17,44 @@
     "filename": "antigravity-ide.md"
   },
   {
+    "title": "Amazon Web Services",
+    "slug": "amazon-web-services",
+    "link": "https://aws.amazon.com/free/",
+    "description": "The world's most comprehensive cloud platform, offering a 12-month free tier and always-free services like Lambda and DynamoDB.",
+    "tags": [
+      "cloud-providers",
+      "hosting",
+      "backend",
+      "free-tier",
+      "aws"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>AWS is the industry leader in cloud computing. Its free tier is split into &quot;Always Free&quot; and &quot;12 Months Free,&quot; allowing developers to build and scale serious applications without cost initially.</p>\n<h1 id=\"key-free-tier-features\">Key Free Tier Features</h1>\n<h2 id=\"💻-compute\">💻 Compute</h2>\n<ul>\n<li><strong>EC2</strong>: 750 hours/month of t2.micro or t3.micro instances (12 months).</li>\n<li><strong>Lambda</strong>: 1 million free requests/month &amp; 3.2M seconds of compute time (Always Free).</li>\n<li><strong>Elastic Load Balancing</strong>: 750 hours/month (12 months).</li>\n</ul>\n<h2 id=\"🗄️-storage--database\">🗄️ Storage &amp; Database</h2>\n<ul>\n<li><strong>S3</strong>: 5GB standard storage (12 months).</li>\n<li><strong>DynamoDB</strong>: 25GB NoSQL DB storage (Always Free).</li>\n<li><strong>RDS</strong>: 750 hours/month of db.t2.micro, db.t3.micro, or db.t4g.micro (12 months).</li>\n</ul>\n<h2 id=\"🔧-utilities\">🔧 Utilities</h2>\n<ul>\n<li><strong>CloudFront</strong>: 1TB data transfer out per month.</li>\n<li><strong>SNS/SQS</strong>: 1 million requests/month each.</li>\n<li><strong>CodeBuild</strong>: 100 build minutes/month.</li>\n</ul>\n<h1 id=\"limitations\">Limitations</h1>\n<ul>\n<li>EC2 and RDS free tiers expire after 12 months.</li>\n<li>Watch out for egress costs if you exceed the free allowances.</li>\n</ul>\n",
+    "full_path": "projects/amazon-web-services.html",
+    "date": "2026-01-22",
+    "filename": "aws.md"
+  },
+  {
+    "title": "Microsoft Azure",
+    "slug": "microsoft-azure",
+    "link": "https://azure.microsoft.com/free/",
+    "description": "A cloud computing service created by Microsoft, offering free services for building, testing, deploying, and managing applications.",
+    "tags": [
+      "cloud-providers",
+      "hosting",
+      "backend",
+      "free-tier",
+      "microsoft"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=azure.microsoft.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Azure is deeply integrated with the Microsoft ecosystem (VS Code, GitHub). Its &quot;Always Free&quot; services include powerful serverless functions and app hosting capabilities.</p>\n<h1 id=\"key-free-tier-features\">Key Free Tier Features</h1>\n<h2 id=\"💻-compute--apps\">💻 Compute &amp; Apps</h2>\n<ul>\n<li><strong>Virtual Machines</strong>: 750 hours/month of B1s burstable VMs (Linux &amp; Windows) (12 months).</li>\n<li><strong>App Service</strong>: 10 web, mobile, or API apps (Always Free - F1 Free Tier).</li>\n<li><strong>Azure Functions</strong>: 1 million requests/month (Always Free).</li>\n<li><strong>Static Web Apps</strong>: Free SSL, custom domains, and global hosting.</li>\n</ul>\n<h2 id=\"🗄️-storage--data\">🗄️ Storage &amp; Data</h2>\n<ul>\n<li><strong>Cosmos DB</strong>: 1000 Request Units/sec and 25GB storage (Always Free).</li>\n<li><strong>Blob Storage</strong>: 5GB LRS hot block storage (12 months).</li>\n<li><strong>Bandwidth</strong>: 15GB data transfer out (12 months).</li>\n</ul>\n<h2 id=\"🧠-ai--devops\">🧠 AI &amp; DevOps</h2>\n<ul>\n<li><strong>Azure DevOps</strong>: 5 active users, unlimited private Git repos.</li>\n<li><strong>Cognitive Services</strong>: Free tiers for Computer Vision, Translator, Face, etc.</li>\n<li><strong>Azure Kubernetes Service (AKS)</strong>: Free cluster management.</li>\n</ul>\n<h1 id=\"limitations\">Limitations</h1>\n<ul>\n<li>VM free tier expires after 12 months.</li>\n<li>&quot;Always Free&quot; applies to specific service tiers/SKUs only.</li>\n</ul>\n",
+    "full_path": "projects/microsoft-azure.html",
+    "date": "2026-01-22",
+    "filename": "azure.md"
+  },
+  {
     "title": "cron-job.org",
     "slug": "cron-joborg",
     "link": "https://cron-job.org/",
@@ -104,6 +142,25 @@
     "filename": "google-ai-studio.md"
   },
   {
+    "title": "Google Cloud Platform",
+    "slug": "google-cloud-platform",
+    "link": "https://cloud.google.com/free",
+    "description": "A suite of cloud computing services that provides a generous free tier including App Engine, Cloud Run, and Compute Engine.",
+    "tags": [
+      "cloud-providers",
+      "hosting",
+      "backend",
+      "free-tier",
+      "google"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=cloud.google.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Google Cloud Platform (GCP) offers one of the most developer-friendly free tiers, perfect for hosting everything from static sites to containerized applications and databases.</p>\n<h1 id=\"key-free-tier-features\">Key Free Tier Features</h1>\n<h2 id=\"💻-compute--app-hosting\">💻 Compute &amp; App Hosting</h2>\n<ul>\n<li><strong>Cloud Run</strong>: 2 million requests/month, 180,000 vCPU-seconds, 360,000 GB-seconds memory.</li>\n<li><strong>Compute Engine</strong>: 1 e2-micro instance (US regions), 30GB HDD.</li>\n<li><strong>App Engine</strong>: 28 frontend instance hours/day (effectively free for one instance).</li>\n<li><strong>Kubernetes (GKE)</strong>: No cluster management fee for one zonal cluster.</li>\n</ul>\n<h2 id=\"🗄️-storage--database\">🗄️ Storage &amp; Database</h2>\n<ul>\n<li><strong>Cloud Storage</strong>: 5GB Standard storage.</li>\n<li><strong>Firestore</strong>: 1GB storage, 50k reads/day.</li>\n<li><strong>BigQuery</strong>: 1TB querying/month, 10GB storage.</li>\n</ul>\n<h2 id=\"🛠️-developer-tools\">🛠️ Developer Tools</h2>\n<ul>\n<li><strong>Cloud Build</strong>: 120 build-minutes/day.</li>\n<li><strong>Cloud Shell</strong>: Free ephemeral Linux shell with 5GB persistent disk.</li>\n<li><strong>Project IDX</strong>: Online VSCode-based development environment (formerly Firebase Studio).</li>\n</ul>\n<h1 id=\"limitations\">Limitations</h1>\n<ul>\n<li>Egress limits apply (typically 1GB to non-Google destinations).</li>\n<li>Compute instances are restricted to specific regions (e.g., us-west1, us-central1).</li>\n</ul>\n",
+    "full_path": "projects/google-cloud-platform.html",
+    "date": "2026-01-22",
+    "filename": "google-cloud.md"
+  },
+  {
     "title": "Kittl PNG to SVG",
     "slug": "kittl-png-to-svg",
     "link": "https://www.kittl.com/tools/png-to-svg",
@@ -172,6 +229,25 @@
     "full_path": "projects/openrouter.html",
     "date": "2024-01-01",
     "filename": "openrouter.md"
+  },
+  {
+    "title": "Oracle Cloud",
+    "slug": "oracle-cloud",
+    "link": "https://www.oracle.com/cloud/free/",
+    "description": "Known for the most generous \"Always Free\" compute offering in the industry, including powerful ARM-based instances.",
+    "tags": [
+      "cloud-providers",
+      "hosting",
+      "backend",
+      "free-tier",
+      "oracle"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.oracle.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Oracle Cloud Infrastructure (OCI) stands out with its incredibly generous &quot;Always Free&quot; Arm compute instances, which are powerful enough to run substantial workloads forever, not just for 12 months.</p>\n<h1 id=\"key-free-tier-features\">Key Free Tier Features</h1>\n<h2 id=\"💻-compute\">💻 Compute</h2>\n<ul>\n<li><strong>Arm Ampere A1</strong>: Up to 4 OCPUs and 24GB RAM (Always Free).</li>\n<li><strong>AMD Compute</strong>: 2 VMs with 1/8 OCPU and 1GB RAM each.</li>\n<li><strong>Load Balancer</strong>: 1 instance with 10Mbps bandwidth.</li>\n</ul>\n<h2 id=\"🗄️-storage--networking\">🗄️ Storage &amp; Networking</h2>\n<ul>\n<li><strong>Block Volume</strong>: 200GB total storage (Always Free).</li>\n<li><strong>Object Storage</strong>: 10GB Standard.</li>\n<li><strong>Outbound Data</strong>: 10TB per month (significantly higher than competitors).</li>\n<li><strong>Databases</strong>: 2 Autonomous Databases (20GB each).</li>\n</ul>\n<h2 id=\"🔧-monitoring--security\">🔧 Monitoring &amp; Security</h2>\n<ul>\n<li><strong>Monitoring</strong>: 500 million ingestion data points, 1 billion retrieval.</li>\n<li><strong>Notifications</strong>: 1 million delivery options per month.</li>\n</ul>\n<h1 id=\"limitations\">Limitations</h1>\n<ul>\n<li>Arm availability can sometimes be scarce in certain popular regions (e.g., Ashburn).</li>\n<li>Instances may be reclaimed if deemed idle for long periods (7 days of inactivity).</li>\n</ul>\n",
+    "full_path": "projects/oracle-cloud.html",
+    "date": "2026-01-22",
+    "filename": "oracle-cloud.md"
   },
   {
     "title": "Oxaam",

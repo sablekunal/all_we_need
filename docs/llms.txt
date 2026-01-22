@@ -3,15 +3,19 @@
 
 ## Projects
 - [Antigravity IDE](https://allweneed.pages.dev/projects/antigravity-ide): An advanced agentic coding assistant designed by Google Deepmind to solve complex engineering tasks. #ai #coding-assistant #ide
+- [Amazon Web Services](https://allweneed.pages.dev/projects/amazon-web-services): The world's most comprehensive cloud platform, offering a 12-month free tier and always-free services like Lambda and DynamoDB. #cloud-providers #hosting #backend #free-tier #aws
+- [Microsoft Azure](https://allweneed.pages.dev/projects/microsoft-azure): A cloud computing service created by Microsoft, offering free services for building, testing, deploying, and managing applications. #cloud-providers #hosting #backend #free-tier #microsoft
 - [cron-job.org](https://allweneed.pages.dev/projects/cron-joborg): Free external cron job service. Perfect for keeping free-tier services alive. #utilities #devops #automation #free
 - [Design Arena](https://allweneed.pages.dev/projects/design-arena): An AI-powered platform for generating and comparing UI and design concepts. #design #ai #ui-ux
 - [DEV Community](https://allweneed.pages.dev/projects/dev-community): A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers. #community #blog #developer #learning #open-source
 - [Emailnator](https://allweneed.pages.dev/projects/emailnator): Generate disposable Gmail-style emails #email #productivity
 - [Google AI Studio](https://allweneed.pages.dev/projects/google-ai-studio): Google’s web-based environment for experimenting with and building Gemini-powered AI apps. #ai #llm #google
+- [Google Cloud Platform](https://allweneed.pages.dev/projects/google-cloud-platform): A suite of cloud computing services that provides a generous free tier including App Engine, Cloud Run, and Compute Engine. #cloud-providers #hosting #backend #free-tier #google
 - [Kittl PNG to SVG](https://allweneed.pages.dev/projects/kittl-png-to-svg): Best ever PNG to SVG converter. Unlimited usage. #svg #converter #design
 - [LM Arena](https://allweneed.pages.dev/projects/lm-arena): A platform to compare large language models through blind, side-by-side evaluations. #ai #llm #benchmark
 - [Netlify](https://allweneed.pages.dev/projects/netlify): An all-in-one platform for building and deploying fast, secure web applications. #hosting #static-sites #deployment
 - [OpenRouter](https://allweneed.pages.dev/projects/openrouter): Unified API gateway that gives developers access to hundreds of LLMs and multimodal models through a single endpoint #api #llm #models #developer #free
+- [Oracle Cloud](https://allweneed.pages.dev/projects/oracle-cloud): Known for the most generous "Always Free" compute offering in the industry, including powerful ARM-based instances. #cloud-providers #hosting #backend #free-tier #oracle
 - [Oxaam](https://allweneed.pages.dev/projects/oxaam): Access shared premium accounts for services like Canva Pro, ChatGPT, and more. #premium #accounts #bypass #utilities #free
 - [Railway](https://allweneed.pages.dev/projects/railway): A developer-focused cloud platform to deploy apps, databases, and services quickly. #cloud #deployment #backend
 - [Remove.photos](https://allweneed.pages.dev/projects/removephotos): A completely free suite of AI tools for image manipulation including BG remover, cleanup, upscaler, and more. No premium features. #images #ai #utilities #converter
