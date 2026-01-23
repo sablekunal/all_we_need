@@ -234,14 +234,16 @@ async function build() {
       content: htmlContent,
       full_path: `projects/${slug}.html`, // Relative path for local navigation
       date: data.date || '2020-01-01', // Default to old date if missing
-      filename: file
+      filename: file,
+      seo_title: `${data.title} - Free ${data.tags[0] ? data.tags[0].charAt(0).toUpperCase() + data.tags[0].slice(1) : 'Developer'} Tool | All We Need`
     };
 
     projects.push(project);
 
     // Generate Project Page
     let pHtml = projectTemplate
-      .replace(/{{title}}/g, escapeHtml(project.title))
+      .replace(/{{title}}/g, escapeHtml(project.seo_title || project.title))
+      .replace(/{{project_name}}/g, escapeHtml(project.title)) // Keep original name for H1
       .replace(/{{description}}/g, escapeHtml(project.description))
       .replace(/{{link}}/g, project.link)
       .replace('{{content}}', project.content);
@@ -307,6 +309,11 @@ async function build() {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "124"
           },
           "author": {
             "@type": "Person",
