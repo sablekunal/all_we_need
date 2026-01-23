@@ -170,6 +170,26 @@
     "seo_title": "Google Cloud Platform - Free Cloud-providers Tool | All We Need"
   },
   {
+    "title": "ImageKit",
+    "slug": "imagekit",
+    "link": "https://imagekit.io/",
+    "description": "A real-time image optimization, transformation, and storage service with a generous forever free tier for developers.",
+    "tags": [
+      "images",
+      "cdn",
+      "hosting",
+      "free-tier",
+      "api"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=imagekit.io&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>ImageKit.io is an essential tool for developers who need to manage media assets effeciently. It offers a &quot;Forever Free&quot; tier that is perfect for side projects, low-traffic websites, and testing. It stands out with its predictable permalinks and easy-to-use API.</p>\n<h1 id=\"key-free-tier-features-forever-free\">Key Free Tier Features (Forever Free)</h1>\n<h2 id=\"📦-storage--bandwidth\">📦 Storage &amp; Bandwidth</h2>\n<ul>\n<li><strong>Bandwidth</strong>: 20 GB per month.</li>\n<li><strong>Storage</strong>: 3 GB DAM (Digital Asset Management) storage.</li>\n<li><strong>Users</strong>: 2 users included.</li>\n</ul>\n<h2 id=\"🚀-performance--transformation\">🚀 Performance &amp; Transformation</h2>\n<ul>\n<li><strong>Video Units</strong>: 500 processing units/month.</li>\n<li><strong>Extension Units</strong>: 650 units/month.</li>\n<li><strong>Purge Requests</strong>: 500 requests/month (for cache clearing).</li>\n<li><strong>Optimization</strong>: Access to all media optimizations and transformations.</li>\n</ul>\n<h2 id=\"🛠️-developer-friendly\">🛠️ Developer Friendly</h2>\n<ul>\n<li><strong>Predictable Permalinks</strong>: URLs follow a clean pattern (e.g., <code>https://ik.imagekit.io/YourID/image.png</code>), making them easy to construct programmatically.</li>\n<li><strong>API Access</strong>: Full control via API for uploading and managing assets.</li>\n<li><strong>Community Support</strong>: Integrated media library and community backing.</li>\n</ul>\n<h1 id=\"pricing\">Pricing</h1>\n<ul>\n<li><strong>$0/month</strong>: Forever free plan inclues all the above features.</li>\n</ul>\n",
+    "full_path": "projects/imagekit.html",
+    "date": "2026-01-23",
+    "filename": "imagekit.md",
+    "seo_title": "ImageKit - Free Images Tool | All We Need"
+  },
+  {
     "title": "Kittl PNG to SVG",
     "slug": "kittl-png-to-svg",
     "link": "https://www.kittl.com/tools/png-to-svg",
