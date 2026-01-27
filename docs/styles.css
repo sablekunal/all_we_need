@@ -361,83 +361,118 @@ body.simple-view .cinematic-bg {
   display: none !important;
 }
 
-/* Adjust Projects Container Top Spacing since Hero is gone */
+/* Adjust Projects Container Top Spacing */
 body.simple-view #projects {
-  padding-top: 120px !important;
+  padding-top: 100px !important;
+  padding-bottom: 50px !important;
   min-height: 100vh;
+  max-width: 1000px !important;
+  /* Limit width for readability */
+  margin: 0 auto !important;
 }
 
-/* Transform Grid to List */
-body.simple-view #projects .grid {
+/* Category Sections (was mb-32) */
+body.simple-view #projects .group\/section {
+  margin-bottom: 2rem !important;
+  /* Drastically reduce from mb-32 */
+  scroll-margin-top: 120px !important;
+}
+
+/* Category Headers */
+body.simple-view #projects h3 {
+  font-size: 1.25rem !important;
+  margin-bottom: 1rem !important;
+  color: #fff !important;
+  border-bottom: 1px solid #333 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Hide Navigation Arrows in Simple View */
+body.simple-view #projects .flex.items-center.justify-between button {
+  display: none !important;
+}
+
+/* Transform Horizontal Flex Containers to Vertical List */
+/* Target the div that contains the cards (it has flex, overflow-x-auto, etc.) */
+body.simple-view #projects .flex.overflow-x-auto {
   display: flex !important;
   flex-direction: column !important;
-  gap: 0.1rem !important;
+  gap: 0 !important;
+  /* No gap, we use padding on items */
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
 }
 
-/* Transform Cards to List Items */
+/* Transform Cards to Compact List Items */
 body.simple-view .glass-card {
   background: transparent !important;
   border: none !important;
   backdrop-filter: none !important;
-  padding: 0.2rem 0 !important;
+  padding: 6px 0 !important;
+  /* Very tight padding */
   border-radius: 0 !important;
-  display: block !important;
+  display: flex !important;
+  /* Keep flex for layout if needed, or block */
+  flex-direction: row !important;
+  align-items: baseline !important;
   opacity: 1 !important;
-  /* Ensure visibility override */
   transform: none !important;
-  /* Reset hover transforms */
+  width: 100% !important;
+  max-width: none !important;
+  /* Override fixed widths */
 }
 
-/* Hover State for List Items */
+/* Hover State */
 body.simple-view .glass-card:hover {
-  background: transparent !important;
-  border-color: transparent !important;
-  transform: none !important;
+  background: rgba(255, 255, 255, 0.03) !important;
 }
 
-/* Hide Logo/Icons/Tags/Footer within Cards */
+/* Hide Logo, Icons, Images, Footer, Border-tops */
+body.simple-view .glass-card img,
+body.simple-view .glass-card svg,
 body.simple-view .glass-card .flex.justify-between,
-/* Header with Logo */
-body.simple-view .glass-card .flex.items-center.justify-between
+/* Card Header */
+body.simple-view .glass-card .border-t,
+/* Card Footer/Contributors separator */
+body.simple-view .glass-card .absolute
 
-/* Footer with Contributors */
+/* Gradient effects */
   {
   display: none !important;
 }
 
-/* Style Title as Link */
+/* Re-structure Title and Description */
 body.simple-view .glass-card h4 {
-  display: inline-block !important;
   font-size: 1rem !important;
   font-family: var(--font-mono) !important;
   color: #60a5fa !important;
   /* Blue-400 */
-  text-decoration: none !important;
-  margin-right: 0.75rem !important;
-  margin-bottom: 0 !important;
-  font-weight: 500 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
+/* Add separator pseudo-element */
 body.simple-view .glass-card h4::after {
   content: "—";
-  margin-left: 0.75rem;
+  margin: 0 0.75rem;
   color: #525252;
+}
+
+body.simple-view .glass-card p {
+  font-size: 0.95rem !important;
+  color: #a3a3a3 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  -webkit-line-clamp: 1 !important;
+  /* Keep it single line if possible, or let it wrap modestly */
+  line-clamp: 1 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 body.simple-view .glass-card:hover h4 {
   text-decoration: underline !important;
-  color: #93c5fd !important;
-  /* Blue-300 */
-}
-
-/* Style Description Inline */
-body.simple-view .glass-card p {
-  display: inline !important;
-  font-size: 0.9rem !important;
-  color: #d4d4d4 !important;
-  /* Neutral-300 */
-  line-height: 1.5 !important;
-  -webkit-line-clamp: unset !important;
-  /* Show full text */
-  line-clamp: unset !important;
 }
