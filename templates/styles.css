@@ -350,3 +350,94 @@ body.simple-view #headerSimpleBtn {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: none;
 }
+
+/* --- Section Visibility in Simple View --- */
+body.simple-view #hero,
+body.simple-view #stats,
+body.simple-view #narrative,
+body.simple-view #contributors-section,
+body.simple-view .live-bg,
+body.simple-view .cinematic-bg {
+  display: none !important;
+}
+
+/* Adjust Projects Container Top Spacing since Hero is gone */
+body.simple-view #projects {
+  padding-top: 120px !important;
+  min-height: 100vh;
+}
+
+/* Transform Grid to List */
+body.simple-view #projects .grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.1rem !important;
+}
+
+/* Transform Cards to List Items */
+body.simple-view .glass-card {
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  padding: 0.2rem 0 !important;
+  border-radius: 0 !important;
+  display: block !important;
+  opacity: 1 !important;
+  /* Ensure visibility override */
+  transform: none !important;
+  /* Reset hover transforms */
+}
+
+/* Hover State for List Items */
+body.simple-view .glass-card:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  transform: none !important;
+}
+
+/* Hide Logo/Icons/Tags/Footer within Cards */
+body.simple-view .glass-card .flex.justify-between,
+/* Header with Logo */
+body.simple-view .glass-card .flex.items-center.justify-between
+
+/* Footer with Contributors */
+  {
+  display: none !important;
+}
+
+/* Style Title as Link */
+body.simple-view .glass-card h4 {
+  display: inline-block !important;
+  font-size: 1rem !important;
+  font-family: var(--font-mono) !important;
+  color: #60a5fa !important;
+  /* Blue-400 */
+  text-decoration: none !important;
+  margin-right: 0.75rem !important;
+  margin-bottom: 0 !important;
+  font-weight: 500 !important;
+}
+
+body.simple-view .glass-card h4::after {
+  content: "—";
+  margin-left: 0.75rem;
+  color: #525252;
+}
+
+body.simple-view .glass-card:hover h4 {
+  text-decoration: underline !important;
+  color: #93c5fd !important;
+  /* Blue-300 */
+}
+
+/* Style Description Inline */
+body.simple-view .glass-card p {
+  display: inline !important;
+  font-size: 0.9rem !important;
+  color: #d4d4d4 !important;
+  /* Neutral-300 */
+  line-height: 1.5 !important;
+  -webkit-line-clamp: unset !important;
+  /* Show full text */
+  line-clamp: unset !important;
+}
