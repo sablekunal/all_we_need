@@ -58,6 +58,44 @@
     "seo_title": "Microsoft Azure - Free Cloud-providers Tool | All We Need"
   },
   {
+    "title": "Bitbucket",
+    "slug": "bitbucket",
+    "link": "https://bitbucket.org/",
+    "description": "Git code management for professional teams, with deep Jira and Trello integration.",
+    "tags": [
+      "source-code-repos",
+      "git",
+      "atlassian",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=bitbucket.org&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Bitbucket is optimized for professional teams, especially those using the Atlassian suite (Jira, Confluence).</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Users</strong>: Unlimited public repositories; up to 5 users on private repositories.</li>\n<li><strong>Pipelines</strong>: 50 build minutes/month.</li>\n<li><strong>Storage</strong>: 1 GB file storage (LFS).</li>\n<li><strong>Integration</strong>: Best-in-class integration with Jira Software.</li>\n</ul>\n",
+    "full_path": "projects/bitbucket.html",
+    "date": "2026-01-27",
+    "filename": "bitbucket.md",
+    "seo_title": "Bitbucket - Free Source-code-repos Tool | All We Need"
+  },
+  {
+    "title": "Brainboard",
+    "slug": "brainboard",
+    "link": "https://www.brainboard.co/",
+    "description": "A collaborative solution to visually build and manage cloud infrastructures from end-to-end.",
+    "tags": [
+      "cloud-management",
+      "infrastructure",
+      "visualization",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.brainboard.co&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Brainboard bridges the gap between diagramming and coding. It allows you to design your architecture visually and automatically generates the Terraform code for it.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Design</strong>: Visual architecture designer.</li>\n<li><strong>Code Generation</strong>: Auto-generate Terraform code from diagrams.</li>\n<li><strong>Projects</strong>: Free for personal projects.</li>\n<li><strong>Reverse Engineering</strong>: Import existing TF files to visualize them (limited in free tier).</li>\n</ul>\n",
+    "full_path": "projects/brainboard.html",
+    "date": "2026-01-27",
+    "filename": "brainboard.md",
+    "seo_title": "Brainboard - Free Cloud-management Tool | All We Need"
+  },
+  {
     "title": "cron-job.org",
     "slug": "cron-joborg",
     "link": "https://cron-job.org/",
@@ -115,6 +153,25 @@
     "seo_title": "DEV Community - Free Community Tool | All We Need"
   },
   {
+    "title": "Discord",
+    "slug": "discord",
+    "link": "https://discord.com/",
+    "description": "The easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your communities.",
+    "tags": [
+      "tools-for-teams",
+      "communication",
+      "community",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=discord.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Discord has evolved from a gaming chat app to a powerful communication tool for developer communities and teams. It supports markdown, code highlighting, and screen sharing.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Users</strong>: Unlimited members and messages.</li>\n<li><strong>Voice/Video</strong>: Reliable low-latency voice and video calls (unlimited).</li>\n<li><strong>Screen Sharing</strong>: Use &quot;Go Live&quot; to share your screen with low latency.</li>\n<li><strong>Integrations</strong>: Extensive bot ecosystem and webhooks for Dev/Ops alerts.</li>\n</ul>\n",
+    "full_path": "projects/discord.html",
+    "date": "2026-01-27",
+    "filename": "discord.md",
+    "seo_title": "Discord - Free Tools-for-teams Tool | All We Need"
+  },
+  {
     "title": "Emailnator",
     "slug": "emailnator",
     "link": "https://emailnator.com",
@@ -130,6 +187,46 @@
     "date": "2024-01-01",
     "filename": "emailnator.md",
     "seo_title": "Emailnator - Free Email Tool | All We Need"
+  },
+  {
+    "title": "GitHub",
+    "slug": "github",
+    "link": "https://github.com/",
+    "description": "The world's largest AI-powered developer platform to build, scale, and secure software.",
+    "tags": [
+      "source-code-repos",
+      "git",
+      "collaboration",
+      "free-tier",
+      "ci-cd"
+    ],
+    "logo": "logo.png",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>GitHub is the standard for code hosting. Its free tier is incredibly generous, offering unlimited public/private repositories, built-in CI/CD (Actions), and project management tools.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Repositories</strong>: Unlimited public and private repositories.</li>\n<li><strong>Collaborators</strong>: Unlimited collaborators on public &amp; private repositories.</li>\n<li><strong>CI/CD</strong>: 2,000 free automation minutes/month (GitHub Actions).</li>\n<li><strong>Storage</strong>: 500MB package storage.</li>\n<li><strong>Community</strong>: Access to the largest open-source community in the world.</li>\n</ul>\n",
+    "full_path": "projects/github.html",
+    "date": "2026-01-27",
+    "filename": "github.md",
+    "seo_title": "GitHub - Free Source-code-repos Tool | All We Need"
+  },
+  {
+    "title": "GitLab",
+    "slug": "gitlab",
+    "link": "https://about.gitlab.com/",
+    "description": "A complete DevSecOps platform delivered as a single application, spanning the entire software development lifecycle.",
+    "tags": [
+      "source-code-repos",
+      "git",
+      "devops",
+      "free-tier",
+      "ci-cd"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=about.gitlab.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>GitLab offers an all-in-one DevOps platform. Its free tier is excellent for private projects that need robust CI/CD pipelines and built-in container registries without relying on external integrations.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Repositories</strong>: Unlimited public and private Git repos.</li>\n<li><strong>Users</strong>: Up to 5 collaborators per namespace (SaaS).</li>\n<li><strong>CI/CD</strong>: 400 compute minutes/month.</li>\n<li><strong>Registry</strong>: Container Registry, Package Registry, and Dependency Proxy included.</li>\n<li><strong>Security</strong>: Basic static application security testing (SAST).</li>\n</ul>\n",
+    "full_path": "projects/gitlab.html",
+    "date": "2026-01-27",
+    "filename": "gitlab.md",
+    "seo_title": "GitLab - Free Source-code-repos Tool | All We Need"
   },
   {
     "title": "Google AI Studio",
@@ -226,6 +323,25 @@
     "seo_title": "LM Arena - Free Ai Tool | All We Need"
   },
   {
+    "title": "Miro",
+    "slug": "miro",
+    "link": "https://miro.com/",
+    "description": "A scalable, secure, cross-device, and enterprise-ready collaboration whiteboard for distributed teams.",
+    "tags": [
+      "tools-for-teams",
+      "collaboration",
+      "whiteboard",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=miro.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Miro is the industry standard for digital whiteboarding. It&#39;s essential for remote brainstorming, architecture diagrams, and agile planning.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Boards</strong>: 3 editable boards.</li>\n<li><strong>Collaborators</strong>: Unlimited team members.</li>\n<li><strong>Templates</strong>: Access to a vast library of templates (Kanban, User Mapping, Flowcharts).</li>\n<li><strong>Integrations</strong>: Core integrations with Slack, Trello, etc.</li>\n<li><strong>Canvas</strong>: Infinite canvas.</li>\n</ul>\n",
+    "full_path": "projects/miro.html",
+    "date": "2026-01-27",
+    "filename": "miro.md",
+    "seo_title": "Miro - Free Tools-for-teams Tool | All We Need"
+  },
+  {
     "title": "Netlify",
     "slug": "netlify",
     "link": "https://www.netlify.com",
@@ -242,6 +358,25 @@
     "date": "2024-01-01",
     "filename": "netlify.md",
     "seo_title": "Netlify - Free Hosting Tool | All We Need"
+  },
+  {
+    "title": "Notion",
+    "slug": "notion",
+    "link": "https://www.notion.so/",
+    "description": "The all-in-one workspace for your notes, tasks, wikis, and databases.",
+    "tags": [
+      "tools-for-teams",
+      "collaboration",
+      "productivity",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.notion.so&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Notion revolutionized the &quot;all-in-one&quot; workspace concept. It is dominant in the developer space for documentation, project management, and knowledge bases.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Blocks</strong>: unlimited blocks for individual users.</li>\n<li><strong>Collaborators</strong>: Invite up to 10 guests.</li>\n<li><strong>Databases</strong>: Powerful relational database features with multiple views (Kanban, Calendar, List).</li>\n<li><strong>Templates</strong>: Access to thousands of community templates.</li>\n<li><strong>API</strong>: API access to build integrations.</li>\n</ul>\n",
+    "full_path": "projects/notion.html",
+    "date": "2026-01-27",
+    "filename": "notion.md",
+    "seo_title": "Notion - Free Tools-for-teams Tool | All We Need"
   },
   {
     "title": "OpenRouter",
@@ -302,6 +437,44 @@
     "date": "2026-01-06",
     "filename": "oxaam.md",
     "seo_title": "Oxaam - Free Premium Tool | All We Need"
+  },
+  {
+    "title": "Postman",
+    "slug": "postman",
+    "link": "https://www.postman.com/",
+    "description": "The industry-standard collaboration platform for API development, testing, and documentation.",
+    "tags": [
+      "api",
+      "developer-tools",
+      "testing",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.postman.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Postman simplifies every step of the API lifecycle. It allows you to design, mock, debug, test, document, monitor, and publish APIs.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Collaboration</strong>: Teams of up to 3 users.</li>\n<li><strong>Requests</strong>: Unlimited API requests and collections.</li>\n<li><strong>Mock Servers</strong>: 1,000 mock server calls/month.</li>\n<li><strong>Monitoring</strong>: 1,000 monitoring calls/month.</li>\n<li><strong>Public API Network</strong>: Publish documentation to the world&#39;s largest public API network.</li>\n</ul>\n",
+    "full_path": "projects/postman.html",
+    "date": "2026-01-27",
+    "filename": "postman.md",
+    "seo_title": "Postman - Free Api Tool | All We Need"
+  },
+  {
+    "title": "Pulumi",
+    "slug": "pulumi",
+    "link": "https://www.pulumi.com/",
+    "description": "Infrastructure as Code (IaC) platform that lets you create, deploy, and manage infrastructure on any cloud using your favorite languages.",
+    "tags": [
+      "cloud-management",
+      "infrastructure",
+      "devops",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.pulumi.com&sz=128",
+    "contributors": [],
+    "content": "<h1 id=\"why-its-great\">Why It&#39;s Great</h1>\n<p>Pulumi allows engineers to define infrastructure using real programming languages (TypeScript, Python, Go) rather than YAML or specialized DSLs like HCL.</p>\n<h1 id=\"key-free-features\">Key Free Features</h1>\n<ul>\n<li><strong>Individual</strong>: Free for individual use forever.</li>\n<li><strong>State Management</strong>: Managed state backend included.</li>\n<li><strong>Resources</strong>: Manage unlimited resources.</li>\n<li><strong>Deployments</strong>: Unlimited deployments.</li>\n<li><strong>Languages</strong>: Support for TS, JS, Python, Go, .NET, and Java.</li>\n</ul>\n",
+    "full_path": "projects/pulumi.html",
+    "date": "2026-01-27",
+    "filename": "pulumi.md",
+    "seo_title": "Pulumi - Free Cloud-management Tool | All We Need"
   },
   {
     "title": "Railway",
