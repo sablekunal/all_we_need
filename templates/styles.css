@@ -363,116 +363,134 @@ body.simple-view .cinematic-bg {
 
 /* Adjust Projects Container Top Spacing */
 body.simple-view #projects {
-  padding-top: 100px !important;
+  padding-top: 80px !important;
   padding-bottom: 50px !important;
   min-height: 100vh;
-  max-width: 1000px !important;
-  /* Limit width for readability */
+  max-width: 900px !important;
+  /* Proper reading width */
   margin: 0 auto !important;
+  display: block !important;
 }
 
-/* Category Sections (was mb-32) */
+/* Hide Category Dividers/Headers to save space (User complained about empty space) */
+/* Or keep them very minimal. Let's keep minimal for structure but remove ALL margin */
 body.simple-view #projects .group\/section {
-  margin-bottom: 2rem !important;
-  /* Drastically reduce from mb-32 */
-  scroll-margin-top: 120px !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+  /* Remove separator lines */
 }
 
-/* Category Headers */
+/* Compact Headers */
 body.simple-view #projects h3 {
-  font-size: 1.25rem !important;
-  margin-bottom: 1rem !important;
-  color: #fff !important;
-  border-bottom: 1px solid #333 !important;
-  padding-bottom: 0.5rem !important;
+  font-size: 0.85rem !important;
+  /* Small label */
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #525252 !important;
+  /* Dimmed */
+  border: none !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-/* Hide Navigation Arrows in Simple View */
-body.simple-view #projects .flex.items-center.justify-between button {
+/* Hide Navigation Arrows & Counts */
+body.simple-view #projects .flex.items-center.justify-between button,
+body.simple-view #projects .flex.items-center.justify-between span {
   display: none !important;
 }
 
-/* Transform Horizontal Flex Containers to Vertical List */
-/* Target the div that contains the cards (it has flex, overflow-x-auto, etc.) */
+/* Reset Scroll Containers to Normal Block Flow */
 body.simple-view #projects .flex.overflow-x-auto {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0 !important;
-  /* No gap, we use padding on items */
-  padding-bottom: 0 !important;
-  margin: 0 !important;
+  display: block !important;
+  /* Break flexbox completely */
   overflow: visible !important;
+  white-space: normal !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Transform Cards to Compact List Items */
+/* Transform Cards to Compact Rows */
 body.simple-view .glass-card {
   background: transparent !important;
   border: none !important;
   backdrop-filter: none !important;
-  padding: 6px 0 !important;
-  /* Very tight padding */
+  padding: 4px 0 !important;
+  /* Ultra tight */
   border-radius: 0 !important;
   display: flex !important;
-  /* Keep flex for layout if needed, or block */
   flex-direction: row !important;
   align-items: baseline !important;
+  /* Align text baselines */
   opacity: 1 !important;
   transform: none !important;
   width: 100% !important;
   max-width: none !important;
-  /* Override fixed widths */
+  margin: 0 !important;
+  height: auto !important;
+  /* Force auto height */
+  min-height: 0 !important;
+  /* Remove min-height constraints */
 }
 
 /* Hover State */
 body.simple-view .glass-card:hover {
-  background: rgba(255, 255, 255, 0.03) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Hide Logo, Icons, Images, Footer, Border-tops */
+/* Hide Elements */
 body.simple-view .glass-card img,
 body.simple-view .glass-card svg,
 body.simple-view .glass-card .flex.justify-between,
-/* Card Header */
 body.simple-view .glass-card .border-t,
-/* Card Footer/Contributors separator */
-body.simple-view .glass-card .absolute
+body.simple-view .glass-card .absolute,
+body.simple-view .glass-card .bg-gradient-to-br
 
-/* Gradient effects */
+/* Hide gradient overlays from New items */
   {
   display: none !important;
 }
 
-/* Re-structure Title and Description */
+/* Title Styling */
 body.simple-view .glass-card h4 {
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
   font-family: var(--font-mono) !important;
   color: #60a5fa !important;
   /* Blue-400 */
   margin: 0 !important;
   white-space: nowrap !important;
   flex-shrink: 0 !important;
+  font-weight: 400 !important;
 }
 
-/* Add separator pseudo-element */
+/* Dash Separator */
 body.simple-view .glass-card h4::after {
   content: "—";
-  margin: 0 0.75rem;
-  color: #525252;
+  margin: 0 0.5rem;
+  color: #404040;
 }
 
+/* Description Styling */
 body.simple-view .glass-card p {
-  font-size: 0.95rem !important;
+  font-size: 0.9rem !important;
   color: #a3a3a3 !important;
   margin: 0 !important;
   line-height: 1.4 !important;
-  display: block !important;
-  -webkit-line-clamp: 1 !important;
-  /* Keep it single line if possible, or let it wrap modestly */
-  line-clamp: 1 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
+  display: inline-block !important;
+  /* Allow wrapping */
+  white-space: normal !important;
+  /* Allow text wrapping */
 }
 
 body.simple-view .glass-card:hover h4 {
   text-decoration: underline !important;
+}
+
+/* Special Fix for "Newly Added" Section in Simple View */
+/* It uses different classes (grid/flex). We need to normalize it. */
+body.simple-view .mb-32 {
+  margin-bottom: 2rem !important;
+  /* Override layout spacing */
 }

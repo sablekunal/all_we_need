@@ -625,7 +625,8 @@ async function build() {
     .replace(/href="leaderboard.html"/g, 'href="../leaderboard.html"')
     .replace(/href="about.html"/g, 'href="../about.html"')
     .replace(/src="logo.png"/g, 'src="../logo.png"')
-    .replace(/href="favicon.png"/g, 'href="../favicon.png"');
+    .replace(/href="favicon.png"/g, 'href="../favicon.png"')
+    .replace(/src="js\/simple-view.js"/g, 'src="../js/simple-view.js"');
 
   // Highlight PROJECTS (Desktop) & Mobile
   // Since we use LEADERBOARD base, it has "Leaderboard" active. We must unset it and set "Projects".
