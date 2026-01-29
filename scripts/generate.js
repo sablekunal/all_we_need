@@ -377,7 +377,7 @@ async function build() {
   let newlyAddedHtml = `
       <div class="mb-32">
           <div class="text-center mb-12">
-               <h3 class="text-2xl font-mono uppercase tracking-widest text-white mb-2">// Newly Added</h3>
+               <h2 class="text-2xl font-mono uppercase tracking-widest text-white mb-2">// Newly Added</h2>
                <p class="text-neutral-500 text-sm">Fresh from the community pipeline</p>
           </div>
 
@@ -394,7 +394,7 @@ async function build() {
                       
                       <div class="bg-neutral-900/90 backdrop-blur-xl h-full rounded-xl p-6 relative z-10 border ${glowClass} flex flex-col gap-4">
                           <div class="flex justify-between items-start">
-                              <img src="${p.logo}" alt="${escapeHtml(p.title)}" class="w-10 h-10 rounded-lg bg-neutral-950 object-cover border border-white/10">
+                              <img src="${p.logo}" width="40" height="40" alt="${escapeHtml(p.title)}" class="w-10 h-10 rounded-lg bg-neutral-950 object-cover border border-white/10">
                               <span class="text-[10px] font-bold bg-white text-black px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
                           </div>
                           
