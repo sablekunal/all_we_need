@@ -589,7 +589,7 @@ async function build() {
               ${group.map(p => `
               <a href="${p.full_path.replace('projects/', '')}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
                  <div class="flex justify-between items-start mb-6">
-                      <img src="${p.logo}" alt="${escapeHtml(p.title)} Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <img src="${p.logo}" width="48" height="48" alt="${escapeHtml(p.title)} Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
                       <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                  </div>
                  <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">${escapeHtml(p.title)}</h4>
@@ -725,7 +725,7 @@ async function build() {
         <tr class="hover:bg-white/5 transition group">
             <td class="px-6 py-6 text-neutral-500 font-mono text-xs">${i + 1 < 10 ? '0' + (i + 1) : i + 1}</td>
             <td class="px-6 py-6 flex items-center gap-4">
-                <img src="${c.avatar_url}" class="w-10 h-10 rounded-full border border-neutral-800 grayscale group-hover:grayscale-0 transition-all">
+                <img src="${c.avatar_url}" width="40" height="40" class="w-10 h-10 rounded-full border border-neutral-800 grayscale group-hover:grayscale-0 transition-all">
                 <a href="${c.html_url}" target="_blank" class="font-medium text-neutral-300 group-hover:text-white transition-colors">${c.login}</a>
             </td>
             <td class="px-6 py-6 text-right font-mono text-neutral-500 group-hover:text-white transition-colors">${c.count}</td>
