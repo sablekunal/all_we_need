@@ -232,7 +232,7 @@ async function build() {
       logo: logo,
       contributors: ghDetails.contributors || [],
       content: htmlContent,
-      full_path: `projects/${slug}.html`, // Relative path for local navigation
+      full_path: `projects/${slug}`, // Relative path (Clean URL)
       date: data.date || '2020-01-01', // Default to old date if missing
       filename: file,
       seo_title: `${data.title} - Free ${data.tags[0] ? data.tags[0].charAt(0).toUpperCase() + data.tags[0].slice(1) : 'Developer'} Tool | All We Need`

@@ -154,7 +154,7 @@ function renderResults(results, container) {
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${results.map(p => `
-                 <a href="${p.full_path}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 opacity-0 translate-y-4 search-result-item">
+                 <a href="/${p.full_path}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 opacity-0 translate-y-4 search-result-item">
                     <div class="flex justify-between items-start mb-6">
                          <img src="${p.logo}" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all">
                          <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
