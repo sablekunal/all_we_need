@@ -9,8 +9,8 @@
   </p>
 
   <p>
-    <a href="https://github.com/ghostshanky/allweneed.github.io/stargazers"><img src="https://img.shields.io/github/stars/ghostshanky/allweneed.github.io?style=for-the-badge&color=blue" alt="Stars"></a>
-    <a href="https://github.com/ghostshanky/allweneed.github.io/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ghostshanky/allweneed.github.io?style=for-the-badge&color=orange" alt="License"></a>
+    <a href="https://github.com/sablekunal/all_we_need/stargazers"><img src="https://img.shields.io/github/stars/sablekunal/all_we_need?style=for-the-badge&color=blue" alt="Stars"></a>
+    <a href="https://github.com/sablekunal/all_we_need/blob/master/LICENSE"><img src="https://img.shields.io/github/license/sablekunal/all_we_need?style=for-the-badge&color=orange" alt="License"></a>
   </p>
 
   <br />

@@ -105,7 +105,7 @@ async function getRepoDetails(link) {
 }
 
 async function getLeaderboardData() {
-  const repo = 'ghostshanky/allweneed.github.io';
+  const repo = 'sablekunal/all_we_need';
   const prsUrl = `https://api.github.com/repos/${repo}/pulls?state=closed&per_page=100&sort=updated&direction=desc`;
 
   const prs = await fetchJSON(prsUrl) || [];
@@ -751,11 +751,23 @@ async function build() {
 
   fs.writeFileSync(path.join(OUT_DIR, 'leaderboard.html'), minifyHtml(lbHtml));
 
+  // 6b. Generate Suggestions HTML & copy assets
+  ensureDir(path.join(OUT_DIR, 'js'));
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'))) {
+    fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'), path.join(OUT_DIR, 'js', 'announcement.js'));
+  }
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'suggestions.json'))) {
+    fs.copyFileSync(path.join(TEMPLATES_DIR, 'suggestions.json'), path.join(OUT_DIR, 'suggestions.json'));
+  }
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'suggestions.html'))) {
+    let sugHtml = fs.readFileSync(path.join(TEMPLATES_DIR, 'suggestions.html'), 'utf8');
+    fs.writeFileSync(path.join(OUT_DIR, 'suggestions.html'), minifyHtml(sugHtml));
+  }
+
   // 6. JSON Outputs
   fs.writeFileSync(path.join(OUT_DIR, 'projects.json'), JSON.stringify(projects, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'leaderboard.json'), JSON.stringify(leaderboard, null, 2));
 
-  // 7. Generate Sitemap
   // 7. Generate Sitemap
   console.log("Generating Sitemap...");
   const baseUrl = "https://allweneed.pages.dev";
@@ -771,6 +783,11 @@ async function build() {
   </url>
   <url>
     <loc>${baseUrl}/projects/</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/suggestions</loc>
     <lastmod>${today}</lastmod>
     <priority>0.9</priority>
   </url>
@@ -822,7 +839,7 @@ async function build() {
 
   // Footer / Contact
   llmsContent += `\n\n## Contribute
-Submit PRs at https://github.com/ghostshanky/allweneed.github.io`;
+Submit PRs at https://github.com/sablekunal/all_we_need`;
 
   fs.writeFileSync(path.join(OUT_DIR, 'llms.txt'), llmsContent);
 

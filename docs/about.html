@@ -69,13 +69,93 @@
     <script defer src="background-manager.js"></script>
     <script defer src="js/simple-view.js"></script>
     <script defer src="js/animations.js"></script>
+    <script defer src="js/announcement.js"></script>
 </head>
 
 <body class="bg-neutral-950/0 text-neutral-100 antialiased">
     <div class="noise-overlay"></div>
 
+    
+    <div id="announcementBanner" class="relative z-[100] bg-gradient-to-r from-purple-950 via-indigo-950 to-neutral-950 text-white border-b border-indigo-500/30 px-4 py-3 shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm font-sans">
+            
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-neutral-200">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    Support Needed
+                </span>
+                <span class="font-semibold text-white">Your support needed!</span>
+                <span class="text-neutral-500 hidden sm:inline">|</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="inline-flex items-center gap-1 text-indigo-300 hover:text-white font-mono text-xs transition-colors underline underline-offset-4">
+                    1. Contribute (~5 mins)
+                </a>
+                <span class="text-neutral-600 font-mono">•</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="inline-flex items-center gap-1 text-yellow-300 hover:text-white font-mono text-xs transition-colors bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">
+                    2. ⭐ Star Repo
+                </a>
+                <span class="text-neutral-600 font-mono">•</span>
+                <button type="button" onclick="toggleSuggestionForm()" class="inline-flex items-center gap-1 text-purple-300 hover:text-white font-mono text-xs transition-colors underline underline-offset-4 cursor-pointer">
+                    3. Share Suggestions & Expectations
+                </button>
+                <span class="text-neutral-300 font-semibold hidden lg:inline">Thank you! 🙏</span>
+            </div>
+
+            
+            <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="toggleSuggestionForm()" class="px-3 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all shadow-md flex items-center gap-1.5 cursor-pointer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Suggest
+                </button>
+                <button type="button" id="dismissBannerBtn" aria-label="Close Announcement" class="text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+
+        
+        <div id="quickSuggestionModal" class="hidden max-w-2xl mx-auto mt-3 pt-3 border-t border-white/10 animate-fade-in">
+            <form id="announcementSuggestionForm" onsubmit="handleQuickSuggestionSubmit(event)" class="bg-neutral-900/95 p-4 rounded-xl border border-indigo-500/30 space-y-3 shadow-2xl">
+                <div class="flex items-center justify-between">
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-indigo-300 font-bold flex items-center gap-2">
+                        💡 Share Suggestions / Expectations
+                    </h4>
+                    <a href="suggestions.html" class="text-[11px] font-mono text-neutral-400 hover:text-white underline">View Suggestions Page →</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[11px] font-mono text-neutral-400 mb-1">Your Name / Handle *</label>
+                        <input type="text" id="sugName" required placeholder="e.g. Kunal or @kunaldev" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-mono text-neutral-400 mb-1">Category</label>
+                        <select id="sugCategory" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-neutral-300 focus:outline-none focus:border-indigo-500 font-sans">
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="UI Improvement">UI Improvement</option>
+                            <option value="New Category">New Category</option>
+                            <option value="Bug Fix">Bug Fix</option>
+                            <option value="General Feedback">General Feedback</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-mono text-neutral-400 mb-1">Suggestion Description / Expected Changes *</label>
+                    <textarea id="sugDescription" required rows="2" placeholder="Describe the changes or suggestions you expect in this project..." class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans"></textarea>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                    <span class="text-[11px] font-mono text-neutral-400">Reflected on /suggestions page & stored on GitHub Issues</span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="toggleSuggestionForm()" class="px-3 py-1 text-xs font-mono text-neutral-400 hover:text-white">Cancel</button>
+                        <button type="submit" class="px-4 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all shadow-md">
+                            Submit & Store 🙏
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <header id="header"
-        class="fixed top-0 w-full z-50 py-6 bg-neutral-950/10 backdrop-blur-md border-b border-white/5 transition-all duration-500"
+        class="sticky top-0 w-full z-50 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-white/5 transition-all duration-500"
         data-scroll-active-class="bg-neutral-950/95 backdrop-blur-md border-b border-white/10 shadow-2xl py-4">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
             <a href="index.html"
@@ -88,10 +168,10 @@
                 class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
                 <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
                 <a href="projects/index.html" class="hover:text-white transition-colors duration-300">Projects</a>
-                <a href="leaderboard.html"
-                    class="text-white hover:text-white transition-colors duration-300">Leaderboard</a>
+                <a href="suggestions.html" class="hover:text-white transition-colors duration-300">Suggestions</a>
+                <a href="leaderboard.html" class="hover:text-white transition-colors duration-300">Leaderboard</a>
                 <a href="about.html" class="text-white font-bold hover:text-white transition-colors duration-300">About</a>
-                <a href="https://github.com/ghostshanky/allweneed.github.io" target="_blank"
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank"
                     class="hover:text-white transition-colors duration-300">GitHub</a>
             </nav>
 
@@ -137,12 +217,14 @@
                 class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Home</a>
             <a href="projects/index.html"
                 class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Projects</a>
+            <a href="suggestions.html"
+                class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Suggestions</a>
             <a href="leaderboard.html"
                 class="mobile-link text-xl font-mono text-white hover:text-white transition-colors tracking-wide">Leaderboard</a>
             <a href="about.html"
                 class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">About</a>
             <div class="h-px w-full bg-white/10 my-4"></div>
-            <a href="https://github.com/ghostshanky/allweneed.github.io" target="_blank"
+            <a href="https://github.com/sablekunal/all_we_need" target="_blank"
                 class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide flex items-center gap-2">
                 GitHub <span>↗</span>
             </a>
@@ -240,20 +322,9 @@
             <div class="flex flex-wrap justify-center gap-2">
                 
                 
-    <div class="relative group">
-        <a href="https://github.com/sablekunal" target="_blank">
-            <img src="https://avatars.githubusercontent.com/u/186178187?v=4" 
-                class="w-10 h-10 rounded-full border border-neutral-800 grayscale group-hover:grayscale-0 group-hover:border-white transition-all duration-300 transform group-hover:scale-110 cursor-pointer object-cover bg-neutral-900">
-        </a>
-        
-        <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-neutral-900 border border-white/10 rounded-lg text-[10px] font-mono text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none z-20 shadow-xl translate-y-2 group-hover:translate-y-0">
-            sablekunal
-        </div>
-    </div>
-  
             </div>
             <p class="mt-8 text-neutral-600 text-xs font-mono">
-                Join 1 contributors building the future.
+                Join 0 contributors building the future.
             </p>
         </div>
     </main>
@@ -263,7 +334,7 @@
         <div class="font-bold text-2xl mb-4 tracking-tight">AWN_</div>
         <div class="flex justify-center gap-6 mb-8 text-neutral-500 text-sm">
             <a href="about.html" class="hover:text-white transition text-white">About</a>
-            <a href="https://github.com/ghostshanky/allweneed.github.io" class="hover:text-white transition">GitHub</a>
+            <a href="https://github.com/sablekunal/all_we_need" class="hover:text-white transition">GitHub</a>
             <a href="leaderboard.html" class="hover:text-white transition">Leaderboard</a>
         </div>
         <p class="text-neutral-600 text-xs font-mono">MIT License · Community Built</p>

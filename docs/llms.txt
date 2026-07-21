@@ -42,4 +42,4 @@
 
 
 ## Contribute
-Submit PRs at https://github.com/ghostshanky/allweneed.github.io
+Submit PRs at https://github.com/sablekunal/all_we_need
