@@ -1,12 +1,29 @@
 
 // All We Need - Premium Motion & Interactions
-// Depends on: GSAP, ScrollTrigger
+// Depends on: GSAP, ScrollTrigger, Lenis (loaded in HTML)
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Integrate with GSAP ScrollTrigger if loaded
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Initialize Lenis (Smooth Scroll)
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
     }
+    requestAnimationFrame(raf);
+
+    // Integrate with GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
     // 2. Hero Animations
     initHero();
@@ -150,21 +167,24 @@ function initScrollReveals() {
 }
 
 function initCounters() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
     const counters = document.querySelectorAll('.stat-counter');
     counters.forEach(counter => {
         const target = parseInt(counter.dataset.target || "0");
+
         ScrollTrigger.create({
             trigger: counter,
-            start: "top 95%",
+            start: "top 90%",
             once: true,
             onEnter: () => {
-                counter.innerText = "0";
                 gsap.to(counter, {
                     innerText: target,
                     duration: 2,
                     snap: { innerText: 1 },
-                    ease: "power2.out"
+                    ease: "power2.out",
+                    onUpdate: function () {
+                        // formats 1000 -> 1,000 if needed, or just keep raw
+                        // this.targets()[0].innerText = Math.ceil(this.targets()[0].innerText); 
+                    }
                 });
             }
         });
