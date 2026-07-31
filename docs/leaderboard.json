@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "login": "yadelishka",
+    "avatar_url": "https://avatars.githubusercontent.com/u/161241496?v=4",
+    "html_url": "https://github.com/yadelishka",
+    "count": 1,
+    "merged_dates": [
+      "2026-07-31T11:17:04Z"
+    ]
+  },
+  {
+    "login": "Ducksss",
+    "avatar_url": "https://avatars.githubusercontent.com/u/58126222?v=4",
+    "html_url": "https://github.com/Ducksss",
+    "count": 1,
+    "merged_dates": [
+      "2026-07-31T11:17:01Z"
+    ]
+  },
+  {
+    "login": "sablekunal",
+    "avatar_url": "https://avatars.githubusercontent.com/u/186178187?v=4",
+    "html_url": "https://github.com/sablekunal",
+    "count": 1,
+    "merged_dates": [
+      "2025-09-27T15:57:30Z"
+    ]
+  }
+]

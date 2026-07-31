@@ -10,6 +10,7 @@
 - [cron-job.org](https://allweneed.pages.dev/projects/cron-joborg): Free external cron job service. Perfect for keeping free-tier services alive. #utilities #devops #automation #free
 - [Design Arena](https://allweneed.pages.dev/projects/design-arena): An AI-powered platform for generating and comparing UI and design concepts. #design #ai #ui-ux
 - [DEV Community](https://allweneed.pages.dev/projects/dev-community): A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers. #community #blog #developer #learning #open-source
+- [DevBox Tools](https://allweneed.pages.dev/projects/devbox-tools): Free browser-based developer toolbox with 58+ utilities for JSON, regex, hashing, Base64, timestamps, URL encoding, SEO, SSL, and more. #devtools #productivity #web #security
 - [Discord](https://allweneed.pages.dev/projects/discord): The easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your communities. #tools-for-teams #communication #community #free-tier
 - [Emailnator](https://allweneed.pages.dev/projects/emailnator): Generate disposable Gmail-style emails #email #productivity
 - [GitHub](https://allweneed.pages.dev/projects/github): The world's largest AI-powered developer platform to build, scale, and secure software. #source-code-repos #git #collaboration #free-tier #ci-cd
@@ -25,6 +26,7 @@
 - [OpenRouter](https://allweneed.pages.dev/projects/openrouter): Unified API gateway that gives developers access to hundreds of LLMs and multimodal models through a single endpoint #api #llm #models #developer #free
 - [Oracle Cloud](https://allweneed.pages.dev/projects/oracle-cloud): Known for the most generous "Always Free" compute offering in the industry, including powerful ARM-based instances. #cloud-providers #hosting #backend #free-tier #oracle
 - [Oxaam](https://allweneed.pages.dev/projects/oxaam): Access shared premium accounts for services like Canva Pro, ChatGPT, and more. #premium #accounts #bypass #utilities #free
+- [Payload Components](https://allweneed.pages.dev/projects/payload-components): MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring. #devtools #design #open-source #nextjs
 - [Postman](https://allweneed.pages.dev/projects/postman): The industry-standard collaboration platform for API development, testing, and documentation. #api #developer-tools #testing #free-tier
 - [Pulumi](https://allweneed.pages.dev/projects/pulumi): Infrastructure as Code (IaC) platform that lets you create, deploy, and manage infrastructure on any cloud using your favorite languages. #cloud-management #infrastructure #devops #free-tier
 - [Railway](https://allweneed.pages.dev/projects/railway): A developer-focused cloud platform to deploy apps, databases, and services quickly. #cloud #deployment #backend

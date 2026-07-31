@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, follow" />
     <title>Projects — All We Need</title>
 
     
@@ -61,19 +62,16 @@
     
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     
     <link rel="stylesheet" href="../styles.css">
     <script defer src="../search.js"></script>
-    <script defer src="background-manager.js"></script>
     <script defer src="../js/simple-view.js"></script>
     <script defer src="../js/animations.js"></script>
     <script defer src="js/announcement.js"></script>
 </head>
 
-<body class="bg-neutral-950 text-neutral-100 antialiased">
-    <div class="noise-overlay"></div>
+<body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
     
     <div id="announcementBanner" class="relative z-[100] bg-gradient-to-r from-purple-950 via-indigo-950 to-neutral-950 text-white border-b border-indigo-500/30 px-4 py-3 shadow-xl transition-all duration-300">
@@ -266,16 +264,6 @@
         backdrop.addEventListener('click', toggleMenu);
     </script>
 
-    
-    <div class="cinematic-bg fixed top-0 left-0 w-full h-full -z-10">
-        <img src="https://cdn.prod.website-files.com/68e3c26f7edb22bc9e5314b2/68e7e742b6fb64146d029e04_drone-static-render-01-p-2000.jpg"
-            class="cinematic-fallback" alt="Background">
-        
-        <video class="cinematic-video"
-            src="https://d3v55qvjb2v012.cloudfront.net/C0IV/2025/12/22/13/00/cTl3IcnYKZI/sc.mp4?&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kM3Y1NXF2amIydjAxMi5jbG91ZGZyb250Lm5ldC9DMElWLzIwMjUvMTIvMjIvMTMvMDAvY1RsM0ljbllLWkkvc2MubXA0PyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2NjQwOTIxNH19fV19&Signature=QebcC3Ifq33OKeQXLgEDb1ttjVyzV3nuw6S~tO0jG4SfGBJFvh5jxXJDWy8t9IKHA~urh~P7LfwUtrM1USfo-RQt76LMsKkAZkjwfV3rlEt4ySsjgtRLA7Wb3YAbPo9HlKmY3Z~6x6bHUHI0QLw64iz1hd1QUWwOPaZAh79Uim0_&Key-Pair-Id=APKAI4E2RN57D46ONMEQ" autoplay
-            preload="metadata" muted loop playsinline style="opacity: 0.4 !important;"></video>
-        <div class="cinematic-overlay"></div>
-    </div>
 
     
     <main class="max-w-7xl mx-auto px-6 pt-40 pb-20 min-h-screen animate-fade-in relative z-10">
@@ -1007,6 +995,99 @@
               </div>
           </div>
    
+         <div class="mb-32 group/section scroll-mt-24" id="productivity">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // productivity
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">5 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-productivity">
+              
+              <a href="devbox-tools" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=devbox.tools&sz=128" width="48" height="48" alt="DevBox Tools Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DevBox Tools</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Free browser-based developer toolbox with 58+ utilities for JSON, regex, hashing, Base64, timestamps, URL encoding, SEO, SSL, and more.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="emailnator" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=emailnator.com&sz=128" width="48" height="48" alt="Emailnator Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Emailnator</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Generate disposable Gmail-style emails</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="notion" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.notion.so&sz=128" width="48" height="48" alt="Notion Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Notion</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">The all-in-one workspace for your notes, tasks, wikis, and databases.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="ssyoutube" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=ssyoutube.online&sz=128" width="48" height="48" alt="SSYouTube Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">SSYouTube</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Download YouTube videos in max quality. Free &amp; no ads.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="yupp-ai" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=yupp.ai&sz=128" width="48" height="48" alt="Yupp AI Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Yupp AI</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">A unified interface to compare and use multiple AI models in one place.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
          <div class="mb-32 group/section scroll-mt-24" id="cloud-providers">
              <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
                  <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
@@ -1149,83 +1230,6 @@
                  </div>
                  <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">SaveWeb2Zip</h4>
                  <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Download entire websites or landing pages as a ZIP archive with all assets (HTML, CSS, JS, Images, Fonts).</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              </div>
-          </div>
-   
-         <div class="mb-32 group/section scroll-mt-24" id="productivity">
-             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
-                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
-                     // productivity
-                 </h3>
-                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">4 items</span>
-             </div>
-             
-              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-productivity">
-              
-              <a href="emailnator" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=emailnator.com&sz=128" width="48" height="48" alt="Emailnator Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Emailnator</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Generate disposable Gmail-style emails</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              <a href="notion" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=www.notion.so&sz=128" width="48" height="48" alt="Notion Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Notion</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">The all-in-one workspace for your notes, tasks, wikis, and databases.</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              <a href="ssyoutube" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=ssyoutube.online&sz=128" width="48" height="48" alt="SSYouTube Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">SSYouTube</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Download YouTube videos in max quality. Free &amp; no ads.</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              <a href="yupp-ai" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=yupp.ai&sz=128" width="48" height="48" alt="Yupp AI Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Yupp AI</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">A unified interface to compare and use multiple AI models in one place.</p>
                  
                  <div class="flex items-center justify-between border-t border-white/5 pt-4">
                      <span class="text-xs font-mono text-neutral-600">By Community</span>
@@ -1652,6 +1656,128 @@
               </div>
           </div>
    
+         <div class="mb-32 group/section scroll-mt-24" id="design">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // design
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">3 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-design">
+              
+              <a href="design-arena" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.designarena.ai&sz=128" width="48" height="48" alt="Design Arena Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Design Arena</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">An AI-powered platform for generating and comparing UI and design concepts.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="kittl-png-to-svg" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.kittl.com&sz=128" width="48" height="48" alt="Kittl PNG to SVG Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Kittl PNG to SVG</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Best ever PNG to SVG converter. Unlimited usage.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="payload-components" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.payload-components.xyz&sz=128" width="48" height="48" alt="Payload Components Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Payload Components</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
+         <div class="mb-32 group/section scroll-mt-24" id="open-source">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // open-source
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">3 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-open-source">
+              
+              <a href="dev-community" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=dev.to&sz=128" width="48" height="48" alt="DEV Community Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DEV Community</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="payload-components" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.payload-components.xyz&sz=128" width="48" height="48" alt="Payload Components Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Payload Components</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              <a href="unmutesh" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=unmute.sh&sz=128" width="48" height="48" alt="Unmute.sh Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Unmute.sh</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Speak to an AI using Kyutai&#39;s new low-latency open-source speech-to-text and text-to-speech models.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
          <div class="mb-32 group/section scroll-mt-24" id="tools-for-teams">
              <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
                  <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
@@ -1970,51 +2096,6 @@
               </div>
           </div>
    
-         <div class="mb-32 group/section scroll-mt-24" id="design">
-             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
-                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
-                     // design
-                 </h3>
-                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">2 items</span>
-             </div>
-             
-              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-design">
-              
-              <a href="design-arena" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=www.designarena.ai&sz=128" width="48" height="48" alt="Design Arena Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Design Arena</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">An AI-powered platform for generating and comparing UI and design concepts.</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              <a href="kittl-png-to-svg" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
-                 <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=www.kittl.com&sz=128" width="48" height="48" alt="Kittl PNG to SVG Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
-                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                 </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Kittl PNG to SVG</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Best ever PNG to SVG converter. Unlimited usage.</p>
-                 
-                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
-                     <span class="text-xs font-mono text-neutral-600">By Community</span>
-                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                          
-                     </div>
-                 </div>
-              </a>
-              
-              </div>
-          </div>
-   
          <div class="mb-32 group/section scroll-mt-24" id="community">
              <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
                  <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
@@ -2105,23 +2186,23 @@
               </div>
           </div>
    
-         <div class="mb-32 group/section scroll-mt-24" id="open-source">
+         <div class="mb-32 group/section scroll-mt-24" id="devtools">
              <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
                  <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
-                     // open-source
+                     // devtools
                  </h3>
                  <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">2 items</span>
              </div>
              
-              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-open-source">
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-devtools">
               
-              <a href="dev-community" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+              <a href="devbox-tools" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
                  <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=dev.to&sz=128" width="48" height="48" alt="DEV Community Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <img src="https://www.google.com/s2/favicons?domain=devbox.tools&sz=128" width="48" height="48" alt="DevBox Tools Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
                       <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                  </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DEV Community</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers.</p>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DevBox Tools</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Free browser-based developer toolbox with 58+ utilities for JSON, regex, hashing, Base64, timestamps, URL encoding, SEO, SSL, and more.</p>
                  
                  <div class="flex items-center justify-between border-t border-white/5 pt-4">
                      <span class="text-xs font-mono text-neutral-600">By Community</span>
@@ -2131,13 +2212,13 @@
                  </div>
               </a>
               
-              <a href="unmutesh" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+              <a href="payload-components" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
                  <div class="flex justify-between items-start mb-6">
-                      <img src="https://www.google.com/s2/favicons?domain=unmute.sh&sz=128" width="48" height="48" alt="Unmute.sh Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <img src="https://www.google.com/s2/favicons?domain=www.payload-components.xyz&sz=128" width="48" height="48" alt="Payload Components Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
                       <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                  </div>
-                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Unmute.sh</h4>
-                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Speak to an AI using Kyutai&#39;s new low-latency open-source speech-to-text and text-to-speech models.</p>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Payload Components</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.</p>
                  
                  <div class="flex items-center justify-between border-t border-white/5 pt-4">
                      <span class="text-xs font-mono text-neutral-600">By Community</span>
@@ -2681,6 +2762,64 @@
               </div>
           </div>
    
+         <div class="mb-32 group/section scroll-mt-24" id="web">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // web
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">1 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-web">
+              
+              <a href="devbox-tools" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=devbox.tools&sz=128" width="48" height="48" alt="DevBox Tools Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DevBox Tools</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Free browser-based developer toolbox with 58+ utilities for JSON, regex, hashing, Base64, timestamps, URL encoding, SEO, SSL, and more.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
+         <div class="mb-32 group/section scroll-mt-24" id="security">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // security
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">1 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-security">
+              
+              <a href="devbox-tools" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=devbox.tools&sz=128" width="48" height="48" alt="DevBox Tools Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">DevBox Tools</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Free browser-based developer toolbox with 58+ utilities for JSON, regex, hashing, Base64, timestamps, URL encoding, SEO, SSL, and more.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
          <div class="mb-32 group/section scroll-mt-24" id="communication">
              <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
                  <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
@@ -2988,6 +3127,35 @@
                  </div>
                  <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Oxaam</h4>
                  <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">Access shared premium accounts for services like Canva Pro, ChatGPT, and more.</p>
+                 
+                 <div class="flex items-center justify-between border-t border-white/5 pt-4">
+                     <span class="text-xs font-mono text-neutral-600">By Community</span>
+                     <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                          
+                     </div>
+                 </div>
+              </a>
+              
+              </div>
+          </div>
+   
+         <div class="mb-32 group/section scroll-mt-24" id="nextjs">
+             <div class="flex items-center justify-between mb-8 border-b border-neutral-900 pb-4">
+                 <h3 class="text-xl font-mono uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+                     // nextjs
+                 </h3>
+                 <span class="text-xs font-mono text-neutral-600 bg-neutral-900 px-3 py-1 rounded-full">1 items</span>
+             </div>
+             
+              <div class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 relative" id="scroll-nextjs">
+              
+              <a href="payload-components" class="glass-card block p-8 rounded-3xl relative overflow-hidden group reveal-stagger hover:scale-[1.02] transition-transform duration-500 w-[300px] md:w-[350px] shrink-0 snap-center h-full flex flex-col justify-between">
+                 <div class="flex justify-between items-start mb-6">
+                      <img src="https://www.google.com/s2/favicons?domain=www.payload-components.xyz&sz=128" width="48" height="48" alt="Payload Components Logo" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                      <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                 </div>
+                 <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">Payload Components</h4>
+                 <p class="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-2 h-10">MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.</p>
                  
                  <div class="flex items-center justify-between border-t border-white/5 pt-4">
                      <span class="text-xs font-mono text-neutral-600">By Community</span>
@@ -3469,14 +3637,21 @@
   
 
     
-    <footer class="py-20 border-t border-neutral-900 text-center relative z-10">
-        <div class="font-bold text-2xl mb-4 tracking-tight">AWN_</div>
-        <div class="flex justify-center gap-6 mb-8 text-neutral-500 text-sm">
-            <a href="../about.html" class="hover:text-white transition">About</a>
-            <a href="https://github.com/sablekunal/all_we_need" class="hover:text-white transition">GitHub</a>
-            <a href="../leaderboard.html" class="hover:text-white transition">Leaderboard</a>
+    <footer class="border-t border-white/5 bg-neutral-950 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-mono text-sm font-bold text-white">AWN_</span>
+                <span class="text-xs text-neutral-500 font-mono">Curated developer tools for software engineers.</span>
+            </div>
+            <div class="flex items-center gap-6 font-mono text-xs text-neutral-400">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="index.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="suggestions.html" class="hover:text-white transition-colors">Suggestions</a>
+                <a href="../leaderboard.html" class="text-white hover:text-white transition-colors">Leaderboard</a>
+                <a href="../about.html" class="hover:text-white transition-colors">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+            </div>
         </div>
-        <p class="text-neutral-600 text-xs font-mono">MIT License · Community Built</p>
     </footer>
 </body>
 

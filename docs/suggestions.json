@@ -46,5 +46,17 @@
     "votes": 18,
     "date": "2026-07-17",
     "githubUrl": "https://github.com/sablekunal/all_we_need/issues"
+  },
+  {
+    "id": "sug-105",
+    "name": "MAMOON",
+    "avatar": "https://github.com/rasheedmamoonur372-create.png",
+    "title": "AI Generated Tools & Autonomous Agents Section",
+    "description": "Add a dedicated category and filter for AI generated developer tools and autonomous workflow automations.",
+    "category": "Feature Request",
+    "status": "Under Review",
+    "votes": 1,
+    "date": "2026-07-31",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues/3"
   }
 ]
