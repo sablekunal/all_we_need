@@ -290,7 +290,7 @@ async function build() {
       const screenshotSrc = isUrl(data.screenshot) ? data.screenshot : `../${data.screenshot}`;
 
       screenshotHtml = `
-        <div class="max-w-4xl mx-auto px-6 mb-16 animate-fade-in">
+        <div class="max-w-4xl mx-auto px-6 mb-8 animate-fade-in">
             <div class="relative group rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900">
                 <img src="${screenshotSrc}" alt="${escapeHtml(project.title)} Screenshot" class="w-full h-auto object-cover">
                 <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none"></div>
@@ -343,7 +343,7 @@ async function build() {
     let relatedToolsHtml = '';
     if (related.length > 0) {
       relatedToolsHtml = `
-        <section class="max-w-4xl mx-auto px-6 mt-16 pt-12 border-t border-neutral-900" aria-label="Related resources">
+        <section class="max-w-4xl mx-auto px-6 mt-10 pt-8 border-t border-neutral-900" aria-label="Related resources">
           <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500 mb-6">Related Resources</h2>
           <div class="related-tools-grid">
             ${related.map(r => {
@@ -559,11 +559,10 @@ async function build() {
   // Calculate total merges (PRs)
   const totalPRs = leaderboard.reduce((acc, c) => acc + c.count, 0);
 
-  // Replace Stats in Index HTML (Targeting specific dummy values from template)
-  // Template values: 104 (Projects), 42 (Contributors), 850 (PRs)
-  indexHtml = indexHtml.replace(/data-target="104"/g, `data-target="${totalProjects}"`);
-  indexHtml = indexHtml.replace(/data-target="42"/g, `data-target="${totalContributors}"`);
-  indexHtml = indexHtml.replace(/data-target="850"/g, `data-target="${totalPRs}"`);
+  // Replace Stats in Index HTML
+  indexHtml = indexHtml.replace(/data-target="104"[^>]*>104/g, `data-target="${totalProjects}">${totalProjects}`);
+  indexHtml = indexHtml.replace(/data-target="42"[^>]*>42/g, `data-target="${totalContributors}">${totalContributors}`);
+  indexHtml = indexHtml.replace(/data-target="850"[^>]*>850/g, `data-target="${totalPRs}">${totalPRs}`);
 
   // Inject Global Data for Search (Avoids Fetch/CORS issues)
   const dataScript = `
@@ -738,16 +737,25 @@ async function build() {
   const leaderboardTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'leaderboard.html'), 'utf8');
   let lbHtml = leaderboardTemplate;
 
-  let lgRows = leaderboard.map((c, i) => `
+  let currentRank = 1;
+  let lastCount = -1;
+  let lgRows = leaderboard.map((c, i) => {
+    if (c.count !== lastCount) {
+      currentRank = i + 1;
+      lastCount = c.count;
+    }
+    const rankStr = currentRank < 10 ? '0' + currentRank : currentRank;
+    return `
         <tr class="hover:bg-white/5 transition group">
-            <td class="px-6 py-6 text-neutral-500 font-mono text-xs">${i + 1 < 10 ? '0' + (i + 1) : i + 1}</td>
+            <td class="px-6 py-6 text-neutral-500 font-mono text-xs">#${rankStr}</td>
             <td class="px-6 py-6 flex items-center gap-4">
                 <img src="${c.avatar_url}" width="40" height="40" class="w-10 h-10 rounded-full border border-neutral-800 grayscale group-hover:grayscale-0 transition-all">
                 <a href="${c.html_url}" target="_blank" class="font-medium text-neutral-300 group-hover:text-white transition-colors">${c.login}</a>
             </td>
             <td class="px-6 py-6 text-right font-mono text-neutral-500 group-hover:text-white transition-colors">${c.count}</td>
         </tr>
-    `).join('');
+    `;
+  }).join('');
 
   lbHtml = lbHtml.replace('{{leaderboard_rows}}', lgRows);
 
