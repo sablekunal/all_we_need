@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -23,7 +23,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 22
 
     - name: Install deps
       run: |
