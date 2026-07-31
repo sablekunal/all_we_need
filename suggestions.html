@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="text-[16px]">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Suggestions & Community Feedback — All We Need</title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCQN3C21S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDCQN3C21S');
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <meta name="description" content="Share your suggestions, feature requests, and expected changes for All We Need developer tools directory." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        neutral: {
+                            950: '#01010a',
+                            900: '#030312',
+                            800: '#15152a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="search.js"></script>
+    <script defer src="js/simple-view.js"></script>
+    <script defer src="js/animations.js"></script>
+    <script defer src="js/announcement.js"></script>
+</head>
+
+<body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    
+    <div id="announcementBanner" class="relative z-[100] bg-gradient-to-r from-purple-950 via-indigo-950 to-neutral-950 text-white border-b border-indigo-500/30 px-4 py-3 shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm font-sans">
+            
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-neutral-200">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    Support Needed
+                </span>
+                <span class="font-semibold text-white">Your support needed!</span>
+                <span class="text-neutral-500 hidden sm:inline">|</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="inline-flex items-center gap-1 text-indigo-300 hover:text-white font-mono text-xs transition-colors underline underline-offset-4">
+                    1. Contribute (~5 mins)
+                </a>
+                <span class="text-neutral-600 font-mono">•</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="inline-flex items-center gap-1 text-yellow-300 hover:text-white font-mono text-xs transition-colors bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">
+                    2. ⭐ Star Repo
+                </a>
+                <span class="text-neutral-600 font-mono">•</span>
+                <button type="button" onclick="toggleSuggestionForm()" class="inline-flex items-center gap-1 text-purple-300 hover:text-white font-mono text-xs transition-colors underline underline-offset-4 cursor-pointer">
+                    3. Share Suggestions & Expectations
+                </button>
+                <span class="text-neutral-300 font-semibold hidden lg:inline">Thank you! 🙏</span>
+            </div>
+
+            
+            <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="toggleSuggestionForm()" class="px-3 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all shadow-md flex items-center gap-1.5 cursor-pointer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Suggest
+                </button>
+                <button type="button" id="dismissBannerBtn" aria-label="Close Announcement" class="text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+
+        
+        <div id="quickSuggestionModal" class="hidden max-w-2xl mx-auto mt-3 pt-3 border-t border-white/10 animate-fade-in">
+            <form id="announcementSuggestionForm" onsubmit="handleQuickSuggestionSubmit(event)" class="bg-neutral-900/95 p-4 rounded-xl border border-indigo-500/30 space-y-3 shadow-2xl">
+                <div class="flex items-center justify-between">
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-indigo-300 font-bold flex items-center gap-2">
+                        💡 Share Suggestions / Expectations
+                    </h4>
+                    <span class="text-[11px] font-mono text-neutral-400">Reflected on site & saved to GitHub Issues</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[11px] font-mono text-neutral-400 mb-1">Your Name / Handle *</label>
+                        <input type="text" id="sugName" required placeholder="e.g. Kunal or @kunaldev" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-mono text-neutral-400 mb-1">Category</label>
+                        <select id="sugCategory" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-neutral-300 focus:outline-none focus:border-indigo-500 font-sans">
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="UI Improvement">UI Improvement</option>
+                            <option value="New Category">New Category</option>
+                            <option value="Bug Fix">Bug Fix</option>
+                            <option value="General Feedback">General Feedback</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-mono text-neutral-400 mb-1">Suggestion Description / Expected Changes *</label>
+                    <textarea id="sugDescription" required rows="2" placeholder="Describe the changes or suggestions you expect in this project..." class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans"></textarea>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                    <span class="text-[11px] font-mono text-neutral-400">Thank you for helping us improve! 🙏</span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="toggleSuggestionForm()" class="px-3 py-1 text-xs font-mono text-neutral-400 hover:text-white">Cancel</button>
+                        <button type="submit" class="px-4 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all shadow-md">
+                            Submit & Store 🙏
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <header id="header" class="sticky top-0 w-full z-50 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-white/5 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="font-semibold text-lg tracking-tight font-mono cursor-pointer hover:text-white transition-colors">
+                AWN_
+            </a>
+
+            
+            <nav class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
+                <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+                <a href="projects/index.html" class="hover:text-white transition-colors duration-300">Projects</a>
+                <a href="suggestions.html" class="text-white font-bold hover:text-white transition-colors duration-300">Suggestions</a>
+                <a href="leaderboard.html" class="hover:text-white transition-colors duration-300">Leaderboard</a>
+                <a href="about.html" class="hover:text-white transition-colors duration-300">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors duration-300">GitHub</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button id="headerSimpleBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md cursor-pointer" aria-label="Toggle Simplified View">
+                </button>
+
+                <button id="headerSearchBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md cursor-pointer" aria-label="Search" onclick="window.location.href='index.html?search=true'">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </button>
+
+                <button id="mobileMenuBtn" aria-label="Open Menu" class="md:hidden relative z-[60] w-10 h-10 flex flex-col justify-center items-center gap-1.5 group">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div id="mobileBackdrop" class="fixed inset-0 bg-black/10 backdrop-blur-sm z-[40] opacity-0 invisible transition-all duration-300 md:hidden"></div>
+
+    
+    <div id="mobileDrawer" class="fixed top-0 right-0 w-[75vw] max-w-xs h-full bg-neutral-900/90 backdrop-blur-md z-[45] transform translate-x-full transition-transform duration-300 ease-out md:hidden flex flex-col pt-32 px-8 border-l border-white/5 shadow-2xl">
+        <nav class="flex flex-col space-y-8 text-left">
+            <a href="index.html" class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Home</a>
+            <a href="projects/index.html" class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Projects</a>
+            <a href="suggestions.html" class="mobile-link text-xl font-mono text-white transition-colors tracking-wide">Suggestions</a>
+            <a href="leaderboard.html" class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">Leaderboard</a>
+            <a href="about.html" class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide">About</a>
+            <div class="h-px w-full bg-white/10 my-4"></div>
+            <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="mobile-link text-xl font-mono text-neutral-400 hover:text-white transition-colors tracking-wide flex items-center gap-2">
+                GitHub <span>↗</span>
+            </a>
+        </nav>
+    </div>
+
+    
+    <main class="max-w-7xl mx-auto px-6 pt-12 pb-24 flex-grow w-full">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-mono text-xs mb-4">
+                <span>💡 Community Driven Feedback</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Suggestions & Expectations</h1>
+            <p class="text-neutral-400 text-sm md:text-base leading-relaxed">
+                Shape the future of <span class="text-white font-semibold">All We Need</span>. Submit ideas for new tools, UI improvements, and expected features. Suggestions are saved locally and synced to GitHub Issues!
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+                <button type="button" onclick="toggleSuggestionForm()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-mono text-xs font-semibold transition-all shadow-lg flex items-center gap-2 cursor-pointer">
+                    <span>➕ Submit New Suggestion</span>
+                </button>
+                <a href="https://github.com/sablekunal/all_we_need/issues" target="_blank" class="px-5 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white rounded-xl font-mono text-xs font-semibold transition-all border border-white/10 flex items-center gap-2">
+                    <span>View GitHub Issues ↗</span>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+            <button class="sug-filter-tab px-4 py-2 rounded-xl font-mono text-xs bg-indigo-600 text-white transition-all cursor-pointer" data-filter="all">All Suggestions</button>
+            <button class="sug-filter-tab px-4 py-2 rounded-xl font-mono text-xs bg-neutral-900 text-neutral-400 hover:text-white transition-all cursor-pointer" data-filter="Feature Request">Feature Requests</button>
+            <button class="sug-filter-tab px-4 py-2 rounded-xl font-mono text-xs bg-neutral-900 text-neutral-400 hover:text-white transition-all cursor-pointer" data-filter="UI Improvement">UI Improvements</button>
+            <button class="sug-filter-tab px-4 py-2 rounded-xl font-mono text-xs bg-neutral-900 text-neutral-400 hover:text-white transition-all cursor-pointer" data-filter="New Category">New Categories</button>
+            <button class="sug-filter-tab px-4 py-2 rounded-xl font-mono text-xs bg-neutral-900 text-neutral-400 hover:text-white transition-all cursor-pointer" data-filter="Bug Fix">Bug Fixes</button>
+        </div>
+
+        
+        <div id="suggestionsList" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+        </div>
+    </main>
+
+    
+    <footer class="border-t border-white/5 bg-neutral-950 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-mono text-sm font-bold text-white">AWN_</span>
+                <span class="text-xs text-neutral-500 font-mono">Curated developer tools for software engineers.</span>
+            </div>
+            <div class="flex items-center gap-6 font-mono text-xs text-neutral-400">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="projects/index.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="suggestions.html" class="text-white hover:text-white transition-colors">Suggestions</a>
+                <a href="leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const drawer = document.getElementById('mobileDrawer');
+        const backdrop = document.getElementById('mobileBackdrop');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                drawer.classList.remove('translate-x-full');
+                backdrop.classList.remove('opacity-0', 'invisible');
+            } else {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        if (btn) btn.addEventListener('click', toggleMenu);
+        if (backdrop) backdrop.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

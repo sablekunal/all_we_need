@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DEV Community — Free Developer Resource | All We Need</title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCQN3C21S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDCQN3C21S');
+    </script>
+
+    
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png">
+
+    
+    <meta name="description" content="A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://allweneed.pages.dev/projects/dev-community" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://allweneed.pages.dev/projects/dev-community" />
+    <meta property="og:title" content="DEV Community — Free Developer Resource | All We Need" />
+    <meta property="og:description" content="A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers." />
+    <meta property="og:image" content="https://www.google.com/s2/favicons?domain=dev.to&sz=128" />
+    <meta property="og:site_name" content="All We Need" />
+
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DEV Community — Free Developer Resource | All We Need" />
+    <meta name="twitter:description" content="A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers." />
+    <meta name="twitter:image" content="https://www.google.com/s2/favicons?domain=dev.to&sz=128" />
+
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"DEV Community — Free Developer Resource | All We Need","description":"A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers.","url":"https://allweneed.pages.dev/projects/dev-community","isPartOf":{"@type":"WebSite","name":"All We Need","url":"https://allweneed.pages.dev/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://allweneed.pages.dev/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://allweneed.pages.dev/projects/"},{"@type":"ListItem","position":3,"name":"DEV Community","item":"https://allweneed.pages.dev/projects/dev-community"}]}]}</script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { neutral: { 950: '#01010a', 900: '#030312', 800: '#15152a' } }
+                }
+            }
+        }
+    </script>
+
+    
+    <link rel="stylesheet" href="../styles.css">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    
+    <script defer src="../search.js"></script>
+    <script defer src="../js/animations.js"></script>
+    <script defer src="../js/simple-view.js"></script>
+    <script defer src="../js/announcement.js"></script>
+</head>
+
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-indigo-500/20">
+    
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    
+    <div id="announcementBanner" role="banner" class="relative z-[100] bg-gradient-to-r from-purple-950 via-indigo-950 to-neutral-950 text-white border-b border-indigo-500/30 px-4 py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm font-sans">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-neutral-200">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" aria-hidden="true"></span>
+                    Open Source
+                </span>
+                <span class="font-semibold text-white">Help us grow this directory!</span>
+                <span class="text-neutral-500 hidden sm:inline" aria-hidden="true">|</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-indigo-300 hover:text-white font-mono text-xs transition-colors underline underline-offset-4">
+                    Contribute a tool (~5 mins)
+                </a>
+                <span class="text-neutral-600 font-mono" aria-hidden="true">•</span>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-yellow-300 hover:text-white font-mono text-xs transition-colors bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/20">
+                    ⭐ Star on GitHub
+                </a>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="toggleSuggestionForm()" aria-expanded="false" aria-controls="quickSuggestionModal" class="px-3 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Suggest
+                </button>
+                <button type="button" id="dismissBannerBtn" aria-label="Close announcement banner" class="text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="quickSuggestionModal" class="hidden max-w-2xl mx-auto mt-3 pt-3 border-t border-white/10" role="dialog" aria-modal="true" aria-label="Suggest a tool">
+            <form id="announcementSuggestionForm" onsubmit="handleQuickSuggestionSubmit(event)" class="bg-neutral-900/95 p-4 rounded-xl border border-indigo-500/30 space-y-3">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-300 font-bold">💡 Suggest a Tool or Resource</h2>
+                    <a href="../suggestions.html" class="text-[11px] font-mono text-neutral-400 hover:text-white underline">View all suggestions →</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="sugName" class="block text-[11px] font-mono text-neutral-400 mb-1">Your Name / Handle *</label>
+                        <input type="text" id="sugName" required placeholder="e.g. Kunal or @kunaldev" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans">
+                    </div>
+                    <div>
+                        <label for="sugCategory" class="block text-[11px] font-mono text-neutral-400 mb-1">Category</label>
+                        <select id="sugCategory" class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-neutral-300 focus:outline-none focus:border-indigo-500 font-sans">
+                            <option value="New Tool">New Tool</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="UI Improvement">UI Improvement</option>
+                            <option value="Bug Fix">Bug Fix</option>
+                            <option value="General Feedback">General Feedback</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="sugDescription" class="block text-[11px] font-mono text-neutral-400 mb-1">Suggestion / Tool URL *</label>
+                    <textarea id="sugDescription" required rows="2" placeholder="Describe the tool or suggest a resource URL..." class="w-full px-3 py-1.5 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-white focus:outline-none focus:border-indigo-500 font-sans"></textarea>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                    <span class="text-[11px] font-mono text-neutral-400">Stored as GitHub Issues</span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="toggleSuggestionForm()" class="px-3 py-1 text-xs font-mono text-neutral-400 hover:text-white">Cancel</button>
+                        <button type="submit" class="px-4 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-mono text-xs font-semibold transition-all">Submit 🙏</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <header id="header" class="sticky top-0 w-full z-50 py-4 bg-neutral-950/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="../index.html" class="font-semibold text-lg tracking-tight font-mono hover:text-white transition-colors" aria-label="All We Need — Home">AWN_</a>
+
+            <nav aria-label="Primary navigation" class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="index.html" class="hover:text-white transition-colors" aria-current="page">Projects</a>
+                <a href="../suggestions.html" class="hover:text-white transition-colors">Suggestions</a>
+                <a href="../leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a>
+                <a href="../about.html" class="hover:text-white transition-colors">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button id="headerSimpleBtn"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all cursor-pointer"
+                    aria-label="Toggle simplified view"
+                    aria-pressed="false">
+                </button>
+                
+                <button id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer"
+                    class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div id="mobileBackdrop" aria-hidden="true" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-[40] opacity-0 invisible transition-all duration-300 md:hidden"></div>
+    <div id="mobileDrawer" role="dialog" aria-label="Navigation menu" aria-modal="true"
+        class="fixed top-0 right-0 w-[75vw] max-w-xs h-full bg-neutral-900/95 backdrop-blur-md z-[45] transform translate-x-full transition-transform duration-300 ease-out md:hidden flex flex-col pt-28 px-8 border-l border-white/5">
+        <nav class="flex flex-col space-y-6">
+            <a href="../index.html" class="mobile-link">Home</a>
+            <a href="index.html" class="mobile-link active">Projects</a>
+            <a href="../suggestions.html" class="mobile-link">Suggestions</a>
+            <a href="../leaderboard.html" class="mobile-link">Leaderboard</a>
+            <a href="../about.html" class="mobile-link">About</a>
+            <div class="h-px w-full bg-white/10 my-2" role="separator"></div>
+            <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="mobile-link">GitHub ↗</a>
+        </nav>
+    </div>
+    <script>
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            if (!btn) return;
+            const drawer = document.getElementById('mobileDrawer');
+            const backdrop = document.getElementById('mobileBackdrop');
+            const spans = btn.querySelectorAll('span');
+            let isOpen = false;
+            function toggleMenu() {
+                isOpen = !isOpen;
+                btn.setAttribute('aria-expanded', isOpen);
+                if (isOpen) { drawer.classList.remove('translate-x-full'); backdrop.classList.remove('opacity-0', 'invisible'); spans[0].style.transform = 'translateY(8px) rotate(45deg)'; spans[1].style.opacity = '0'; spans[2].style.transform = 'translateY(-8px) rotate(-45deg)'; }
+                else { drawer.classList.add('translate-x-full'); backdrop.classList.add('opacity-0', 'invisible'); spans[0].style.transform = ''; spans[1].style.opacity = '1'; spans[2].style.transform = ''; }
+            }
+            btn.addEventListener('click', toggleMenu);
+            backdrop.addEventListener('click', toggleMenu);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen) toggleMenu(); });
+        })();
+    </script>
+
+    <main id="main-content" class="pt-6 pb-16">
+        
+        <div class="max-w-4xl mx-auto px-6 mb-6">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb-sep" aria-hidden="true">/</span>
+                <a href="index.html">Projects</a>
+                <span class="breadcrumb-sep" aria-hidden="true">/</span>
+                <span class="breadcrumb-current" aria-current="page">DEV Community</span>
+            </nav>
+        </div>
+
+        
+        <div class="max-w-4xl mx-auto px-6 mb-8">
+            <div class="flex flex-col md:flex-row gap-6 items-start animate-fade-in">
+                
+                <div class="relative shrink-0">
+                    <img src="https://www.google.com/s2/favicons?domain=dev.to&sz=128" alt="DEV Community" class="w-16 h-16 rounded-xl object-cover border border-neutral-800 bg-neutral-900">
+                </div>
+
+                <div class="flex-1 min-w-0">
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-3 leading-tight text-white">DEV Community</h1>
+                    <p class="text-lg text-neutral-400 leading-relaxed font-light mb-6 max-w-2xl">A vibrant, open-source community for software developers to share knowledge, write articles, and grow their careers.</p>
+
+                    <div class="flex flex-wrap gap-3 items-center">
+                        <a href="https://dev.to/" target="_blank" rel="noopener noreferrer"
+                            class="px-6 py-2.5 bg-white text-black text-sm font-semibold rounded-full hover:scale-105 transition-transform duration-200 inline-flex items-center gap-2">
+                            Visit Resource
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="glass-card p-5 rounded-2xl">
+                <h2 class="text-xs uppercase tracking-widest text-neutral-500 mb-3 font-mono">Categories</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-mono border border-neutral-800 rounded-full text-neutral-400 bg-neutral-900">community</span><span class="px-3 py-1 text-xs font-mono border border-neutral-800 rounded-full text-neutral-400 bg-neutral-900">blog</span><span class="px-3 py-1 text-xs font-mono border border-neutral-800 rounded-full text-neutral-400 bg-neutral-900">developer</span><span class="px-3 py-1 text-xs font-mono border border-neutral-800 rounded-full text-neutral-400 bg-neutral-900">learning</span><span class="px-3 py-1 text-xs font-mono border border-neutral-800 rounded-full text-neutral-400 bg-neutral-900">open-source</span>
+                </div>
+            </div>
+            <div class="glass-card p-5 rounded-2xl">
+                <h2 class="text-xs uppercase tracking-widest text-neutral-500 mb-3 font-mono">Contributors</h2>
+                <div class="flex items-center -space-x-2">
+                    <span class="text-neutral-500 text-sm italic">No data</span>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        
+        <article class="max-w-4xl mx-auto px-6 prose prose-invert prose-lg max-w-none prose-neutral prose-headings:font-bold prose-headings:tracking-tight prose-a:text-white prose-a:underline hover:prose-a:text-indigo-400 prose-pre:bg-neutral-900/90 prose-pre:border prose-pre:border-neutral-800 prose-code:text-amber-300 prose-li:text-neutral-300 prose-p:text-neutral-300 prose-p:leading-relaxed prose-content" aria-label="DEV Community details">
+            <h1 id="why-its-great">Why It&#39;s Great</h1>
+<p>DEV (dev.to) is one of the most inclusive and active communities for developers. Unlike Medium or other general blogging platforms, it is built <em>by</em> developers <em>for</em> developers, with a strong focus on code sharing, mentorship, and open exchange of ideas.</p>
+<h1 id="key-features">Key Features</h1>
+<h2 id="🤝-community--connection">🤝 Community &amp; Connection</h2>
+<ul>
+<li><strong>Connect</strong>: finding high-quality, community-driven content is easier than ever.</li>
+<li><strong>Discuss</strong>: Engage in discussions on strict technical topics or soft skills.</li>
+<li><strong>Network</strong>: Build your personal brand and connect with industry peers.</li>
+</ul>
+<h2 id="📚-knowledge-sharing">📚 Knowledge Sharing</h2>
+<ul>
+<li><strong>Articles</strong>: Write and read technical articles with code snippets and markdown support.</li>
+<li><strong>Tags</strong>: Follow specific topics like #javascript, #python, #beginners, or #career.</li>
+<li><strong>Open Source</strong>: The platform itself is open source (Forem), reflecting its ethos.</li>
+</ul>
+<h2 id="🚀-career-growth">🚀 Career Growth</h2>
+<ul>
+<li><strong>Jobs</strong>: Access a curated job board for developers.</li>
+<li><strong>Listings</strong>: Find mentorship opportunities, events, and products.</li>
+</ul>
+<h1 id="additional-info">Additional Info</h1>
+<p>DEV is known for its friendly &quot;inclusive&quot; vibe, making it a safe place for beginners to ask questions and experts to share deep dives.</p>
+
+        </article>
+
+        
+        
+        <section class="max-w-4xl mx-auto px-6 mt-10 pt-8 border-t border-neutral-900" aria-label="Related resources">
+          <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500 mb-6">Related Resources</h2>
+          <div class="related-tools-grid">
+            
+              <a href="discord" class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:border-white/10 transition-all group" aria-label="Discord — The easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your communities.">
+                <img src="https://www.google.com/s2/favicons?domain=discord.com&sz=128" alt="Discord" width="40" height="40" class="w-10 h-10 rounded-lg object-cover bg-neutral-900 shrink-0 border border-neutral-800" loading="lazy">
+                <div class="min-w-0">
+                  <div class="font-semibold text-sm text-white group-hover:text-white truncate">Discord</div>
+                  <div class="text-xs text-neutral-500 mt-0.5 line-clamp-2">The easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your communities.</div>
+                </div>
+              </a>
+              <a href="openrouter" class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:border-white/10 transition-all group" aria-label="OpenRouter — Unified API gateway that gives developers access to hundreds of LLMs and multimodal models through a single endpoint">
+                <img src="https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128" alt="OpenRouter" width="40" height="40" class="w-10 h-10 rounded-lg object-cover bg-neutral-900 shrink-0 border border-neutral-800" loading="lazy">
+                <div class="min-w-0">
+                  <div class="font-semibold text-sm text-white group-hover:text-white truncate">OpenRouter</div>
+                  <div class="text-xs text-neutral-500 mt-0.5 line-clamp-2">Unified API gateway that gives developers access to hundreds of LLMs and multimodal models through a single endpoint</div>
+                </div>
+              </a>
+              <a href="payload-components" class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:border-white/10 transition-all group" aria-label="Payload Components — MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.">
+                <img src="https://www.google.com/s2/favicons?domain=www.payload-components.xyz&sz=128" alt="Payload Components" width="40" height="40" class="w-10 h-10 rounded-lg object-cover bg-neutral-900 shrink-0 border border-neutral-800" loading="lazy">
+                <div class="min-w-0">
+                  <div class="font-semibold text-sm text-white group-hover:text-white truncate">Payload Components</div>
+                  <div class="text-xs text-neutral-500 mt-0.5 line-clamp-2">MIT registry and CLI for 67 typed Payload CMS blocks, installed as owned source with automated wiring.</div>
+                </div>
+              </a>
+              <a href="unmutesh" class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:border-white/10 transition-all group" aria-label="Unmute.sh — Speak to an AI using Kyutai&#39;s new low-latency open-source speech-to-text and text-to-speech models.">
+                <img src="https://www.google.com/s2/favicons?domain=unmute.sh&sz=128" alt="Unmute.sh" width="40" height="40" class="w-10 h-10 rounded-lg object-cover bg-neutral-900 shrink-0 border border-neutral-800" loading="lazy">
+                <div class="min-w-0">
+                  <div class="font-semibold text-sm text-white group-hover:text-white truncate">Unmute.sh</div>
+                  <div class="text-xs text-neutral-500 mt-0.5 line-clamp-2">Speak to an AI using Kyutai&#39;s new low-latency open-source speech-to-text and text-to-speech models.</div>
+                </div>
+              </a>
+          </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <a href="../index.html" class="font-bold text-lg tracking-tight font-mono text-neutral-400 hover:text-white transition-colors">AWN_</a>
+            <nav aria-label="Footer navigation" class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-neutral-600 text-xs font-mono">
+                <a href="../about.html" class="hover:text-white transition-colors">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+                <a href="../leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a>
+                <a href="../privacy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="../terms.html" class="hover:text-white transition-colors">Terms</a>
+            </nav>
+            <p class="text-neutral-700 text-xs font-mono">MIT License &middot; Community Built</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

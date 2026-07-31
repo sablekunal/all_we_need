@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sug-101",
+    "name": "Kunal Sable",
+    "avatar": "https://github.com/sablekunal.png",
+    "title": "Chrome Extension for 1-Click Access to Free Tools",
+    "description": "Develop a lightweight Chrome extension so developers can query free accounts, APIs, and AI models right from their browser toolbar.",
+    "category": "Feature Request",
+    "status": "Planned",
+    "votes": 42,
+    "date": "2026-07-20",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues"
+  },
+  {
+    "id": "sug-102",
+    "name": "Dev Community",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
+    "title": "Live API Uptime & Latency Status Monitor",
+    "description": "Add real-time health checks and status indicators for free tier endpoints listed across project cards.",
+    "category": "UI Improvement",
+    "status": "Under Review",
+    "votes": 29,
+    "date": "2026-07-19",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues"
+  },
+  {
+    "id": "sug-103",
+    "name": "Sarah Jenkins",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+    "title": "Free Vector Search & Embedding API Directory",
+    "description": "Add a dedicated section for free vector databases (Pinecone free tier, Qdrant, Chroma, Weaviate).",
+    "category": "New Category",
+    "status": "Implemented",
+    "votes": 35,
+    "date": "2026-07-18",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues"
+  },
+  {
+    "id": "sug-104",
+    "name": "Marcus Vance",
+    "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&auto=format&fit=crop&q=80",
+    "title": "Search Filter by License Type (MIT, Apache, GPL)",
+    "description": "Allow filtering tools by open-source license type so commercial projects can verify licensing fast.",
+    "category": "Feature Request",
+    "status": "Under Review",
+    "votes": 18,
+    "date": "2026-07-17",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues"
+  },
+  {
+    "id": "sug-105",
+    "name": "MAMOON",
+    "avatar": "https://github.com/rasheedmamoonur372-create.png",
+    "title": "AI Generated Tools & Autonomous Agents Section",
+    "description": "Add a dedicated category and filter for AI generated developer tools and autonomous workflow automations.",
+    "category": "Feature Request",
+    "status": "Under Review",
+    "votes": 1,
+    "date": "2026-07-31",
+    "githubUrl": "https://github.com/sablekunal/all_we_need/issues/3"
+  }
+]

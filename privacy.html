@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="text-[16px]">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Privacy Policy — All We Need</title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCQN3C21S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TDCQN3C21S');
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="js/simple-view.js"></script>
+    <script defer src="js/animations.js"></script>
+    <script defer src="js/announcement.js"></script>
+</head>
+
+<body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    <header id="header" class="sticky top-0 w-full z-50 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-white/5 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="font-semibold text-lg tracking-tight font-mono cursor-pointer hover:text-white transition-colors">
+                AWN_
+            </a>
+            <nav class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
+                <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+                <a href="projects/index.html" class="hover:text-white transition-colors duration-300">Projects</a>
+                <a href="suggestions.html" class="hover:text-white transition-colors duration-300">Suggestions</a>
+                <a href="leaderboard.html" class="hover:text-white transition-colors duration-300">Leaderboard</a>
+                <a href="about.html" class="hover:text-white transition-colors duration-300">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors duration-300">GitHub</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button id="headerSimpleBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md cursor-pointer" aria-label="Toggle Simplified View"></button>
+                <button id="headerSearchBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md cursor-pointer" aria-label="Search" onclick="window.location.href='index.html?search=true'">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto px-6 pt-16 pb-20">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Privacy Policy</h1>
+            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest">Last updated: July 2026</p>
+        </div>
+        <div class="prose prose-invert prose-neutral mx-auto max-w-3xl text-neutral-300 space-y-6 text-sm md:text-base leading-relaxed">
+            <p>At <strong>All We Need (AWN_)</strong>, we respect your privacy and believe in full transparency. As an open-source community directory for developer tools, we prioritize collecting as little data as possible while operating a reliable public resource.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-3">1. Information We Collect</h2>
+            <p>We use lightweight web analytics (such as Google Analytics / gtag) to understand aggregated traffic trends, popular project pages, and general device statistics. This analytics data does not track personally identifiable information (PII).</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-3">2. Open-Source Contributions & Suggestions</h2>
+            <p>If you submit a pull request on our GitHub repository or share feedback via our public community suggestions form, any information you provide (such as your GitHub username, avatar URL, or submitted feature suggestions) becomes publicly accessible as part of the open-source repository and Hall of Fame contributors list.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-3">3. Third-Party Links</h2>
+            <p>Our project cards contain links to third-party developer tools and services. Once you follow a link to an external tool, their respective privacy policy applies. We are not responsible for the privacy practices of external platforms.</p>
+            <h2 class="text-xl font-bold text-white mt-8 mb-3">4. Contact & Modifications</h2>
+            <p>Because All We Need is built in the open, any discussions or concerns regarding data practices or removal requests can be raised directly via our official <a href="https://github.com/sablekunal/all_we_need/issues" class="text-indigo-400 hover:underline" target="_blank">GitHub Issues</a>.</p>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-neutral-950 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-mono text-sm font-bold text-white">AWN_</span>
+                <span class="text-xs text-neutral-500 font-mono">Curated developer tools for software engineers.</span>
+            </div>
+            <div class="flex items-center gap-6 font-mono text-xs text-neutral-400">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="projects/index.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="suggestions.html" class="hover:text-white transition-colors">Suggestions</a>
+                <a href="leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a>
+                <a href="about.html" class="hover:text-white transition-colors">About</a>
+                <a href="privacy.html" class="text-white hover:text-white transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
