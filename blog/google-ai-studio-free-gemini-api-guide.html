@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="text-[16px]">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <title>Google AI Studio Free Tier 2026: Complete Guide to Using Gemini API for Free</title>
+    <meta name="description" content="Step-by-step guide to Google AI Studio's free Gemini API: how to get your API key, rate limits explained, Python and JavaScript code examples, token counting, and tips to avoid hitting quotas." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://allweneed.pages.dev/blog/google-ai-studio-free-gemini-api-guide.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://allweneed.pages.dev/blog/google-ai-studio-free-gemini-api-guide.html" />
+    <meta property="og:title" content="Google AI Studio Free Tier 2026: Complete Guide to Using Gemini API for Free" />
+    <meta property="og:description" content="Everything you need to use Google's Gemini API for free via AI Studio — API key setup, rate limits, Python/JS code, and pro tips for staying under quota." />
+    <meta property="og:image" content="https://allweneed.pages.dev/logo.png" />
+    <meta property="og:site_name" content="All We Need" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Google AI Studio Free Gemini API: Complete 2026 Guide" />
+    <meta name="twitter:description" content="Get your free Gemini API key from Google AI Studio and start building. Rate limits, code examples, token counting, and quota tips." />
+    <meta name="twitter:image" content="https://allweneed.pages.dev/logo.png" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCQN3C21S"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TDCQN3C21S');</script>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="theme-color" content="#01010a" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']},colors:{neutral:{950:'#01010a',900:'#030312',800:'#15152a'}}}}}</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Google AI Studio Free Tier 2026: Complete Guide to Using Gemini API for Free","description":"A comprehensive guide to getting started with Google AI Studio's free Gemini API — API key setup, rate limits, Python and JavaScript code examples, multimodal use, and quota management.","image":"https://allweneed.pages.dev/logo.png","url":"https://allweneed.pages.dev/blog/google-ai-studio-free-gemini-api-guide.html","datePublished":"2026-09-12T00:00:00+00:00","dateModified":"2026-09-12T00:00:00+00:00","author":{"@type":"Organization","name":"AWN_ Team","url":"https://allweneed.pages.dev/"},"publisher":{"@type":"Organization","name":"All We Need","url":"https://allweneed.pages.dev/","logo":{"@type":"ImageObject","url":"https://allweneed.pages.dev/logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://allweneed.pages.dev/blog/google-ai-studio-free-gemini-api-guide.html"},"keywords":"Google AI Studio, Gemini API free, Gemini 1.5 Pro free, Google AI Studio API key, free LLM API Google, Gemini free tier","articleSection":"Tutorial","wordCount":1800}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"HowTo","name":"How to Get a Free Gemini API Key from Google AI Studio","description":"Step-by-step instructions to get your free Gemini API key from Google AI Studio without a credit card.","step":[{"@type":"HowToStep","position":1,"name":"Go to Google AI Studio","text":"Navigate to aistudio.google.com in your browser."},{"@type":"HowToStep","position":2,"name":"Sign in with Google","text":"Click 'Sign in' and use any Google account."},{"@type":"HowToStep","position":3,"name":"Click 'Get API Key'","text":"In the left sidebar, click 'Get API Key', then 'Create API key in new project'."},{"@type":"HowToStep","position":4,"name":"Copy your API key","text":"Copy the generated API key and store it securely in your environment variables."},{"@type":"HowToStep","position":5,"name":"Install the SDK","text":"Run 'pip install google-generativeai' (Python) or 'npm install @google/generative-ai' (Node.js)."}]}
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://allweneed.pages.dev/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://allweneed.pages.dev/blog/"},{"@type":"ListItem","position":3,"name":"Google AI Studio Guide","item":"https://allweneed.pages.dev/blog/google-ai-studio-free-gemini-api-guide.html"}]}</script>
+    <style>
+        .reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#6366f1,#8b5cf6);z-index:100;transition:width .1s}
+        .prose-content h2{font-size:1.5rem;font-weight:700;color:white;margin-top:2.5rem;margin-bottom:.75rem}
+        .prose-content h3{font-size:1.15rem;font-weight:600;color:#d4d4d4;margin-top:1.75rem;margin-bottom:.5rem}
+        .prose-content p{margin-bottom:1.25rem;line-height:1.8}
+        .prose-content ul{list-style:disc;padding-left:1.5rem;margin-bottom:1.25rem}
+        .prose-content ol{padding-left:1.5rem;margin-bottom:1.25rem;counter-reset:ol-counter}
+        .prose-content ol li{counter-increment:ol-counter;margin-bottom:.5rem;position:relative;padding-left:.5rem}
+        .prose-content ul li{margin-bottom:.4rem}
+        .prose-content code{background:#15152a;color:#a5b4fc;padding:.15rem .4rem;border-radius:.25rem;font-size:.85em;font-family:'JetBrains Mono',monospace}
+        .prose-content pre{background:#0a0a1a;border:1px solid rgba(255,255,255,.08);border-radius:.75rem;padding:1.25rem;overflow-x:auto;margin:1.5rem 0}
+        .prose-content pre code{background:transparent;padding:0;font-size:.82rem;line-height:1.7;color:#c4b5fd}
+        .prose-content table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem}
+        .prose-content th{background:#15152a;color:white;padding:.75rem 1rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+        .prose-content td{padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.05);color:#a3a3a3}
+        .callout{background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:.75rem;padding:1rem 1.25rem;margin:1.5rem 0}
+        .callout-title{font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#818cf8;margin-bottom:.4rem}
+        .step-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:1rem;padding:1.25rem 1.25rem 1.25rem 1.5rem;margin:.75rem 0;display:flex;gap:1rem;align-items:flex-start}
+        .step-num{width:2rem;height:2rem;border-radius:50%;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;color:#818cf8;flex-shrink:0;margin-top:.1rem}
+        .model-badge{display:inline-flex;align-items:center;padding:.2rem .65rem;border-radius:9999px;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;background:rgba(139,92,246,.1);color:#c4b5fd;border:1px solid rgba(139,92,246,.2)}
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased">
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="sticky top-0 w-full z-50 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="../index.html" aria-label="All We Need Home" class="font-semibold text-lg tracking-tight font-mono hover:text-white transition-colors">AWN_</a>
+            <nav aria-label="Primary navigation" class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="../projects/index.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="index.html" class="text-white font-bold">Blog</a>
+                <a href="../suggestions.html" class="hover:text-white transition-colors">Suggestions</a>
+                <a href="../about.html" class="hover:text-white transition-colors">About</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+            </nav>
+            <a href="../index.html?search=true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all" aria-label="Search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 flex gap-12">
+        <article class="flex-1 min-w-0" itemscope itemtype="https://schema.org/BlogPosting">
+            <meta itemprop="datePublished" content="2026-09-12" />
+            <nav aria-label="Breadcrumb" class="mb-6 text-xs font-mono text-neutral-500 flex items-center gap-2">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a><span>/</span>
+                <a href="index.html" class="hover:text-white transition-colors">Blog</a><span>/</span>
+                <span class="text-neutral-300">Google AI Studio Guide</span>
+            </nav>
+            <header class="mb-10">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-2.5 py-0.5 rounded-full bg-yellow-500/15 text-yellow-300 font-mono text-xs border border-yellow-500/20">Tutorial</span>
+                    <span class="text-neutral-500 font-mono text-xs">· 12 min read ·</span>
+                    <time datetime="2026-09-12" class="text-neutral-500 font-mono text-xs">September 12, 2026</time>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-5" itemprop="headline">Google AI Studio Free Tier 2026: Complete Guide to Using Gemini API for Free</h1>
+                <p class="text-neutral-400 text-lg leading-relaxed" itemprop="description">
+                    Google AI Studio gives developers free access to Gemini 1.5 Flash and Gemini 1.5 Pro — without entering a credit card. The 1-million token context window, multimodal capabilities, and generous daily limits make this the most powerful free AI API available today. This guide covers everything: getting your API key in under 2 minutes, understanding rate limits, working code examples, and practical tips to build AI-powered apps without ever hitting a billing page.
+                </p>
+                <div class="mt-6 flex items-center gap-3 text-sm text-neutral-500 font-mono">
+                    <span>By <span itemprop="author">AWN_ Team</span></span>
+                    <span>·</span>
+                    <a href="../index.html?category=ai" class="text-indigo-400 hover:underline">Browse free AI tools →</a>
+                </div>
+            </header>
+
+            <div class="prose-content text-neutral-300 text-sm md:text-base" itemprop="articleBody">
+                <div class="callout">
+                    <div class="callout-title">🔑 What You'll Get</div>
+                    <p style="margin:0;color:#d4d4d4">By the end of this guide you'll have a working free Gemini API key, understand your exact rate limits, and have tested code in both Python and JavaScript ready to drop into your project.</p>
+                </div>
+
+                <h2>What Is Google AI Studio?</h2>
+                <p>Google AI Studio (<a href="https://aistudio.google.com" class="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">aistudio.google.com</a>) is Google's browser-based IDE for experimenting with and building on Gemini models. It provides a playground interface for testing prompts, a prompt library, model tuning tools, and most importantly — a free API key generator that gives you programmatic access to Gemini models.</p>
+                <p>This is distinct from the <strong>Vertex AI API</strong> (Google Cloud's enterprise AI platform, which requires billing setup). Google AI Studio's API keys are specifically scoped to the free tier of the Gemini Developer API.</p>
+
+                <h2>Available Free Models</h2>
+                <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0 1.5rem">
+                    <span class="model-badge">Gemini 1.5 Flash</span>
+                    <span class="model-badge">Gemini 1.5 Flash-8B</span>
+                    <span class="model-badge">Gemini 1.5 Pro</span>
+                    <span class="model-badge">Gemini 1.0 Pro</span>
+                    <span class="model-badge">Text Embedding 004</span>
+                </div>
+                <p>Each model has different capabilities, context windows, and rate limits. Here's a practical breakdown:</p>
+                <table>
+                    <thead><tr><th>Model</th><th>Context Window</th><th>Best For</th><th>Free RPM</th><th>Free Daily Limit</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>gemini-1.5-flash</code></td><td>1,000,000 tokens</td><td>Speed, most tasks</td><td>15 RPM</td><td>1,500 requests</td></tr>
+                        <tr><td><code>gemini-1.5-flash-8b</code></td><td>1,000,000 tokens</td><td>Simple tasks, high volume</td><td>15 RPM</td><td>1,500 requests</td></tr>
+                        <tr><td><code>gemini-1.5-pro</code></td><td>2,000,000 tokens</td><td>Complex reasoning, analysis</td><td>2 RPM</td><td>50 requests</td></tr>
+                        <tr><td><code>text-embedding-004</code></td><td>2,048 tokens</td><td>Vector embeddings, RAG</td><td>1,500 RPM</td><td>—</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>Practical advice:</strong> Use <code>gemini-1.5-flash</code> as your default for development. It's fast, capable, and the 1,500 daily requests is generous. Reach for <code>gemini-1.5-pro</code> only when you specifically need deeper reasoning or very long document analysis.</p>
+
+                <h2>Step-by-Step: Getting Your Free API Key</h2>
+                <div class="step-card"><div class="step-num">1</div><div><p style="margin:0;font-weight:600;color:white;margin-bottom:.25rem">Navigate to Google AI Studio</p><p style="margin:0;color:#a3a3a3;font-size:.875rem">Go to <a href="https://aistudio.google.com" class="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">aistudio.google.com</a>. No special account needed — any Google account works.</p></div></div>
+                <div class="step-card"><div class="step-num">2</div><div><p style="margin:0;font-weight:600;color:white;margin-bottom:.25rem">Sign In with Google</p><p style="margin:0;color:#a3a3a3;font-size:.875rem">Click the blue "Sign in" button in the top-right. Use your Gmail or Google Workspace account.</p></div></div>
+                <div class="step-card"><div class="step-num">3</div><div><p style="margin:0;font-weight:600;color:white;margin-bottom:.25rem">Click "Get API Key" in the Left Sidebar</p><p style="margin:0;color:#a3a3a3;font-size:.875rem">In the left navigation panel, find and click "Get API Key." Then click <strong>"Create API key in new project."</strong></p></div></div>
+                <div class="step-card"><div class="step-num">4</div><div><p style="margin:0;font-weight:600;color:white;margin-bottom:.25rem">Copy and Secure Your Key</p><p style="margin:0;color:#a3a3a3;font-size:.875rem">Google will display your API key once. Copy it immediately and store it in an <code>.env</code> file. Never commit it to Git.</p></div></div>
+                <div class="step-card"><div class="step-num">5</div><div><p style="margin:0;font-weight:600;color:white;margin-bottom:.25rem">Agree to Terms</p><p style="margin:0;color:#a3a3a3;font-size:.875rem">Review and accept the Gemini API Terms of Service. No billing information is required.</p></div></div>
+
+                <h2>Python Quickstart</h2>
+                <pre><code># Install the SDK
+# pip install google-generativeai
+
+import google.generativeai as genai
+import os
+
+# Load from environment variable (never hardcode keys)
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
+# Initialize model
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+# Basic text generation
+response = model.generate_content(
+    "Explain the difference between REST and GraphQL in 3 bullet points"
+)
+print(response.text)
+
+# Multi-turn conversation
+chat = model.start_chat()
+response1 = chat.send_message("I'm building a todo app in React.")
+response2 = chat.send_message("What state management library should I use?")
+print(response2.text)
+
+# Count tokens before sending (avoid surprises)
+token_count = model.count_tokens("Your prompt here")
+print(f"Token count: {token_count.total_tokens}")</code></pre>
+
+                <h2>JavaScript / Node.js Quickstart</h2>
+                <pre><code>// npm install @google/generative-ai
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+async function run() {
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  // Basic generation
+  const result = await model.generateContent(
+    "Write a function in TypeScript that debounces a callback"
+  );
+  console.log(result.response.text());
+
+  // Streaming response (better UX for long outputs)
+  const stream = await model.generateContentStream(
+    "Explain async/await in JavaScript with 3 examples"
+  );
+  for await (const chunk of stream.stream) {
+    process.stdout.write(chunk.text());
+  }
+}
+
+run();</code></pre>
+
+                <h2>Multimodal: Analyzing Images for Free</h2>
+                <p>One of Gemini's most powerful features is multimodal input — you can send images, PDFs, audio, and video alongside text prompts. All included in the free tier:</p>
+                <pre><code>import google.generativeai as genai
+from pathlib import Path
+
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+# Analyze an image from disk
+image_data = Path("screenshot.png").read_bytes()
+
+response = model.generate_content([
+    "Describe what's in this image and identify any UI problems",
+    {"mime_type": "image/png", "data": image_data}
+])
+print(response.text)</code></pre>
+                <p>This works with JPEG, PNG, GIF, WebP, PDF, MP3, WAV, MP4, and many other formats — all within the free tier limits.</p>
+
+                <h2>Understanding and Managing Rate Limits</h2>
+                <p>The free tier operates on three limit dimensions:</p>
+                <ul>
+                    <li><strong>RPM (Requests Per Minute):</strong> For Flash, this is 15. If you send the 16th request within a minute, you'll receive a <code>429 Resource Exhausted</code> error.</li>
+                    <li><strong>TPM (Tokens Per Minute):</strong> Flash is limited to 1,000,000 tokens per minute (essentially unlimited for practical use).</li>
+                    <li><strong>RPD (Requests Per Day):</strong> Flash allows 1,500 requests/day. Resets at midnight Pacific Time.</li>
+                </ul>
+
+                <h3>Implementing Retry Logic for Rate Limits</h3>
+                <pre><code>import time
+import google.generativeai as genai
+from google.api_core.exceptions import ResourceExhausted
+
+def generate_with_retry(model, prompt, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            return model.generate_content(prompt)
+        except ResourceExhausted as e:
+            if attempt < max_retries - 1:
+                wait_time = 60  # Wait 60 seconds for rate limit reset
+                print(f"Rate limited. Waiting {wait_time}s... (attempt {attempt+1})")
+                time.sleep(wait_time)
+            else:
+                raise e</code></pre>
+
+                <h2>Practical Tips to Maximize Your Free Quota</h2>
+                <ul>
+                    <li><strong>Use Flash by default, not Pro.</strong> Flash has 30x more daily requests than Pro. Only use Pro when absolutely necessary for complex reasoning tasks.</li>
+                    <li><strong>Batch your requests.</strong> Instead of 10 small API calls, structure your prompt to handle multiple tasks in one call. Use JSON output for structured multi-task responses.</li>
+                    <li><strong>Cache repeated prompts.</strong> If your app calls the API with the same system prompt repeatedly, store the response locally (Redis, SQLite) and invalidate after a reasonable TTL.</li>
+                    <li><strong>Count tokens before sending.</strong> Use <code>model.count_tokens()</code> to check request size before sending. This prevents surprises with the TPM limit on large documents.</li>
+                    <li><strong>Use streaming for long outputs.</strong> Streaming lets users see progress immediately and avoids client-side timeout issues for long-running generations.</li>
+                    <li><strong>Implement request queuing.</strong> If your app might get burst traffic, queue API calls and process them at 14 RPM (slightly under the limit) to avoid 429 errors.</li>
+                </ul>
+
+                <h2>When Does the Free Tier Upgrade Path Make Sense?</h2>
+                <p>When you move to production and need higher rate limits, you'll graduate to Google AI Studio's paid tier (same API key, just add billing to your Google Cloud project). Pricing as of 2026:</p>
+                <ul>
+                    <li><strong>Gemini 1.5 Flash:</strong> $0.075 per 1 million input tokens, $0.30 per 1 million output tokens</li>
+                    <li><strong>Gemini 1.5 Pro:</strong> $3.50 per 1 million input tokens, $10.50 per 1 million output tokens</li>
+                </ul>
+                <p>These are among the most competitive prices in the LLM market. Even when you move to paid, Gemini remains cost-effective at scale.</p>
+
+                <h2>What Can You Build with the Free Tier?</h2>
+                <p>The 1,500 free requests per day for Flash is more than enough to build and soft-launch:</p>
+                <ul>
+                    <li>Personal AI assistants and chatbots</li>
+                    <li>Code review tools that analyze PRs</li>
+                    <li>Document summarization services</li>
+                    <li>AI-powered search for internal wikis</li>
+                    <li>Image alt-text generators</li>
+                    <li>Content moderation pipelines</li>
+                    <li>Data extraction from unstructured documents (invoices, contracts, PDFs)</li>
+                </ul>
+                <p>Explore more free AI tools in the <a href="../index.html?category=ai" class="text-indigo-400 hover:underline">AWN_ AI tools directory →</a></p>
+            </div>
+
+            <footer class="mt-12 pt-8 border-t border-white/5">
+                <div class="bg-neutral-900/50 border border-white/5 rounded-2xl p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2">Explore More Free AI Tools</p>
+                    <p class="text-neutral-300 text-sm mb-4">Gemini is just the start. See all free AI APIs and models in the AWN_ directory.</p>
+                    <a href="../index.html?category=ai" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-mono text-xs font-semibold transition-all">Browse AI Tools →</a>
+                </div>
+            </footer>
+        </article>
+
+        <aside class="hidden lg:block w-72 shrink-0" aria-label="Sidebar">
+            <!-- REPLACE: Sidebar ad (300x600) -->
+            <div class="sticky top-24">
+                <div class="bg-neutral-900/50 border border-white/5 rounded-2xl p-5 mb-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-4">More Articles</p>
+                    <div class="space-y-4">
+                        <a href="free-ai-apis-no-credit-card-2025.html" class="block group"><p class="text-xs text-neutral-500 font-mono mb-1">AI & APIs</p><p class="text-sm text-neutral-300 group-hover:text-white transition-colors leading-snug">7 Free AI APIs — No Credit Card Required</p></a>
+                        <div class="h-px bg-white/5"></div>
+                        <a href="netlify-vs-vercel-free-tier-2025.html" class="block group"><p class="text-xs text-neutral-500 font-mono mb-1">Comparison</p><p class="text-sm text-neutral-300 group-hover:text-white transition-colors leading-snug">Netlify vs Vercel Free Tier 2026</p></a>
+                        <div class="h-px bg-white/5"></div>
+                        <a href="railway-vs-render-free-hosting-2025.html" class="block group"><p class="text-xs text-neutral-500 font-mono mb-1">Hosting</p><p class="text-sm text-neutral-300 group-hover:text-white transition-colors leading-snug">Railway vs Render: Free Backend</p></a>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-950/60 to-neutral-900/60 border border-indigo-500/20 rounded-2xl p-5">
+                    <p class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">Open Source</p>
+                    <p class="text-sm text-neutral-300 mb-4 leading-relaxed">Know a free AI tool we missed? Contribute to AWN_.</p>
+                    <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="block text-center px-3 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-mono text-xs font-semibold transition-all">Contribute →</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="border-t border-white/5 bg-neutral-950 py-12 mt-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+                <div><div class="font-bold font-mono text-white text-lg mb-3">AWN_</div><p class="text-xs text-neutral-500 font-mono">Free SaaS alternatives for developers.</p></div>
+                <div><h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Navigate</h3><ul class="space-y-2 text-xs font-mono text-neutral-500"><li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li><li><a href="../projects/index.html" class="hover:text-white transition-colors">Projects</a></li><li><a href="index.html" class="text-white">Blog</a></li></ul></div>
+                <div><h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Community</h3><ul class="space-y-2 text-xs font-mono text-neutral-500"><li><a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a></li><li><a href="../suggestions.html" class="hover:text-white transition-colors">Suggestions</a></li></ul></div>
+                <div><h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Legal</h3><ul class="space-y-2 text-xs font-mono text-neutral-500"><li><a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li><li><a href="../terms.html" class="hover:text-white transition-colors">Terms of Service</a></li><li><a href="../about.html#contact" class="hover:text-white transition-colors">Contact Us</a></li></ul></div>
+            </div>
+            <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-neutral-600 font-mono">© 2026 All We Need · MIT License</p>
+                <p class="text-xs text-neutral-700 font-mono">This site uses Google AdSense. See our <a href="../privacy.html" class="hover:text-neutral-500 underline">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </footer>
+    <script>window.addEventListener('scroll',function(){const s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('readingProgress').style.width=(s/h*100)+'%'});</script>
+</body>
+</html>
