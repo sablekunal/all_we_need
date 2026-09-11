@@ -1,6 +1,27 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+
+# Block build artifacts and scripts directory
+Disallow: /scripts/
+Disallow: /node_modules/
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Specific bot rules for well-behaved bots
+User-agent: Googlebot
+Allow: /
+Allow: /blog/
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Allow: /blog/
+Crawl-delay: 2
+
+# AdSense verification and media files
+User-agent: Mediapartners-Google
+Allow: /
 
 Sitemap: https://allweneed.pages.dev/sitemap.xml
-
-
