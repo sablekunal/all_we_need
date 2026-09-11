@@ -3,8 +3,26 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="robots" content="noindex, follow" />
-    <title>Terms of Service — All We Need</title>
+    <!-- AdSense REQUIRES legal pages to be indexable — do NOT use noindex here -->
+    <meta name="robots" content="index, follow" />
+    <title>Terms of Service — All We Need | Free Developer Tools Directory</title>
+    <meta name="description" content="Read the Terms of Service for All We Need (AWN_), the open-source community directory of free developer tools. Covers user conduct, contributions, disclaimers, and liability." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://allweneed.pages.dev/terms.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://allweneed.pages.dev/terms.html" />
+    <meta property="og:title" content="Terms of Service — All We Need" />
+    <meta property="og:description" content="Community Terms of Service for the All We Need open-source developer tools directory." />
+    <meta property="og:image" content="https://allweneed.pages.dev/logo.png" />
+    <meta property="og:site_name" content="All We Need" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://allweneed.pages.dev/terms.html" />
+    <meta name="twitter:title" content="Terms of Service — All We Need" />
+    <meta name="twitter:description" content="Community Terms of Service for the All We Need open-source developer tools directory." />
+    <meta name="twitter:image" content="https://allweneed.pages.dev/logo.png" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCQN3C21S"></script>
@@ -19,29 +37,71 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        neutral: {
+                            950: '#01010a',
+                            900: '#030312',
+                            800: '#15152a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="styles.css">
     <script defer src="js/simple-view.js"></script>
     <script defer src="js/animations.js"></script>
     <script defer src="js/announcement.js"></script>
+
+    <!-- JSON-LD: WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Service — All We Need",
+      "url": "https://allweneed.pages.dev/terms.html",
+      "description": "Terms of Service for the All We Need open-source developer tools directory, including contributor guidelines, disclaimers, and limitation of liability.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "All We Need",
+        "url": "https://allweneed.pages.dev/"
+      }
+    }
+    </script>
 </head>
 
 <body class="bg-neutral-950 text-neutral-100 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
     <header id="header" class="sticky top-0 w-full z-50 py-4 bg-neutral-950/90 backdrop-blur-md border-b border-white/5 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="font-semibold text-lg tracking-tight font-mono cursor-pointer hover:text-white transition-colors">
+            <a href="index.html" aria-label="All We Need Home" class="font-semibold text-lg tracking-tight font-mono cursor-pointer hover:text-white transition-colors">
                 AWN_
             </a>
-            <nav class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
+            <nav aria-label="Primary navigation" class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-neutral-400 absolute left-1/2 -translate-x-1/2">
                 <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
                 <a href="projects/index.html" class="hover:text-white transition-colors duration-300">Projects</a>
+                <a href="blog/index.html" class="hover:text-white transition-colors duration-300">Blog</a>
                 <a href="suggestions.html" class="hover:text-white transition-colors duration-300">Suggestions</a>
                 <a href="leaderboard.html" class="hover:text-white transition-colors duration-300">Leaderboard</a>
                 <a href="about.html" class="hover:text-white transition-colors duration-300">About</a>
-                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors duration-300">GitHub</a>
+                <a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-300">GitHub</a>
             </nav>
             <div class="flex items-center gap-4">
                 <button id="headerSimpleBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md cursor-pointer" aria-label="Toggle Simplified View"></button>
@@ -53,38 +113,146 @@
     </header>
 
     <main class="flex-grow max-w-4xl mx-auto px-6 pt-16 pb-20">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8 text-xs font-mono text-neutral-500">
+            <ol class="flex items-center gap-2">
+                <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                <li><span aria-hidden="true">/</span></li>
+                <li class="text-neutral-300">Terms of Service</li>
+            </ol>
+        </nav>
+
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Terms of Service</h1>
-            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest">Last updated: July 2026</p>
+            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest">Last updated: September 2026</p>
         </div>
-        <div class="prose prose-invert prose-neutral mx-auto max-w-3xl text-neutral-300 space-y-6 text-sm md:text-base leading-relaxed">
-            <p>Welcome to <strong>All We Need (AWN_)</strong>. By accessing our website and directory, you agree to these community Terms of Service.</p>
-            <h2 class="text-xl font-bold text-white mt-8 mb-3">1. Nature of the Service</h2>
-            <p>All We Need is a free, open-source curated directory designed to help software engineers discover useful tools, platforms, and resources. We do not charge fees, display ads, or accept paid placements.</p>
-            <h2 class="text-xl font-bold text-white mt-8 mb-3">2. Accuracy & Third-Party Resources</h2>
-            <p>While our maintainers hand-pick and evaluate tools, pricing models (such as "free tiers" or open-source licensing) on third-party websites can change without notice. We provide resource listings on an "as-is" basis without warranties of continued availability or accuracy.</p>
-            <h2 class="text-xl font-bold text-white mt-8 mb-3">3. Community Contributions</h2>
-            <p>By submitting tools, suggestions, or Pull Requests to the repository, you agree to license your contributions under our open-source MIT License and confirm that submitted tools comply with open community standards (no spam or malicious software).</p>
-            <h2 class="text-xl font-bold text-white mt-8 mb-3">4. Limitation of Liability</h2>
-            <p>In no event shall the authors, maintainers, or contributors of All We Need be liable for any direct, indirect, incidental, or consequential damages arising out of the use of any listed developer tools or resources.</p>
+
+        <div class="prose prose-invert prose-neutral mx-auto max-w-3xl text-neutral-300 space-y-8 text-sm md:text-base leading-relaxed">
+
+            <p>Welcome to <strong>All We Need (AWN_)</strong> — a free, open-source community-maintained directory of free alternatives to premium SaaS developer tools. By accessing or using this website at <a href="https://allweneed.pages.dev/" class="text-indigo-400 hover:underline">allweneed.pages.dev</a>, you agree to be bound by these Terms of Service. If you do not agree to these terms, please discontinue use of the site.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">1. Acceptance of Terms</h2>
+            <p>These Terms of Service ("Terms") constitute a legally binding agreement between you and the maintainers and contributors of the All We Need project ("we," "us," or "AWN_"). By accessing the website, browsing the tool directory, reading blog articles, or submitting contributions to the GitHub repository, you acknowledge that you have read, understood, and agree to these Terms and our <a href="privacy.html" class="text-indigo-400 hover:underline">Privacy Policy</a>.</p>
+            <p>We reserve the right to modify these Terms at any time. Continued use of the site following any changes constitutes your acceptance of the revised Terms.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">2. Nature of the Service</h2>
+            <p>All We Need is a <strong>free, community-curated reference directory</strong> and educational blog. We do not:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>Charge fees or subscription costs for access to the directory.</li>
+                <li>Accept paid placements or sponsored listings in the tool directory.</li>
+                <li>Guarantee the availability, performance, or legality of any listed third-party tool or service.</li>
+                <li>Represent, endorse, or affiliate with any listed tool or company unless explicitly stated.</li>
+            </ul>
+            <p>This site contains Google AdSense advertisements, which is a third-party advertising network. Ad placement does not indicate endorsement of advertised products or services.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">3. Accuracy & Third-Party Resources</h2>
+            <p>While our maintainers and community volunteers hand-pick and evaluate the tools listed in this directory, we cannot guarantee that the information published (including free tier details, pricing models, feature availability, and open-source licensing status) remains accurate over time. Third-party product offerings change without notice.</p>
+            <p>You acknowledge and agree that:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>All tool listings and blog content are provided on an <strong>"as-is" and "as-available" basis</strong>.</li>
+                <li>You must independently verify the current terms, pricing, and licensing of any tool before relying on it for production use.</li>
+                <li>We are not responsible for any changes in pricing, feature deprecation, or service termination by listed tools.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">4. Community Contributions & MIT License</h2>
+            <p>All We Need is an open-source project licensed under the <strong>MIT License</strong>. By submitting a pull request, issue, or suggestion to the project:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>You agree to license your contribution under the <a href="https://github.com/sablekunal/all_we_need/blob/main/LICENSE" class="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">MIT License</a>.</li>
+                <li>You confirm that you have the right to submit the contribution and that it does not infringe any third-party intellectual property rights.</li>
+                <li>You confirm that submitted tools, resources, and suggestions comply with open community standards — no spam, malware, phishing tools, or content that violates applicable laws.</li>
+                <li>You understand that maintainers may reject, modify, or remove any submitted content at their sole discretion.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">5. Prohibited Uses</h2>
+            <p>You agree not to use this website or its content to:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>Scrape, harvest, or systematically collect data for commercial resale without prior written permission.</li>
+                <li>Submit malicious, spammy, or deceptive tool listings or content.</li>
+                <li>Attempt to interfere with, hack, or disrupt the website's infrastructure or services.</li>
+                <li>Use the site in any way that violates applicable local, national, or international laws or regulations.</li>
+                <li>Impersonate the AWN_ project, its maintainers, or other users.</li>
+                <li>Post, link to, or promote content that is illegal, defamatory, harassing, or contains malware.</li>
+            </ul>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">6. Intellectual Property</h2>
+            <p>The overall design, layout, visual branding, editorial blog content, and curated structure of All We Need are the intellectual property of the AWN_ maintainers and contributors, provided under the MIT License. The MIT License permits you to freely use, copy, modify, and distribute the project's code, provided attribution is maintained.</p>
+            <p>Third-party tool names, logos, and trademarks referenced in the directory are the property of their respective owners. Use of third-party trademarks is for descriptive and reference purposes only and does not imply any affiliation or endorsement.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">7. Third-Party Advertising (Google AdSense)</h2>
+            <p>This website displays advertisements served by <strong>Google AdSense</strong>. We are not responsible for the content of any advertisement displayed on this site. Clicking on third-party advertisements will direct you away from our site, and we are not responsible for the content or practices of those third-party sites.</p>
+            <p>Google AdSense operates under Google's own terms and policies. You can review Google's advertising policies at <a href="https://policies.google.com/technologies/ads" class="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">policies.google.com/technologies/ads</a>.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">8. Disclaimer of Warranties</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THIS WEBSITE, ITS CONTENT, AND ALL LISTED TOOLS ARE PROVIDED <strong>"AS IS" WITHOUT WARRANTY OF ANY KIND</strong>, WHETHER EXPRESS, IMPLIED, OR STATUTORY. WE SPECIFICALLY DISCLAIM ALL IMPLIED WARRANTIES OF:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>Merchantability and fitness for a particular purpose;</li>
+                <li>Non-infringement of third-party rights;</li>
+                <li>Accuracy, completeness, or reliability of information;</li>
+                <li>Uninterrupted or error-free access to the website or any linked services.</li>
+            </ul>
+            <p>We make no warranty that any listed tool, free-tier offering, or open-source resource will continue to be available, remain free of charge, or meet your specific requirements. You use all listed resources at your own risk.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">9. Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHORS, MAINTAINERS, CONTRIBUTORS, OR OPERATORS OF ALL WE NEED BE LIABLE FOR ANY:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li>Direct, indirect, incidental, special, exemplary, or consequential damages;</li>
+                <li>Loss of profits, revenue, data, goodwill, or business opportunities;</li>
+                <li>Damages resulting from the use of or inability to use any listed tool or resource;</li>
+                <li>Damages resulting from unauthorized access to or alteration of your transmissions or data;</li>
+                <li>Any other matter relating to this service.</li>
+            </ul>
+            <p>This limitation applies even if AWN_ has been advised of the possibility of such damages, and regardless of whether such damages are based on contract, tort, negligence, strict liability, or any other legal theory.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">10. Governing Law & Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. As an open-source community project with a global contributor base, we encourage all disputes to be resolved through good-faith community discussion via our public GitHub repository before pursuing any formal legal remedies.</p>
+
+            <h2 class="text-xl font-bold text-white mt-10 mb-3">11. Contact & Modifications</h2>
+            <p>For questions, concerns, or requests related to these Terms of Service, please reach out via:</p>
+            <ul class="list-disc pl-6 space-y-2 text-neutral-400">
+                <li><strong class="text-neutral-200">GitHub Issues:</strong> <a href="https://github.com/sablekunal/all_we_need/issues" class="text-indigo-400 hover:underline" target="_blank" rel="noopener noreferrer">github.com/sablekunal/all_we_need/issues</a></li>
+                <li><strong class="text-neutral-200">Contact Page:</strong> <a href="about.html#contact" class="text-indigo-400 hover:underline">allweneed.pages.dev/about.html#contact</a></li>
+            </ul>
+            <p>We reserve the right to modify these Terms at any time. We will make reasonable efforts to notify users of significant changes by updating the "Last updated" date above. Your continued use of the site constitutes acceptance of the updated Terms.</p>
         </div>
     </main>
 
     <footer class="border-t border-white/5 bg-neutral-950 py-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <span class="font-mono text-sm font-bold text-white">AWN_</span>
-                <span class="text-xs text-neutral-500 font-mono">Curated developer tools for software engineers.</span>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+                <div>
+                    <div class="font-bold font-mono text-white text-lg mb-3">AWN_</div>
+                    <p class="text-xs text-neutral-500 font-mono leading-relaxed">The open-source directory of free alternatives to premium SaaS tools.</p>
+                </div>
+                <div>
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Navigate</h3>
+                    <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="projects/index.html" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="blog/index.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Community</h3>
+                    <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                        <li><a href="https://github.com/sablekunal/all_we_need" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Repo</a></li>
+                        <li><a href="suggestions.html" class="hover:text-white transition-colors">Suggestions</a></li>
+                        <li><a href="https://github.com/sablekunal/all_we_need/issues" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Report Issue</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">Legal</h3>
+                    <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-white hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="about.html#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex items-center gap-6 font-mono text-xs text-neutral-400">
-                <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                <a href="projects/index.html" class="hover:text-white transition-colors">Projects</a>
-                <a href="suggestions.html" class="hover:text-white transition-colors">Suggestions</a>
-                <a href="leaderboard.html" class="hover:text-white transition-colors">Leaderboard</a>
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="privacy.html" class="hover:text-white transition-colors">Privacy</a>
-                <a href="terms.html" class="text-white hover:text-white transition-colors">Terms</a>
-                <a href="https://github.com/sablekunal/all_we_need" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-neutral-600 font-mono">© 2026 All We Need. Open-source under the MIT License.</p>
+                <p class="text-xs text-neutral-700 font-mono">This site uses Google AdSense & Analytics. See our <a href="privacy.html" class="hover:text-neutral-500 underline">Privacy Policy</a>.</p>
             </div>
         </div>
     </footer>
