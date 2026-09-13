@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
+marked.use({
+  mangle: false,
+  headerIds: false
+});
 const fetch = require('node-fetch');
 const mkdirp = require('mkdirp');
 const slugify = require('slugify');
@@ -163,17 +167,33 @@ async function build() {
     });
   }
 
-  // Custom Scripts (Search, Animations)
+  // Custom Scripts (Search, Animations, Cookie Consent)
   try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'search.js'), path.join(OUT_DIR, 'search.js')); } catch (e) { }
 
-  // Create js dir and copy animations
+  // Create js dir and copy animations and consent scripts
   ensureDir(path.join(OUT_DIR, 'js'));
   try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'animations.js'), path.join(OUT_DIR, 'js', 'animations.js')); } catch (e) { }
   try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'simple-view.js'), path.join(OUT_DIR, 'js', 'simple-view.js')); } catch (e) { }
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'cookie-consent.js'))) {
+    try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'cookie-consent.js'), path.join(OUT_DIR, 'js', 'cookie-consent.js')); } catch (e) { }
+  }
 
-  try { fs.copyFileSync(path.join(REPO_ROOT, 'logo.png'), path.join(OUT_DIR, 'logo.png')); } catch (e) { }
-  try { fs.copyFileSync(path.join(REPO_ROOT, 'favicon.png'), path.join(OUT_DIR, 'favicon.png')); } catch (e) { }
-  try { fs.copyFileSync(path.join(TEMPLATES_DIR, '404.html'), path.join(OUT_DIR, '404.html')); } catch (e) { }
+  // Copy Root Static Assets (Favicon Set, Manifest, OG Card, Robots)
+  const rootAssetsToCopy = [
+    'logo.png', 'og-image.png', 'favicon.ico', 'favicon.png',
+    'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png',
+    'android-chrome-192x192.png', 'android-chrome-512x512.png',
+    'site.webmanifest', 'robots.txt'
+  ];
+  rootAssetsToCopy.forEach(asset => {
+    const src = path.join(REPO_ROOT, asset);
+    if (fs.existsSync(src)) {
+      try {
+        fs.copyFileSync(src, path.join(OUT_DIR, asset));
+        console.log(`Copied asset: ${asset}`);
+      } catch (e) { console.warn(`Failed to copy asset ${asset}`); }
+    }
+  });
 
   // Copy Google Verification HTML files
   const rootFiles = fs.readdirSync(REPO_ROOT);
@@ -252,7 +272,7 @@ async function build() {
     const isUrl = (str) => str.startsWith('http') || str.startsWith('//');
     const projectPageLogo = isUrl(project.logo) ? project.logo : `../${project.logo}`;
 
-    const logoHtml = `<img src="${projectPageLogo}" alt="${project.title}" class="w-16 h-16 rounded-xl object-cover border border-neutral-800 bg-neutral-900">`;
+    const logoHtml = `<img src="${projectPageLogo}" alt="${escapeHtml(project.title)} logo" width="64" height="64" class="w-16 h-16 rounded-xl object-cover border border-neutral-800 bg-neutral-900">`;
     pHtml = pHtml.replace('{{logo_html}}', logoHtml);
 
     // Inject Tags
@@ -262,7 +282,7 @@ async function build() {
     // Inject Contributors
     const contribsHtml = project.contributors.slice(0, 5).map(c => `
             <a href="${c.html_url}" target="_blank" title="${c.login}">
-                <img src="${c.avatar_url}" class="w-8 h-8 rounded-full border-2 border-neutral-900 hover:scale-110 transition relative z-0 hover:z-10">
+                <img src="${c.avatar_url}" alt="${escapeHtml(c.login)} avatar" width="32" height="32" class="w-8 h-8 rounded-full border-2 border-neutral-900 hover:scale-110 transition relative z-0 hover:z-10">
             </a>
         `).join('') || '<span class="text-neutral-500 text-sm italic">No data</span>';
     pHtml = pHtml.replace('{{contributors_html}}', contribsHtml);
@@ -273,9 +293,11 @@ async function build() {
       : '';
     pHtml = pHtml.replace('{{repo_button}}', repoBtn);
 
-    // SEO Injection
+    // SEO & Open Graph Injection
     const canonicalUrl = `https://allweneed.pages.dev/projects/${slug}`;
-    pHtml = pHtml.replace('{{canonical_url}}', canonicalUrl);
+    const projectOgImage = isUrl(project.logo) ? project.logo : 'https://allweneed.pages.dev/og-image.png';
+    pHtml = pHtml.replace(/{{canonical_url}}/g, canonicalUrl);
+    pHtml = pHtml.replace(/{{og_image}}/g, projectOgImage);
 
     // Inject Screenshot
     let screenshotHtml = '';
@@ -612,21 +634,32 @@ async function build() {
   let projectsIndexHtml = projectsTemplate;
 
   projectsIndexHtml = projectsIndexHtml
-    .replace('<title>Leaderboard — All We Need</title>', '<title>Projects — All We Need</title>')
-    .replace('Leaderboard — All We Need', 'Projects — All We Need');
+    .replace(/<title>.*?<\/title>/, '<title>Projects Directory — All We Need | Free Developer Tools</title>')
+    .replace(/<meta name="description" content=".*?" \/>/, '<meta name="description" content="Browse our complete directory of free developer tools, hosting tiers, AI models, APIs, and cloud services with zero ads." />')
+    .replace(/<link rel="canonical" href=".*?" \/>/, '<link rel="canonical" href="https://allweneed.pages.dev/projects/" />')
+    .replace(/Contributor Leaderboard — All We Need/g, 'Projects Directory — All We Need');
 
   // Fix Relative Paths for Subdirectory
   projectsIndexHtml = projectsIndexHtml
-    .replace(/href="styles.css"/g, 'href="../styles.css"')
-    .replace(/src="search.js"/g, 'src="../search.js"')
-    .replace(/src="js\/animations.js"/g, 'src="../js/animations.js"')
-    .replace(/href="index.html"/g, 'href="../index.html"')
-    .replace(/href="projects\/index.html"/g, 'href="index.html"')
-    .replace(/href="leaderboard.html"/g, 'href="../leaderboard.html"')
-    .replace(/href="about.html"/g, 'href="../about.html"')
-    .replace(/src="logo.png"/g, 'src="../logo.png"')
-    .replace(/href="favicon.png"/g, 'href="../favicon.png"')
-    .replace(/src="js\/simple-view.js"/g, 'src="../js/simple-view.js"');
+    .replace(/href="styles\.css"/g, 'href="../styles.css"')
+    .replace(/src="search\.js"/g, 'src="../search.js"')
+    .replace(/src="js\/animations\.js"/g, 'src="../js/animations.js"')
+    .replace(/src="js\/announcement\.js"/g, 'src="../js/announcement.js"')
+    .replace(/src="js\/cookie-consent\.js"/g, 'src="../js/cookie-consent.js"')
+    .replace(/href="index\.html"/g, 'href="../index.html"')
+    .replace(/href="projects\/index\.html"/g, 'href="index.html"')
+    .replace(/href="leaderboard\.html"/g, 'href="../leaderboard.html"')
+    .replace(/href="about\.html"/g, 'href="../about.html"')
+    .replace(/href="suggestions\.html"/g, 'href="../suggestions.html"')
+    .replace(/href="blog\/index\.html"/g, 'href="../blog/index.html"')
+    .replace(/src="logo\.png"/g, 'src="../logo.png"')
+    .replace(/href="favicon\.ico"/g, 'href="../favicon.ico"')
+    .replace(/href="favicon\.png"/g, 'href="../favicon.png"')
+    .replace(/href="favicon-32x32\.png"/g, 'href="../favicon-32x32.png"')
+    .replace(/href="favicon-16x16\.png"/g, 'href="../favicon-16x16.png"')
+    .replace(/href="apple-touch-icon\.png"/g, 'href="../apple-touch-icon.png"')
+    .replace(/href="site\.webmanifest"/g, 'href="../site.webmanifest"')
+    .replace(/src="js\/simple-view\.js"/g, 'src="../js/simple-view.js"');
 
   // Highlight PROJECTS (Desktop) & Mobile
   // Since we use LEADERBOARD base, it has "Leaderboard" active. We must unset it and set "Projects".
@@ -758,7 +791,7 @@ async function build() {
 
   fs.writeFileSync(path.join(OUT_DIR, 'leaderboard.html'), minifyHtml(lbHtml));
 
-  // 6b. Generate Suggestions HTML & copy assets
+  // 6b. Generate Auxiliary & Legal Pages
   ensureDir(path.join(OUT_DIR, 'js'));
   if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'))) {
     fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'), path.join(OUT_DIR, 'js', 'announcement.js'));
@@ -766,16 +799,22 @@ async function build() {
   if (fs.existsSync(path.join(TEMPLATES_DIR, 'suggestions.json'))) {
     fs.copyFileSync(path.join(TEMPLATES_DIR, 'suggestions.json'), path.join(OUT_DIR, 'suggestions.json'));
   }
-  if (fs.existsSync(path.join(TEMPLATES_DIR, 'suggestions.html'))) {
-    let sugHtml = fs.readFileSync(path.join(TEMPLATES_DIR, 'suggestions.html'), 'utf8');
-    fs.writeFileSync(path.join(OUT_DIR, 'suggestions.html'), minifyHtml(sugHtml));
-  }
+
+  const auxiliaryPages = ['suggestions.html', 'privacy.html', 'terms.html', 'thank-you.html', '404.html'];
+  auxiliaryPages.forEach(page => {
+    const pageSrc = path.join(TEMPLATES_DIR, page);
+    if (fs.existsSync(pageSrc)) {
+      const pageHtml = fs.readFileSync(pageSrc, 'utf8');
+      fs.writeFileSync(path.join(OUT_DIR, page), minifyHtml(pageHtml));
+      console.log(`Generated page: ${page}`);
+    }
+  });
 
   // 6. JSON Outputs
   fs.writeFileSync(path.join(OUT_DIR, 'projects.json'), JSON.stringify(projects, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, 'leaderboard.json'), JSON.stringify(leaderboard, null, 2));
 
-  // 7. Generate Sitemap
+  // 7. Generate Complete Sitemap
   console.log("Generating Sitemap...");
   const baseUrl = "https://allweneed.pages.dev";
   // Use YYYY-MM-DD format for wider compatibility
@@ -794,26 +833,51 @@ async function build() {
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>${baseUrl}/suggestions</loc>
+    <loc>${baseUrl}/suggestions.html</loc>
     <lastmod>${today}</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>${baseUrl}/leaderboard</loc>
+    <loc>${baseUrl}/leaderboard.html</loc>
     <lastmod>${today}</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>${baseUrl}/about</loc>
+    <loc>${baseUrl}/about.html</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/privacy.html</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/terms.html</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/blog/</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.9</priority>
+  </url>`;
+
+  // Dynamically include blog articles if present in docs/blog
+  const blogDir = path.join(OUT_DIR, 'blog');
+  if (fs.existsSync(blogDir)) {
+    const blogFiles = fs.readdirSync(blogDir).filter(f => f.endsWith('.html') && f !== 'index.html');
+    blogFiles.forEach(bf => {
+      sitemap += `
+  <url>
+    <loc>${baseUrl}/blog/${bf}</loc>
     <lastmod>${today}</lastmod>
     <priority>0.8</priority>
   </url>`;
+    });
+  }
 
   projects.forEach(p => {
-    // p.full_path is 'projects/slug.html'
-    // We keep extension for files, but if you want clean URLs for projects, verify server support.
-    // GitHub Pages / Cloudflare Pages usually support clean URLs if .html exists.
-    // Let's keep .html for leaf pages to be safe, but root/index should be clean.
     sitemap += `
   <url>
     <loc>${baseUrl}/${p.full_path.replace('.html', '')}</loc>
@@ -827,7 +891,12 @@ async function build() {
 
   fs.writeFileSync(path.join(OUT_DIR, 'sitemap.xml'), sitemap);
   // Also copy robots.txt to output
-  try { fs.copyFileSync(path.join(REPO_ROOT, 'robots.txt'), path.join(OUT_DIR, 'robots.txt')); } catch (e) { console.warn("robots.txt not found"); }
+  try {
+    fs.copyFileSync(path.join(REPO_ROOT, 'robots.txt'), path.join(OUT_DIR, 'robots.txt'));
+    console.log("Synchronized robots.txt");
+  } catch (e) {
+    console.warn("robots.txt not found");
+  }
 
   // 8. Generate llms.txt (Answer Engine Optimization)
   console.log("Generating llms.txt...");

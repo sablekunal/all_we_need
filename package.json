@@ -29,6 +29,8 @@
   ],
   "scripts": {
     "build": "node scripts/generate.js",
+    "dev": "node scripts/generate.js && npx -y serve docs",
+    "start": "npx -y serve docs",
     "deploy": "echo 'Deployment handled by Cloudflare'"
   },
   "dependencies": {

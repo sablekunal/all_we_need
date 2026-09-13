@@ -15,10 +15,13 @@
         gtag('config', 'G-TDCQN3C21S');
     </script>
 
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png">
+    <!-- Favicon Set -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#01010a">
     <meta name="description" content="{{description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="{{canonical_url}}" />
@@ -26,6 +29,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{canonical_url}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:image" content="{{og_image}}" />
+    <meta property="og:site_name" content="All We Need" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{canonical_url}}" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:image" content="{{og_image}}" />
 
     <!-- Fonts & Tailwind -->
     <link
@@ -60,6 +75,7 @@
     <script defer src="../js/animations.js"></script>
     <script defer src="../js/simple-view.js"></script>
     <script defer src="../js/announcement.js"></script>
+    <script defer src="../js/cookie-consent.js"></script>
 </head>
 
 <body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-white/20">
