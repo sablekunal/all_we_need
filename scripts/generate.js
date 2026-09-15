@@ -177,6 +177,9 @@ async function build() {
   if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'cookie-consent.js'))) {
     try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'cookie-consent.js'), path.join(OUT_DIR, 'js', 'cookie-consent.js')); } catch (e) { }
   }
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'promo-popup.js'))) {
+    try { fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'promo-popup.js'), path.join(OUT_DIR, 'js', 'promo-popup.js')); } catch (e) { }
+  }
 
   // Copy Root Static Assets (Favicon Set, Manifest, OG Card, Robots)
   const rootAssetsToCopy = [
@@ -646,6 +649,7 @@ async function build() {
     .replace(/src="js\/animations\.js"/g, 'src="../js/animations.js"')
     .replace(/src="js\/announcement\.js"/g, 'src="../js/announcement.js"')
     .replace(/src="js\/cookie-consent\.js"/g, 'src="../js/cookie-consent.js"')
+    .replace(/src="js\/promo-popup\.js"/g, 'src="../js/promo-popup.js"')
     .replace(/href="index\.html"/g, 'href="../index.html"')
     .replace(/href="projects\/index\.html"/g, 'href="index.html"')
     .replace(/href="leaderboard\.html"/g, 'href="../leaderboard.html"')

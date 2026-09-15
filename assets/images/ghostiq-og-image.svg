@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <rect width="1200" height="630" fill="#09090b"/>
+  <!-- Ambient Gradient Glows -->
+  <circle cx="200" cy="150" r="300" fill="#6366f1" opacity="0.12" filter="blur(100px)"/>
+  <circle cx="1000" cy="450" r="280" fill="#8b5cf6" opacity="0.12" filter="blur(90px)"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="#121215" stroke="#27272a" stroke-width="2"/>
+  
+  <!-- Brand Header -->
+  <g transform="translate(130, 140)">
+    <rect width="54" height="54" rx="14" fill="#18181b" stroke="#3f3f46" stroke-width="1.5"/>
+    <path d="M30 14L18 30H28L26 42L38 26H28L30 14Z" fill="url(#grad)" />
+    <text x="75" y="38" fill="#f4f4f5" font-family="Inter, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.02em">ghostIQ</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="130" y="270" fill="#f4f4f5" font-family="Inter, sans-serif" font-size="46" font-weight="700" letter-spacing="-0.03em">
+    Stealth AI Humanizer &amp;
+  </text>
+  <text x="130" y="330" fill="url(#grad)" font-family="Inter, sans-serif" font-size="46" font-weight="700" letter-spacing="-0.03em">
+    Detector Bypass Workbench
+  </text>
+  
+  <!-- Description -->
+  <text x="130" y="390" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="20" font-weight="400">
+    Bypass Turnitin, GPTZero, Originality.ai, and ZeroGPT with 100% natural syntactic flow.
+  </text>
+
+  <!-- Feature Pills -->
+  <g transform="translate(130, 440)">
+    <rect width="210" height="40" rx="20" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <circle cx="24" cy="20" r="5" fill="#10b981"/>
+    <text x="38" y="25" fill="#e5e1e4" font-family="JetBrains Mono, monospace" font-size="13" font-weight="500">100% Turnitin Safe</text>
+  </g>
+
+  <g transform="translate(360, 440)">
+    <rect width="190" height="40" rx="20" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <circle cx="24" cy="20" r="5" fill="#6366f1"/>
+    <text x="38" y="25" fill="#e5e1e4" font-family="JetBrains Mono, monospace" font-size="13" font-weight="500">Free &amp; Zero-Login</text>
+  </g>
+
+  <g transform="translate(570, 440)">
+    <rect width="220" height="40" rx="20" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <circle cx="24" cy="20" r="5" fill="#a855f7"/>
+    <text x="38" y="25" fill="#e5e1e4" font-family="JetBrains Mono, monospace" font-size="13" font-weight="500">Zero Clumsy Synonyms</text>
+  </g>
+
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+</svg>

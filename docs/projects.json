@@ -208,6 +208,28 @@
     "seo_title": "Emailnator - Free Email Tool | All We Need"
   },
   {
+    "title": "ghostIQ",
+    "slug": "ghostiq",
+    "link": "https://ghostiq.pages.dev/",
+    "description": "Stealth AI text humanizer and detector bypass calibrated for Turnitin v2.4, GPTZero, and Originality.ai. 100% free with zero login.",
+    "tags": [
+      "ai",
+      "humanizer",
+      "bypass",
+      "utilities",
+      "productivity",
+      "writing",
+      "free"
+    ],
+    "logo": "https://ghostiq.pages.dev/icon.svg",
+    "contributors": [],
+    "content": "<h2>Overview</h2>\n<p><strong>ghostIQ</strong> is a high-performance, production-ready AI text humanizer and detector bypass workbench. Designed to eliminate false positives and rigid synthetic syntax, it restructures AI-generated copy from ChatGPT, Claude, and Gemini to achieve 100% human-score calibration against leading detection platforms like Turnitin (v2.4), GPTZero Deep, and Originality.ai 3.0.</p>\n<p>Unlike clumsy synonym spinners that destroy grammatical integrity, ghostIQ performs natural syntactic flow restructuring, adjusting burstiness and perplexity while preserving the author&#39;s original meaning and factual nuance.</p>\n<blockquote>\n<p>[!TIP]\n<strong>Zero Login &amp; Free</strong>: ghostIQ does not require account creation, credit cards, or subscription tiers. The entire workbench is accessible directly in the browser with unlimited text restructuring.</p>\n</blockquote>\n<hr>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Dual-Pane Interactive Workbench</strong>: Real-time word count telemetry, AI marker scanning, and side-by-side restructuring comparison.</li>\n<li><strong>Detector-Specific Calibration</strong>: Pre-tuned heuristics for Turnitin v2.4, GPTZero Deep, Originality.ai 3.0, and ZeroGPT.</li>\n<li><strong>Multi-Mode Engine</strong>:<ul>\n<li><strong>Standard</strong>: Balanced restructuring ideal for essays, articles, and general communication.</li>\n<li><strong>Natural</strong>: Conversational, highly readable prose with natural syntactic variance.</li>\n<li><strong>Academic</strong>: Formal research style retaining specialized vocabulary and citation tone.</li>\n</ul>\n</li>\n<li><strong>Stealth / Flow Intensity Slider</strong>: Fine-grained 50%–100% slider control over sentence restructuring depth and vocabulary variance.</li>\n<li><strong>Zero Render-Blocking Performance</strong>: Sub-second edge inference powered by Cloudflare Pages with a near-perfect 99/100 Lighthouse performance score.</li>\n<li><strong>Privacy First</strong>: No text is logged or stored into training corpuses. Your drafts remain entirely private.</li>\n</ul>\n<hr>\n<h2>Detector Benchmark Results</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">AI Detector Platform</th>\n<th align=\"left\">Unprocessed AI Score</th>\n<th align=\"left\">ghostIQ Processed Score</th>\n<th align=\"left\">Status</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Turnitin (v2.4)</strong></td>\n<td align=\"left\">98% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>GPTZero Deep</strong></td>\n<td align=\"left\">100% AI Detected</td>\n<td align=\"left\"><strong>2% AI (98% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Originality.ai 3.0</strong></td>\n<td align=\"left\">94% AI Detected</td>\n<td align=\"left\"><strong>1% AI (99% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>ZeroGPT</strong></td>\n<td align=\"left\">89% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n</tbody></table>\n<hr>\n<h2>How to Use ghostIQ</h2>\n<ol>\n<li>Visit <a href=\"https://ghostiq.pages.dev/\">ghostIQ</a>.</li>\n<li>Paste your draft into the left input pane.</li>\n<li>Select your target mode (<strong>Standard</strong>, <strong>Natural</strong>, or <strong>Academic</strong>) and adjust the Stealth / Flow intensity slider.</li>\n<li>Click <strong>Humanize Text</strong>.</li>\n<li>Copy your restructured, detector-proof text from the right output pane.</li>\n</ol>\n",
+    "full_path": "projects/ghostiq",
+    "date": "2026-09-15",
+    "filename": "ghostiq.md",
+    "seo_title": "ghostIQ - Free Ai Tool | All We Need"
+  },
+  {
     "title": "GitHub",
     "slug": "github",
     "link": "https://github.com/",
