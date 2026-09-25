@@ -42,6 +42,7 @@ jobs:
         path: docs
 
   deploy:
+    if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
     steps:
