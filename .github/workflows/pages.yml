@@ -40,18 +40,22 @@ jobs:
         run: |
           npm run build
 
+      # SKIP pages config on PRs
       - name: Configure GitHub Pages
+        if: github.event_name == 'push'
         uses: actions/configure-pages@v5
 
+      # SKIP artifact upload on PRs
       - name: Upload artifact
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
   deploy:
     needs: build
-    # This ensures deployment only happens on merges/pushes to main or master
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    # This ensures deployment only happens on merges/pushes
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
