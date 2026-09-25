@@ -143,20 +143,7 @@ function renderResults(results, container) {
   container.style.zIndex = '50';
 
   if (results.length === 0) {
-    container.innerHTML = `
-      <div class="text-center py-20 px-6 max-w-md mx-auto animate-fade-in">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-neutral-900 border border-white/10 flex items-center justify-center text-2xl">
-          🔍
-        </div>
-        <h4 class="text-lg font-bold text-white mb-2">No Matching Tools Found</h4>
-        <p class="text-neutral-400 text-xs font-mono mb-6 leading-relaxed">
-          Know a great free developer alternative or tool that belongs here? Submit it to the community!
-        </p>
-        <button onclick="toggleSuggestionForm()" class="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-mono text-xs font-semibold rounded-xl shadow-lg transition-all cursor-pointer">
-          ➕ Suggest This Tool
-        </button>
-      </div>
-    `;
+    container.innerHTML = `<div class="text-center text-neutral-500 py-20">No projects found.</div>`;
     return;
   }
 
@@ -167,9 +154,9 @@ function renderResults(results, container) {
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${results.map(p => `
-                 <a href="/${p.full_path.replace(/^\//, '')}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 opacity-0 translate-y-4 search-result-item">
+                 <a href="/${p.full_path}" class="glass-card block p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500 opacity-0 translate-y-4 search-result-item">
                     <div class="flex justify-between items-start mb-6">
-                         <img src="${p.logo}" alt="${escapeHtml(p.title)} logo" width="48" height="48" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all">
+                         <img src="${p.logo}" class="w-12 h-12 rounded-xl object-cover bg-neutral-900 shadow-lg group-hover:shadow-white/10 transition-all">
                          <svg class="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </div>
                     <h4 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors tracking-tight">${escapeHtml(p.title)}</h4>
@@ -178,7 +165,7 @@ function renderResults(results, container) {
                     <div class="flex items-center justify-between border-t border-white/5 pt-4">
                         <span class="text-xs font-mono text-neutral-600">By ${p.contributors[0] ? p.contributors[0].login : 'Community'}</span>
                         <div class="flex -space-x-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                             ${p.contributors.slice(0, 3).map(c => `<img src="${c.avatar_url}" alt="${escapeHtml(c.login)} avatar" width="24" height="24" class="w-6 h-6 rounded-full border border-neutral-900">`).join('')}
+                             ${p.contributors.slice(0, 3).map(c => `<img src="${c.avatar_url}" class="w-6 h-6 rounded-full border border-neutral-900">`).join('')}
                         </div>
                     </div>
                  </a>

@@ -46,46 +46,13 @@ function toggleSuggestionForm() {
 // Handle quick suggestion submit from banner
 function handleQuickSuggestionSubmit(event) {
   event.preventDefault();
-  const form = document.getElementById('announcementSuggestionForm');
   const nameInput = document.getElementById('sugName');
   const catInput = document.getElementById('sugCategory');
   const descInput = document.getElementById('sugDescription');
-  const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
-  // Clear previous errors
-  clearFormErrors(form);
-
-  let hasError = false;
-
-  if (!nameInput || !nameInput.value.trim()) {
-    showInputError(nameInput, 'Please enter your name or GitHub handle.');
-    hasError = true;
-  }
-
-  if (!descInput || !descInput.value.trim()) {
-    showInputError(descInput, 'Please describe your suggestion or feedback.');
-    hasError = true;
-  } else if (descInput.value.trim().length < 5) {
-    showInputError(descInput, 'Suggestion description must be at least 5 characters.');
-    hasError = true;
-  }
-
-  if (hasError) return;
-
-  // Loading state (Item 12)
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.dataset.origText = submitBtn.innerHTML;
-    submitBtn.innerHTML = `
-      <span class="inline-flex items-center gap-1.5">
-        <svg class="animate-spin h-3.5 w-3.5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
-        Saving...
-      </span>
-    `;
-    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+  if (!nameInput || !descInput || !nameInput.value.trim() || !descInput.value.trim()) {
+    alert('Please enter your name and suggestion description.');
+    return;
   }
 
   const name = nameInput.value.trim();
@@ -116,56 +83,23 @@ function handleQuickSuggestionSubmit(event) {
   localSuggestions.unshift(newSuggestion);
   localStorage.setItem('awn_user_suggestions', JSON.stringify(localSuggestions));
 
-  setTimeout(() => {
-    // Reset form & hide modal
-    nameInput.value = '';
-    descInput.value = '';
-    if (submitBtn && submitBtn.dataset.origText) {
-      submitBtn.innerHTML = submitBtn.dataset.origText;
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-    }
-    toggleSuggestionForm();
+  // Reset form & hide modal
+  nameInput.value = '';
+  descInput.value = '';
+  toggleSuggestionForm();
 
-    // Open GitHub Issue tab in background
-    try {
-      window.open(githubIssueUrl, '_blank');
-    } catch (e) {
-      console.warn('Popup blocked:', e);
-    }
+  // Open GitHub Issue tab to store on GitHub
+  window.open(githubIssueUrl, '_blank');
 
-    // Redirect to Thank You page (Item 14)
-    window.location.href = getBasePath() + 'thank-you.html';
-  }, 600);
-}
-
-// Inline Form Error Helpers (Item 13)
-function showInputError(inputEl, message) {
-  if (!inputEl) return;
-  inputEl.classList.add('border-rose-500', 'ring-1', 'ring-rose-500');
-  let err = inputEl.parentNode.querySelector('.form-error-msg');
-  if (!err) {
-    err = document.createElement('p');
-    err.className = 'form-error-msg text-rose-400 text-[10px] font-mono mt-1 flex items-center gap-1';
-    inputEl.parentNode.appendChild(err);
+  // Notify user or update suggestions list
+  if (document.getElementById('suggestionsList')) {
+    initSuggestionsPage();
+  } else {
+    showNotification(`Thank you ${name}! Suggestion saved & opened on GitHub. Redirecting to Suggestions page...`);
+    setTimeout(() => {
+      window.location.href = getBasePath() + 'suggestions.html';
+    }, 1500);
   }
-  err.innerHTML = `<span>⚠️ ${escapeHtml(message)}</span>`;
-
-  // Auto clear error when user types
-  const clearHandler = function () {
-    inputEl.classList.remove('border-rose-500', 'ring-1', 'ring-rose-500');
-    if (err) err.remove();
-    inputEl.removeEventListener('input', clearHandler);
-  };
-  inputEl.addEventListener('input', clearHandler);
-}
-
-function clearFormErrors(form) {
-  if (!form) return;
-  form.querySelectorAll('.border-rose-500').forEach(el => {
-    el.classList.remove('border-rose-500', 'ring-1', 'ring-rose-500');
-  });
-  form.querySelectorAll('.form-error-msg').forEach(el => el.remove());
 }
 
 // Get base path relative to current page

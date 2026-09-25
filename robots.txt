@@ -1,46 +1,6 @@
 User-agent: *
 Allow: /
-Allow: /blog/
-Allow: /projects/
-Allow: /assets/
-Allow: /css/
-Allow: /js/
-Allow: /sitemap.xml
-Allow: /robots.txt
-Allow: /llms.txt
-
-# Block internal build scripts and sources
-Disallow: /scripts/
-Disallow: /node_modules/
-Disallow: /templates/
-
-# Crawl delay to prevent server overload
-Crawl-delay: 1
-
-# Googlebot specific rules
-User-agent: Googlebot
-Allow: /
-Allow: /blog/
-Allow: /projects/
-Crawl-delay: 0
-
-# Bingbot specific rules
-User-agent: Bingbot
-Allow: /
-Allow: /blog/
-Allow: /projects/
-Crawl-delay: 1
-
-# Social Media preview crawlers
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-# AdSense verification and media files
-User-agent: Mediapartners-Google
-Allow: /
 
 Sitemap: https://allweneed.pages.dev/sitemap.xml
-Host: https://allweneed.pages.dev
+
+
