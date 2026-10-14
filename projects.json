@@ -664,6 +664,25 @@
     "seo_title": "ToolFK - Free Utilities Tool | All We Need"
   },
   {
+    "title": "TruthDraft",
+    "slug": "truthdraft",
+    "link": "https://truthdraft.com/",
+    "description": "Free AI writing detector and humanizer. Detect AI text and humanize it to sound natural — no login required.",
+    "tags": [
+      "ai",
+      "utilities",
+      "education",
+      "free"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=truthdraft.com&sz=128",
+    "contributors": [],
+    "content": "<h2 id=\"overview\">Overview</h2>\n<p><strong>TruthDraft</strong> is a web-based AI writing detector and AI text humanizer. It helps you review an automated writing estimate and compare an edited draft with your original text — completely free, with no account required.</p>\n<blockquote>\n<p>[!NOTE]\nTruthDraft is for students, researchers, and professionals who want to inspect or revise a short passage.</p>\n</blockquote>\n<h2 id=\"features\">Features</h2>\n<ul>\n<li><strong>AI Detector</strong> — Scans your text and returns an estimate of how much reads as AI-generated. Results are shown as a percentage with color-coded confidence indicators.</li>\n<li><strong>AI Humanizer</strong> — Rewrites your passage to use more natural phrasing, varied sentence structures, and idiomatic flow. The edited draft is shown side-by-side with your original so you can review every change before using it.</li>\n<li><strong>Zero Login</strong> — No account, no API key, no paywall. Paste your text, click run, and you&#39;re done.</li>\n<li><strong>Draft Comparison</strong> — See exactly what changed between your original and the humanized version so you stay in control of meaning and accuracy.</li>\n</ul>\n<h2 id=\"who-its-for\">Who It&#39;s For</h2>\n<table>\n<thead>\n<tr>\n<th>Audience</th>\n<th>Use Case</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Students</td>\n<td>Check drafts before submitting coursework</td>\n</tr>\n<tr>\n<td>Researchers</td>\n<td>Inspect AI-assisted sections of papers</td>\n</tr>\n<tr>\n<td>Professionals</td>\n<td>Polish AI-drafted communications</td>\n</tr>\n<tr>\n<td>Content Writers</td>\n<td>Identify and rewrite robotic-sounding passages</td>\n</tr>\n</tbody></table>\n<h2 id=\"how-to-use\">How to Use</h2>\n<ol>\n<li>Go to <strong><a href=\"https://truthdraft.com/\">truthdraft.com</a></strong>.</li>\n<li>Paste your text into the input box.</li>\n<li>Click <strong>Detect</strong> to see the AI score, or <strong>Humanize</strong> to get a revised draft.</li>\n<li>Compare the original and revised versions side-by-side.</li>\n<li>Copy and use the output — no sign-up needed.</li>\n</ol>\n<blockquote>\n<p>[!CAUTION]\n<strong>Important Disclaimers:</strong></p>\n<ul>\n<li>Detector results are <strong>estimates only</strong>. They can be wrong and cannot prove authorship.</li>\n<li>Humanizer edits <strong>may change meaning</strong>. Always review the output carefully.</li>\n<li>Humanizer edits <strong>do not guarantee any detector result</strong> — results may vary across platforms.</li>\n</ul>\n</blockquote>\n",
+    "full_path": "projects/truthdraft",
+    "date": "2026-10-15",
+    "filename": "truthdraft.md",
+    "seo_title": "TruthDraft - Free Ai Tool | All We Need"
+  },
+  {
     "title": "Unmute.sh",
     "slug": "unmutesh",
     "link": "https://unmute.sh/",
