@@ -763,6 +763,9 @@ async function build() {
   if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'))) {
     fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'announcement.js'), path.join(OUT_DIR, 'js', 'announcement.js'));
   }
+  if (fs.existsSync(path.join(TEMPLATES_DIR, 'js', 'promo-popup.js'))) {
+    fs.copyFileSync(path.join(TEMPLATES_DIR, 'js', 'promo-popup.js'), path.join(OUT_DIR, 'js', 'promo-popup.js'));
+  }
   if (fs.existsSync(path.join(TEMPLATES_DIR, 'suggestions.json'))) {
     fs.copyFileSync(path.join(TEMPLATES_DIR, 'suggestions.json'), path.join(OUT_DIR, 'suggestions.json'));
   }
