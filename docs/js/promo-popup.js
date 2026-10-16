@@ -1,8 +1,8 @@
-// Developer-Verified Promotion Popup for ghostIQ
+// Developer-Verified Promotion Popup for TruthDraft
 // Injected non-intrusively across All We Need
 
 (function () {
-  const STORAGE_KEY = 'awn_ghostiq_promo_dismissed';
+  const STORAGE_KEY = 'awn_truthdraft_promo_dismissed';
 
   function initPromoPopup() {
     // Check if dismissed previously
@@ -17,9 +17,12 @@
   function renderPopup() {
     if (document.getElementById('awn-promo-popup')) return;
 
-    // Resolve relative path to ghostIQ blog post based on current directory
-    let blogHref = 'blog/free-ai-humanizer-turnitin-bypass-ghostiq-2026.html';
+    // Do not show on TruthDraft project page itself
     const path = window.location.pathname;
+    if (path.includes('truthdraft') || path.includes('truth-draft')) return;
+
+    // Resolve relative path to TruthDraft blog post based on current directory
+    let blogHref = 'blog/free-ai-humanizer-turnitin-bypass-ghostiq-2026.html';
     if (path.includes('/projects/')) {
       blogHref = '../blog/free-ai-humanizer-turnitin-bypass-ghostiq-2026.html';
     } else if (path.includes('/blog/')) {
@@ -45,18 +48,18 @@
         </button>
       </div>
 
-      <a href="https://ghostiq.pages.dev/" target="_blank" rel="noopener noreferrer" class="block rounded-xl overflow-hidden border border-white/10 group mb-3 shadow-md bg-neutral-950">
-        <img src="https://ghostiq.pages.dev/og-image.svg" alt="ghostIQ Stealth AI Humanizer Banner" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="210" loading="lazy">
+      <a href="https://truthdraft.com/" target="_blank" rel="noopener noreferrer" class="block rounded-xl overflow-hidden border border-white/10 group mb-3 shadow-md bg-neutral-950">
+        <img src="https://truthdraft.com/og-image.png" alt="TruthDraft AI Humanizer & Detector Banner" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="210" loading="lazy">
       </a>
 
       <div>
         <div class="text-[11px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-1">// Found a best free humanizer for you</div>
-        <h4 class="text-sm font-bold text-white leading-tight">ghostIQ — Stealth AI Humanizer & Bypass</h4>
-        <p class="text-xs text-neutral-300 mt-1 leading-relaxed">Turnitin v2.4, GPTZero & Originality.ai bypass with natural syntactic flow. Zero logins, 100% free.</p>
+        <h4 class="text-sm font-bold text-white leading-tight">TruthDraft — AI Humanizer & Detector</h4>
+        <p class="text-xs text-neutral-300 mt-1 leading-relaxed">Turnitin bypass, AI detection & text humanizer with natural flow. Zero logins, 100% free.</p>
       </div>
 
       <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-white/10">
-        <a href="https://ghostiq.pages.dev/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 px-3 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-mono text-xs font-semibold rounded-xl shadow-lg transition-all text-center">
+        <a href="https://truthdraft.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 px-3 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-mono text-xs font-semibold rounded-xl shadow-lg transition-all text-center">
           Visit Site ↗
         </a>
         <a href="${blogHref}" class="flex items-center justify-center gap-1 px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 hover:text-white border border-white/10 font-mono text-xs font-semibold rounded-xl transition-all text-center">

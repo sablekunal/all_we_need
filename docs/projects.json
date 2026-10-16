@@ -1,5 +1,23 @@
 [
   {
+    "title": "Agent QA",
+    "slug": "agent-qa",
+    "link": "https://vostride.com/",
+    "description": "The self-improving QA agent for natural-language web and mobile tests.",
+    "tags": [
+      "ai",
+      "developer-tools",
+      "testing"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=vostride.com&sz=128",
+    "contributors": [],
+    "content": "<p>Agent QA helps software teams write and run web and mobile tests in natural language. It provides a dashboard and CLI, plus MCP and skills for coding agents.</p>\n",
+    "full_path": "projects/agent-qa",
+    "date": "2026-09-24",
+    "filename": "agent-qa.md",
+    "seo_title": "Agent QA - Free Ai Tool | All We Need"
+  },
+  {
     "title": "Antigravity IDE",
     "slug": "antigravity-ide",
     "link": "https://antigravity.google",
@@ -115,6 +133,25 @@
     "seo_title": "cron-job.org - Free Utilities Tool | All We Need"
   },
   {
+    "title": "CurlShot",
+    "slug": "curlshot",
+    "link": "https://curlshot.com",
+    "description": "Screenshot API: turn any URL, HTML or Markdown into a PNG, JPEG, WebP, PDF or scrolling video with one HTTP request. Free plan, no card.",
+    "tags": [
+      "devtools",
+      "api",
+      "ai",
+      "free"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=curlshot.com&sz=128",
+    "contributors": [],
+    "content": "<p>CurlShot is a screenshot API for developers. One HTTP request turns a URL, HTML or Markdown into a PNG, JPEG, WebP, PDF or a scrolling video (MP4, WebM, GIF). Pages render in a real browser.</p>\n<h2>Features</h2>\n<ul>\n<li>Full-page capture, with lazy images loaded on the way down</li>\n<li>Phone, tablet and desktop device presets</li>\n<li>Cookie banners, ads and chat bubbles removed before the capture</li>\n<li>Capture one element by CSS selector, dark mode, custom CSS and JavaScript</li>\n<li>Async jobs with signed webhooks and bulk runs of up to 100 URLs</li>\n<li>MCP server (<code>https://curlshot.com/api/mcp</code>) so AI agents can take screenshots, plus OpenAPI 3.1 and llms.txt</li>\n<li>Works from any language with no SDK (cURL, Node.js, Python, PHP, Go, Ruby examples); n8n community node</li>\n</ul>\n<h2>Free tier</h2>\n<p>100 screenshots a month, no credit card. A free online tool on the home page works without an account. Docs: <a href=\"https://curlshot.com/docs\">https://curlshot.com/docs</a></p>\n",
+    "full_path": "projects/curlshot",
+    "date": "2026-10-16",
+    "filename": "curlshot.md",
+    "seo_title": "CurlShot - Free Devtools Tool | All We Need"
+  },
+  {
     "title": "Design Arena",
     "slug": "design-arena",
     "link": "https://www.designarena.ai",
@@ -191,6 +228,26 @@
     "seo_title": "Discord - Free Tools-for-teams Tool | All We Need"
   },
   {
+    "title": "Easypanel",
+    "slug": "easypanel",
+    "link": "https://easypanel.io/",
+    "description": "Self-hosted application deployment platform for apps, Docker images, Docker Compose services and databases on your own server.",
+    "tags": [
+      "devops",
+      "deployment",
+      "self-hosting",
+      "developer-tools",
+      "free-tier"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=easypanel.io&sz=128",
+    "contributors": [],
+    "content": "<h1>Easypanel</h1>\n<p>Easypanel provides a browser dashboard for deploying and managing applications on your own server. Connect GitHub, GitLab or Bitbucket repositories, deploy Docker images and Docker Compose services, and manage databases alongside your applications.</p>\n<p>It includes automatic SSL, resource monitoring, logs and a browser shell. One-click templates are available for tools such as n8n, Supabase, WordPress, Immich and Nextcloud.</p>\n<h1>Free plan</h1>\n<ul>\n<li>Up to 3 projects.</li>\n<li>Unlimited services and deployments.</li>\n<li>Basic monitoring.</li>\n<li>Free forever; you provide your own server.</li>\n</ul>\n<p>Easypanel is proprietary software with a free plan and optional paid subscriptions. Server hosting costs are separate. See the <a href=\"https://easypanel.io/pricing\">official pricing page</a> for current limits and paid features.</p>\n",
+    "full_path": "projects/easypanel",
+    "date": "2020-01-01",
+    "filename": "easypanel.md",
+    "seo_title": "Easypanel - Free Devops Tool | All We Need"
+  },
+  {
     "title": "Emailnator",
     "slug": "emailnator",
     "link": "https://emailnator.com",
@@ -206,28 +263,6 @@
     "date": "2024-01-01",
     "filename": "emailnator.md",
     "seo_title": "Emailnator - Free Email Tool | All We Need"
-  },
-  {
-    "title": "ghostIQ",
-    "slug": "ghostiq",
-    "link": "https://ghostiq.pages.dev/",
-    "description": "Stealth AI text humanizer and detector bypass calibrated for Turnitin v2.4, GPTZero, and Originality.ai. 100% free with zero login.",
-    "tags": [
-      "ai",
-      "humanizer",
-      "bypass",
-      "utilities",
-      "productivity",
-      "writing",
-      "free"
-    ],
-    "logo": "https://ghostiq.pages.dev/icon.svg",
-    "contributors": [],
-    "content": "<h2>Overview</h2>\n<p><strong>ghostIQ</strong> is a high-performance, production-ready AI text humanizer and detector bypass workbench. Designed to eliminate false positives and rigid synthetic syntax, it restructures AI-generated copy from ChatGPT, Claude, and Gemini to achieve 100% human-score calibration against leading detection platforms like Turnitin (v2.4), GPTZero Deep, and Originality.ai 3.0.</p>\n<p>Unlike clumsy synonym spinners that destroy grammatical integrity, ghostIQ performs natural syntactic flow restructuring, adjusting burstiness and perplexity while preserving the author&#39;s original meaning and factual nuance.</p>\n<blockquote>\n<p>[!TIP]\n<strong>Zero Login &amp; Free</strong>: ghostIQ does not require account creation, credit cards, or subscription tiers. The entire workbench is accessible directly in the browser with unlimited text restructuring.</p>\n</blockquote>\n<hr>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Dual-Pane Interactive Workbench</strong>: Real-time word count telemetry, AI marker scanning, and side-by-side restructuring comparison.</li>\n<li><strong>Detector-Specific Calibration</strong>: Pre-tuned heuristics for Turnitin v2.4, GPTZero Deep, Originality.ai 3.0, and ZeroGPT.</li>\n<li><strong>Multi-Mode Engine</strong>:<ul>\n<li><strong>Standard</strong>: Balanced restructuring ideal for essays, articles, and general communication.</li>\n<li><strong>Natural</strong>: Conversational, highly readable prose with natural syntactic variance.</li>\n<li><strong>Academic</strong>: Formal research style retaining specialized vocabulary and citation tone.</li>\n</ul>\n</li>\n<li><strong>Stealth / Flow Intensity Slider</strong>: Fine-grained 50%–100% slider control over sentence restructuring depth and vocabulary variance.</li>\n<li><strong>Zero Render-Blocking Performance</strong>: Sub-second edge inference powered by Cloudflare Pages with a near-perfect 99/100 Lighthouse performance score.</li>\n<li><strong>Privacy First</strong>: No text is logged or stored into training corpuses. Your drafts remain entirely private.</li>\n</ul>\n<hr>\n<h2>Detector Benchmark Results</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">AI Detector Platform</th>\n<th align=\"left\">Unprocessed AI Score</th>\n<th align=\"left\">ghostIQ Processed Score</th>\n<th align=\"left\">Status</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Turnitin (v2.4)</strong></td>\n<td align=\"left\">98% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>GPTZero Deep</strong></td>\n<td align=\"left\">100% AI Detected</td>\n<td align=\"left\"><strong>2% AI (98% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Originality.ai 3.0</strong></td>\n<td align=\"left\">94% AI Detected</td>\n<td align=\"left\"><strong>1% AI (99% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>ZeroGPT</strong></td>\n<td align=\"left\">89% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n</tbody></table>\n<hr>\n<h2>How to Use ghostIQ</h2>\n<ol>\n<li>Visit <a href=\"https://ghostiq.pages.dev/\">ghostIQ</a>.</li>\n<li>Paste your draft into the left input pane.</li>\n<li>Select your target mode (<strong>Standard</strong>, <strong>Natural</strong>, or <strong>Academic</strong>) and adjust the Stealth / Flow intensity slider.</li>\n<li>Click <strong>Humanize Text</strong>.</li>\n<li>Copy your restructured, detector-proof text from the right output pane.</li>\n</ol>\n",
-    "full_path": "projects/ghostiq",
-    "date": "2026-09-15",
-    "filename": "ghostiq.md",
-    "seo_title": "ghostIQ - Free Ai Tool | All We Need"
   },
   {
     "title": "GitHub",
@@ -364,6 +399,25 @@
     "seo_title": "LM Arena - Free Ai Tool | All We Need"
   },
   {
+    "title": "만화 번역기 AI",
+    "slug": "ai",
+    "link": "https://www.mangatranslate.com/ko/ai-manga-translator/",
+    "description": "만화 번역기 AI는 만화 이미지의 일괄·맞춤 번역과 온라인 편집을 제공하고, 개발자가 API로 개인 번역 작업 흐름을 자동화하도록 지원합니다.",
+    "tags": [
+      "ai",
+      "api",
+      "productivity",
+      "images"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=www.mangatranslate.com&sz=128",
+    "contributors": [],
+    "content": "<p>만화 번역기 AI는 Ficory LLC가 운영하는 기업급 만화 리더·번역 플랫폼으로, 지원하는 모든 번역 언어인 100개 이상의 언어로 개인 사용자의 여러 만화 페이지를 일괄 번역하고 작품에 맞는 맞춤 번역을 지원합니다. 스튜디오 사용자는 완전한 온라인 Photoshop 방식 편집기로 번역문과 페이지 레이아웃을 수정하며, 개발자는 API를 개인 작업 흐름에 연결하여 이미지 업로드, 번역 작업 제출, 진행 상태 확인과 결과 다운로드를 자동화할 수 있습니다.</p>\n<h2>개발자 작업 흐름</h2>\n<p>개발자는 API Key로 인증한 뒤 이미지 배치를 제출하고 반환된 작업 식별자로 처리 상태를 조회합니다. API는 번역 이미지 URL을 반환하며, 공식 예제는 Python, cURL과 Node.js 요청을 설명합니다. 자동 번역 결과는 인명, 용어 및 말풍선 배치를 검토한 후 사용해야 합니다.</p>\n<h2>이용 조건</h2>\n<p>이 서비스는 제한된 무료 이용량과 유료 크레딧·구독을 함께 제공합니다. 무료 크레딧의 현재 지급 조건과 사용 한도는 공식 요금 및 계정 화면에서 확인해야 합니다. 무제한 무료 서비스나 오픈소스 제품으로 소개하지 않습니다.</p>\n<p><a href=\"https://www.mangatranslate.com/ko/ai-manga-translator/\">만화 번역기 AI</a></p>\n<ul>\n<li><a href=\"https://www.mangatranslate.com/ko/api-examples/\">API 예제</a></li>\n<li><a href=\"https://www.mangatranslate.com/ko/\">공식 한국어 홈페이지</a></li>\n</ul>\n",
+    "full_path": "projects/ai",
+    "date": "2020-01-01",
+    "filename": "manga-translator-ko.md",
+    "seo_title": "만화 번역기 AI - Free Ai Tool | All We Need"
+  },
+  {
     "title": "Miro",
     "slug": "miro",
     "link": "https://miro.com/",
@@ -458,6 +512,25 @@
     "date": "2026-01-22",
     "filename": "oracle-cloud.md",
     "seo_title": "Oracle Cloud - Free Cloud-providers Tool | All We Need"
+  },
+  {
+    "title": "Orkas",
+    "slug": "orkas",
+    "link": "https://orkas.ai/?source=dir_allweneed",
+    "description": "Open-source, local-first desktop AI workforce coordinated by a Commander through one chat.",
+    "tags": [
+      "ai",
+      "devtools",
+      "productivity",
+      "open-source"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=orkas.ai&sz=128",
+    "contributors": [],
+    "content": "<p>Orkas is an open-source, local-first desktop AI workforce. A Commander turns goals into executable plans and coordinates specialist agents in parallel or sequence through one chat.</p>\n<p>For developer work, Orkas can coordinate built-in agents and supported external local agents such as Claude Code, Codex and OpenCode. Packaged installers are available for macOS and Windows; Linux runs from source. The core application is free; model usage and optional services may cost extra.</p>\n<ul>\n<li><a href=\"https://orkas.ai/?source=dir_allweneed\">Official website</a></li>\n<li><a href=\"https://github.com/Orkas-AI/Orkas\">Source code and setup</a></li>\n</ul>\n",
+    "full_path": "projects/orkas",
+    "date": "2020-01-01",
+    "filename": "orkas.md",
+    "seo_title": "Orkas - Free Ai Tool | All We Need"
   },
   {
     "title": "Oxaam",
@@ -686,6 +759,28 @@
     "seo_title": "ToolFK - Free Utilities Tool | All We Need"
   },
   {
+    "title": "TruthDraft",
+    "slug": "truthdraft",
+    "link": "https://truthdraft.com/",
+    "description": "Free AI writing detector and humanizer. Detect AI text and humanize it to sound natural — 100% free with zero login.",
+    "tags": [
+      "ai",
+      "humanizer",
+      "bypass",
+      "utilities",
+      "productivity",
+      "writing",
+      "free"
+    ],
+    "logo": "https://www.google.com/s2/favicons?domain=truthdraft.com&sz=128",
+    "contributors": [],
+    "content": "<h2>Overview</h2>\n<p><strong>TruthDraft</strong> is a high-performance, web-based AI writing detector and text humanizer workbench. Designed to eliminate false positives and rigid synthetic syntax, it analyzes AI-generated text and restructures phrasing from ChatGPT, Claude, and Gemini with natural perplexity, burstiness, and human cadence.</p>\n<p>Unlike clumsy synonym spinners that break sentence structure, TruthDraft performs intelligent flow restructuring, comparing original drafts with humanized versions side-by-side — completely free, with no account or subscription required.</p>\n<blockquote>\n<p>[!TIP]\n<strong>Zero Login &amp; 100% Free</strong>: TruthDraft does not require account creation, credit cards, or subscription tiers. The entire workbench is accessible directly in the browser with unlimited text restructuring and detection.</p>\n</blockquote>\n<hr>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Dual-Pane Interactive Workbench</strong>: Real-time AI score telemetry, side-by-side original vs. humanized draft comparison, and instant diff inspection.</li>\n<li><strong>Accurate AI Detection</strong>: Instant heuristic scanning providing an estimate of AI-generated content percentage with confidence indicators.</li>\n<li><strong>Natural Syntactic Flow</strong>: Restructures monotonous cadence and predictable n-grams into organic sentence lengths and natural human phrasing.</li>\n<li><strong>Detector-Specific Calibration</strong>: Pre-calibrated against leading detection platforms including Turnitin (v2.4), GPTZero Deep, and Originality.ai 3.0.</li>\n<li><strong>Privacy First</strong>: No draft content is logged or permanently retained for training datasets. Your writing stays entirely confidential.</li>\n<li><strong>Zero Login Friction</strong>: No sign-up modals, API keys, or paywalls. Paste your draft, analyze, and copy results immediately.</li>\n</ul>\n<hr>\n<h2>Detector Benchmark Results</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">AI Detector Platform</th>\n<th align=\"left\">Unprocessed AI Score</th>\n<th align=\"left\">TruthDraft Processed Score</th>\n<th align=\"left\">Status</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Turnitin (v2.4)</strong></td>\n<td align=\"left\">98% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>GPTZero Deep</strong></td>\n<td align=\"left\">100% AI Detected</td>\n<td align=\"left\"><strong>2% AI (98% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Originality.ai 3.0</strong></td>\n<td align=\"left\">94% AI Detected</td>\n<td align=\"left\"><strong>1% AI (99% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>ZeroGPT</strong></td>\n<td align=\"left\">89% AI Detected</td>\n<td align=\"left\"><strong>0% AI (100% Human)</strong></td>\n<td align=\"left\">✅ Passed</td>\n</tr>\n</tbody></table>\n<hr>\n<h2>How to Use TruthDraft</h2>\n<ol>\n<li>Visit <strong><a href=\"https://truthdraft.com/\">truthdraft.com</a></strong>.</li>\n<li>Paste your draft into the input workspace.</li>\n<li>Click <strong>Detect</strong> to analyze the AI probability score, or <strong>Humanize</strong> to generate a natural revision.</li>\n<li>Review the side-by-side comparison to inspect and approve all stylistic changes.</li>\n<li>Copy your polished, detector-proof text with one click — no registration required.</li>\n</ol>\n",
+    "full_path": "projects/truthdraft",
+    "date": "2026-10-15",
+    "filename": "truthdraft.md",
+    "seo_title": "TruthDraft - Free Ai Tool | All We Need"
+  },
+  {
     "title": "Unmute.sh",
     "slug": "unmutesh",
     "link": "https://unmute.sh/",
@@ -758,5 +853,85 @@
     "date": "2024-01-01",
     "filename": "yupp-ai.md",
     "seo_title": "Yupp AI - Free Ai Tool | All We Need"
+  },
+  {
+    "title": "YYLO Benchmark",
+    "slug": "yylo-benchmark",
+    "link": "https://github.com/yylo-dev/yylo-benchmark",
+    "description": "A thin trusted-host experiment runner for historical Ledger tasks, supplied coding prompts, and workflows.",
+    "tags": [
+      "ai",
+      "benchmark",
+      "devtools"
+    ],
+    "logo": "https://avatars.githubusercontent.com/u/318831521?v=4",
+    "contributors": [
+      {
+        "login": "InsightFactoryAPP",
+        "avatar_url": "https://avatars.githubusercontent.com/u/168487014?v=4",
+        "html_url": "https://github.com/InsightFactoryAPP"
+      },
+      {
+        "login": "Mahdiyar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/143013096?v=4",
+        "html_url": "https://github.com/Mahdiyar"
+      }
+    ],
+    "content": "<p>YYLO Benchmark compares models, harnesses and configurations: reviewed cases produce independent attempts, and retained outputs can be evaluated with different checks or judges later. It does not choose a winner or combine judge opinions with test results. Cases are prepared once from historical Ledger tasks, supplied coding prompts, or workflows, and <code>yylo-benchmark</code> runs alongside the YYLO CLI and YYLO Ledger packages.</p>\n",
+    "full_path": "projects/yylo-benchmark",
+    "date": "2026-10-04",
+    "filename": "yylo-benchmark.md",
+    "seo_title": "YYLO Benchmark - Free Ai Tool | All We Need"
+  },
+  {
+    "title": "YYLO Ledger",
+    "slug": "yylo-ledger",
+    "link": "https://github.com/yylo-dev/yylo-ledger",
+    "description": "A Git-native task and Record store with a shell-friendly CLI.",
+    "tags": [
+      "ai",
+      "devtools"
+    ],
+    "logo": "https://avatars.githubusercontent.com/u/318831521?v=4",
+    "contributors": [
+      {
+        "login": "InsightFactoryAPP",
+        "avatar_url": "https://avatars.githubusercontent.com/u/168487014?v=4",
+        "html_url": "https://github.com/InsightFactoryAPP"
+      }
+    ],
+    "content": "<p>YYLO Ledger is a Git-native task and Record store with a shell-friendly CLI. It is for developers, automation authors, and coding-agent workflows that need reviewable current state, append-only history, dependency-aware work, and bounded queries without making a database the source of truth. Ledger owns Records and task history; it runs alongside the YYLO CLI (coding-agent and task/merge/release orchestration) and YYLO Benchmark (evaluation runs and their private evidence registry) packages.</p>\n",
+    "full_path": "projects/yylo-ledger",
+    "date": "2026-10-08",
+    "filename": "yylo-ledger.md",
+    "seo_title": "YYLO Ledger - Free Ai Tool | All We Need"
+  },
+  {
+    "title": "YYLO",
+    "slug": "yylo",
+    "link": "https://github.com/yylo-dev/yylo",
+    "description": "A command-line orchestrator for coding agents, repeatable workflows, and receipt-backed repository changes.",
+    "tags": [
+      "ai",
+      "devtools"
+    ],
+    "logo": "https://avatars.githubusercontent.com/u/318831521?v=4",
+    "contributors": [
+      {
+        "login": "InsightFactoryAPP",
+        "avatar_url": "https://avatars.githubusercontent.com/u/168487014?v=4",
+        "html_url": "https://github.com/InsightFactoryAPP"
+      },
+      {
+        "login": "Mahdiyar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/143013096?v=4",
+        "html_url": "https://github.com/Mahdiyar"
+      }
+    ],
+    "content": "<p>YYLO orchestrates coding agents from the terminal: <code>yy</code> and <code>yylo</code> (equivalent launchers) run agent loops, repeatable workflows, and receipt-backed repository changes. <code>yy init</code> bootstraps a Git workspace with typed task, validation, merge, and release-readiness boundaries, and <code>yy ledger</code> / <code>yy benchmark</code> delegate to the independent YYLO Ledger and YYLO Benchmark packages.</p>\n",
+    "full_path": "projects/yylo",
+    "date": "2026-10-01",
+    "filename": "yylo.md",
+    "seo_title": "YYLO - Free Ai Tool | All We Need"
   }
 ]
