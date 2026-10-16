@@ -4,6 +4,7 @@ Thank you for your interest in contributing! **All We Need** is a community-driv
 
 ## How to Add a Project
 
+0.  **Star Repo**: Star this repo so more developers will find this repo and get to know about these tools.
 1.  **Fork & Clone**: Fork this repository and clone it to your local machine.
 2.  **Create a File**: Add a new markdown file in `/projects/`.
     *   **Filename**: Use hyphenated lowercase (e.g., `emailnator.md`, `openrouter.md`).
