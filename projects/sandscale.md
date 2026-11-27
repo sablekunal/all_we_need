@@ -11,7 +11,7 @@ Sandscale gives each AI coding agent run its own Firecracker microVM, so the age
 
 - **Four products:** sandboxes, workspaces, build hosts and lab hosts.
 - **Ways to connect:** a remote MCP server at `https://mcp.sandscale.dev/mcp` (Streamable HTTP, OAuth 2.1), a REST API, the CLI and SDKs.
-- **Security controls:** allow/ask/deny policies per tool, human approvals, DLP, a vault for secrets and an audit log.
+- **Security controls:** policy controls, human approvals, DLP, a vault for secrets and an audit log.
 - **Pricing:** billed per awake vCPU-hour. The Free plan includes 100 awake vCPU-hours a month, 3 boxes at once and 5 GB storage.
 
 Docs: https://sandscale.dev/docs
